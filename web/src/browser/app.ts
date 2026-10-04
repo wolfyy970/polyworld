@@ -569,6 +569,7 @@ export class PolyworldShell {
       if (steps > 0) this.agentsDirty = true;
     }
 
+    this.rig.followStep(this.world.stepIndex);
     this.rig.update();
     this.syncCameraAspect();
     this.draw();

@@ -29,7 +29,10 @@ export interface BoxField {
 
 export function createBoxField(name: string, capacity: number): BoxField {
   const geometry = new THREE.BoxGeometry(1, 1, 1);
-  const material = new THREE.MeshLambertMaterial({ flatShading: true });
+  // Unlit (`MeshBasicMaterial`): native enables no `GL_LIGHTING`, so a `gboxf`'s `gbox::draw()`
+  // writes its own `fColor` flat (`gmisc.cc::drawunitcube`). The per-instance colour below is the
+  // object's own (`gobject::setcolor`).
+  const material = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide });
 
   let current = Math.max(1, Math.floor(capacity));
   let mesh = newInstanced(geometry, material, name, current);

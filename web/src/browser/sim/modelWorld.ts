@@ -56,7 +56,7 @@
  * `run/stats/**` lands in the same sink as every other artifact the run writes.
  */
 
-import { Agent } from '../../model/agent';
+import { Agent, agentConfig, NoseColor } from '../../model/agent';
 import { Barrier, Brick, Food, gXSortedObjects } from '../../model/environment';
 import { MonitorManager, processEnvironment } from '../../model/monitor';
 import { Simulation } from '../../model/sim/simulation';
@@ -370,7 +370,13 @@ function projectRoster(): SimulationAgent[] {
       z: agent.z(),
       yaw: agent.yaw(),
       size: agent.radius(),
+      // Native `agent::draw()` reads the mesh lengths and the two colours; the renderer draws the
+      // real mesh, so it needs them (`agent.cc:1819-1831`).
+      lengthX: agent.lengthX(),
+      lengthZ: agent.lengthZ(),
       color: agent.color(),
+      noseColor: agent.noseColor(),
+      noseIsBody: agentConfig.noseColor === NoseColor.NC_BODY,
       alive: agent.alive(),
     });
   }

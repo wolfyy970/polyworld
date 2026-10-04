@@ -1,86 +1,85 @@
 /**
- * Lane L18 (browser wiring) — the agent field: instanced meshes fed by the simulation seam.
+ * Lane L18 (browser wiring) — the agent field: the **native body mesh**, one instance per creature.
  *
- * Two instances meshes (body + nose pointer) carry the whole population regardless of agent
- * count, so agent count adds no draw calls; the frame is allocation-free and reads no clock.
+ * Each agent draws `etc/objects/agent.obj`, scaled by its own `(fLengthX, agentHeight, fLengthZ)`
+ * and rotated by its yaw, exactly as `agent::SetGeometry()` + `agent::draw()` do
+ * (`agent/agent.cc:993-1013, 1819-1831`). The mesh is split into the two polygon ranges native
+ * paints (`0..4` in `fNoseColor`, `5..9` in `fColor`) — see `agentMesh.ts`. Two `InstancedMesh`es
+ * carry the whole population regardless of agent count, so agent count adds no draw calls; the
+ * frame is allocation-free and reads no clock.
+ *
  * The sim-facing type is `SimulationAgent` (`sim/simSeam.ts`), in *native* coordinates; the
  * conversion to three.js space happens here and only here
- * (`nativeXToScene`/`nativeZToScene`/`yawToSceneRotation`).
+ * (`nativeXToScene`/`nativeZToScene`/`yawToMeshRotation`).
  *
- * PORT-NOTE (L18/agent-size): the body's radius is the agent's own `size` — native
- * `agent::radius()` after `SetGeometry`/`setRadius` — in world units, so a population's real size
- * range reads off the screen.
+ * PORT-NOTE (L18d/unlit): native never enables `GL_LIGHTING` on the scene path (there is no
+ * `glEnable(GL_LIGHTING)` anywhere in `app/`, `library/sim/`, `library/graphics/` or
+ * `qtrenderer/` — confirmed by `src/model/vision/raster.ts`'s own note), so `agent::draw()`'s
+ * `glColor3fv` writes flat colour with no shade, falloff or highlight. The body is therefore drawn
+ * with `MeshBasicMaterial` (unlit), not a Lambert material — the same reasoning as the ground,
+ * barriers and boxes.
  *
- * PORT-NOTE (L18/agent-colour): the body's colour is the **model's own** (`agent::color()`, the
- * three native 0..1 floats `agent::UpdateColor()` writes each step from the body-channel nerves).
- * The lane's preview stand-in carried a palette slot instead because there were no nerves to read;
- * nothing on screen is a palette invention any more. The one look-only choice left is the nose
- * pointer: it is the same nerve colour blended towards the palette accent so that the ground
- * marker stays visible against the body it belongs to (visuals are not frozen — PORT_SPEC).
+ * PORT-NOTE (L18d/agents-sit-on-the-ground): native `agent::fPosition[1]` is never set (it stays
+ * `gobject::init`'s `0.0`), and the mesh spans `y ∈ [-0.5, +0.5]·agentHeight`, so the creature is
+ * centred on `y = 0` and the ground (drawn first, depth-tested) hides the buried half. The old
+ * `agentHeight + radius` lift was an invention and is gone.
  *
- * PORT-NOTE (L18/agent-height): native agents stand on `AgentHeight` above the ground
- * (`agent::config.agentHeight`, 0.2 in both recorded worldfiles); this module adds it to the
- * body's own radius so the creature sits on the plane rather than in it.
+ * PORT-NOTE (L18d/no-dead-agents): native's cast list holds only live agents (a dead agent is
+ * removed from `gXSortedObjects`, `Simulation.cc:3570`), so the roster the renderer gets is already
+ * the live set; nothing here filters `alive` a second time.
  */
 
 import * as THREE from 'three';
-import { nativeXToScene, nativeZToScene, yawToSceneRotation, type SimulationAgent } from '../sim/simSeam';
-import { PALETTE } from './palette';
-
-/** How far the nose pointer is pushed towards the accent colour (look only). */
-const ACCENT_COLOR = new THREE.Color(PALETTE.accent);
+import {
+  nativeXToScene,
+  nativeZToScene,
+  yawToMeshRotation,
+  type SimulationAgent,
+} from '../sim/simSeam';
+import { createAgentMeshes } from './agentMesh';
 
 export interface AgentField {
   readonly group: THREE.Group;
   /** Instance capacity the field was allocated for (native `MaxAgents`, or the `?agents=` floor). */
   readonly capacity: number;
-  /** Push current agent positions/orientations/sizes into the instance buffers. */
+  /** Push current agent positions/orientations/sizes/colours into the instance buffers. */
   sync(agents: readonly SimulationAgent[], worldSize: number): void;
   dispose(): void;
 }
 
-/** Radius of the unit body geometry; an agent's instance scale is its own radius. */
-const BODY_RADIUS = 1;
-
 export function createAgentField(maxAgents: number, agentHeight: number): AgentField {
   const capacity = Math.max(1, Math.floor(maxAgents));
+  const meshes = createAgentMeshes();
 
-  const bodyGeometry = new THREE.OctahedronGeometry(BODY_RADIUS, 0);
-  const bodyMaterial = new THREE.MeshLambertMaterial({ flatShading: true });
-  const bodies = new THREE.InstancedMesh(bodyGeometry, bodyMaterial, capacity);
-  bodies.name = 'agents-body';
-  bodies.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
-  bodies.frustumCulled = false;
-  bodies.count = 0;
+  // Native leaves face culling off (`//glEnable(GL_CULL_FACE)`), so both sides of every polygon
+  // are filled; `MeshBasicMaterial` is the unlit equivalent of native's flat `glColor3fv` fills.
+  const noseMaterial = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide });
+  const bodyMaterial = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide });
 
-  // Nose pointer: a flat triangle lying on the ground, just ahead of the body. It exists
-  // because an octahedron's facing is ambiguous from a top-down orbit camera.
-  const noseGeometry = new THREE.CircleGeometry(1, 3);
-  noseGeometry.rotateX(-Math.PI / 2);
-  const noseMaterial = new THREE.MeshBasicMaterial({
-    transparent: true,
-    opacity: 0.85,
-    side: THREE.DoubleSide,
-    depthWrite: false,
-  });
-  const noses = new THREE.InstancedMesh(noseGeometry, noseMaterial, capacity);
+  const noses = new THREE.InstancedMesh(meshes.nose, noseMaterial, capacity);
   noses.name = 'agents-nose';
-  noses.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
-  noses.frustumCulled = false;
-  noses.count = 0;
+  const bodies = new THREE.InstancedMesh(meshes.body, bodyMaterial, capacity);
+  bodies.name = 'agents-body';
 
-  const color = new THREE.Color();
-  for (let i = 0; i < capacity; i++) {
-    color.setHex(PALETTE.agents[i % PALETTE.agents.length]!);
-    bodies.setColorAt(i, color);
-    noses.setColorAt(i, color);
+  for (const mesh of [noses, bodies]) {
+    mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    mesh.frustumCulled = false;
+    mesh.count = 0;
   }
-  if (bodies.instanceColor) bodies.instanceColor.setUsage(THREE.DynamicDrawUsage);
+
+  // Allocate the instance-colour buffers up front (three.js would otherwise create one lazily on
+  // the first `setColorAt`, mid-sync).
+  const seed = new THREE.Color();
+  for (let i = 0; i < capacity; i++) {
+    noses.setColorAt(i, seed.setRGB(0.5, 0.5, 0.5));
+    bodies.setColorAt(i, seed.setRGB(0.5, 0.5, 0.5));
+  }
   if (noses.instanceColor) noses.instanceColor.setUsage(THREE.DynamicDrawUsage);
+  if (bodies.instanceColor) bodies.instanceColor.setUsage(THREE.DynamicDrawUsage);
 
   const group = new THREE.Group();
   group.name = 'agents';
-  group.add(bodies, noses);
+  group.add(noses, bodies);
   group.matrixAutoUpdate = false;
   group.updateMatrix();
 
@@ -96,50 +95,35 @@ export function createAgentField(maxAgents: number, agentHeight: number): AgentF
       const n = Math.min(agents.length, capacity);
       for (let i = 0; i < n; i++) {
         const a = agents[i]!;
-        const radius = Math.max(0.05, a.size);
-        // Native yaw → three.js rotation about +Y (see simSeam.ts).
-        const rotation = yawToSceneRotation(a.yaw);
-        const sceneX = nativeXToScene(a.x, worldSize);
-        const sceneZ = nativeZToScene(a.z, worldSize);
-
-        dummy.position.set(sceneX, agentHeight + radius, sceneZ);
-        dummy.rotation.set(0, rotation, 0);
-        dummy.scale.setScalar(radius);
+        dummy.position.set(nativeXToScene(a.x, worldSize), 0, nativeZToScene(a.z, worldSize));
+        dummy.rotation.set(0, yawToMeshRotation(a.yaw), 0);
+        // Native `agent::SetGeometry`'s scale: x by `fLengthX`, y by `agentHeight`, z by `fLengthZ`.
+        // A degenerate length would collapse a polygon; keep a hair of width so it stays drawable.
+        dummy.scale.set(Math.max(1e-4, a.lengthX), agentHeight, Math.max(1e-4, a.lengthZ));
         dummy.updateMatrix();
+
         bodies.setMatrixAt(i, dummy.matrix);
         bodies.setColorAt(i, bodyColour.setRGB(a.color[0], a.color[1], a.color[2]));
 
-        dummy.position.set(
-          sceneX + Math.cos(rotation) * radius * 1.8,
-          agentHeight * 0.5,
-          sceneZ - Math.sin(rotation) * radius * 1.8,
-        );
-        dummy.rotation.set(0, rotation, 0);
-        dummy.scale.setScalar(radius * 1.4);
-        dummy.updateMatrix();
+        // `agent::draw()`: polygons 0..4 in `fNoseColor`, unless the worldfile's `NoseColor` is `B`.
+        const nose = a.noseIsBody ? a.color : a.noseColor;
         noses.setMatrixAt(i, dummy.matrix);
-        // The nose is the same nerve colour, pushed towards the palette's accent so a body and the
-        // pointer on the ground stay distinguishable from above (look, not model — PORT-NOTE below).
-        noses.setColorAt(
-          i,
-          noseColour.setRGB(a.color[0], a.color[1], a.color[2]).lerp(ACCENT_COLOR, 0.35),
-        );
+        noses.setColorAt(i, noseColour.setRGB(nose[0], nose[1], nose[2]));
       }
-      bodies.count = n;
       noses.count = n;
-      bodies.instanceMatrix.needsUpdate = true;
+      bodies.count = n;
       noses.instanceMatrix.needsUpdate = true;
-      if (bodies.instanceColor) bodies.instanceColor.needsUpdate = true;
+      bodies.instanceMatrix.needsUpdate = true;
       if (noses.instanceColor) noses.instanceColor.needsUpdate = true;
+      if (bodies.instanceColor) bodies.instanceColor.needsUpdate = true;
     },
 
     dispose(): void {
-      bodyGeometry.dispose();
-      bodyMaterial.dispose();
-      noseGeometry.dispose();
+      meshes.dispose();
       noseMaterial.dispose();
-      bodies.dispose();
+      bodyMaterial.dispose();
       noses.dispose();
+      bodies.dispose();
     },
   };
 }

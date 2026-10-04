@@ -52,7 +52,7 @@ compares by content, a payload difference, a missing file and an unreadable cont
 remaining hard failures.
 
 **Not frozen (free):** `run/movie.pmv` (delta-compressed, incrementally written),
-windowing, widgets, camera feel, Three.js visuals, tool UIs. The browser version should
+windowing, widgets, tool UIs. The browser version should
 make movie recording deterministic *by construction* (sample on step boundaries) rather
 than reproduce the native sampling jitter. The harness therefore never *fails* a scenario
 on `run/movie.pmv`, at any tier (task `t_588c28e1`): every tier's compare defaults ignore
@@ -62,6 +62,20 @@ fresh native runs of `minitest_voff` produced **two distinct** movies — one by
 to the golden, two differing only in `movie.pmv` — so a tier-A number means "the model's
 artifacts", not "the movie too". A scenario can still opt in with `no_default_ignore` if a
 future encoder check wants the strict comparison.
+
+**The render is a fidelity surface (task `t_67dbaa3f`, L18d).** "Presentation layer keeps its own
+look" is no longer an acceptable reading of any doc in this repo. The browser scene must *look* the
+way the native build renders it — same environment, same objects, same colours, same lighting — and
+the native source (`qtrenderer/renderer/qt/QtSceneRenderer.cc`, `library/graphics/**`,
+`library/monitor/**`) is the contract for it, exactly as it is for the model. Concretely: the clear
+colour is native's black, the ground is `etc/objects/ground.obj` scaled by `WorldSize`, the agents
+are `etc/objects/agent.obj` scaled by `(fLengthX, agentHeight, fLengthZ)` and painted in their two
+native polygon-range colours, the boxes are the model's own `gboxf`s, the barriers are the
+worldfile's walls, lighting is native's (none — nothing ever enables `GL_LIGHTING`), and the default
+camera is native's `MainScene` (`FieldOfView 90`, the `Rotate` controller's pose). The values that
+remain a *choice* are named in a `PORT-NOTE (L18d/...)` at their call site, with the reason. What
+this does **not** change: `run/movie.pmv` and the windowing/widget/tool-UI surfaces stay free, and
+no golden is touched.
 
 ## Ground rules
 

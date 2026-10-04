@@ -1,11 +1,10 @@
 /**
  * Lane L18 (browser wiring) — the boot's parity test.
  *
- * The browser lane owns no frozen artifact (PORT_SPEC: "Not frozen — windowing, widgets,
- * camera feel, Three.js visuals, tool UIs"), but the *boot* it runs before the first step is
- * the native's own pre-step path, and four of the artifacts that path produces **are**
- * frozen: `run/original.wf`, `run/original.wfs`, `run/converted.wf`, `run/normalized.wf`.
- * This test is the evidence:
+ * The browser lane's *presentation* is now a fidelity surface too (L18d, PORT_SPEC → "The render is
+ * a fidelity surface"), but what this test pins is the *boot*: the pre-step path the lane runs is
+ * native's own, and four of the artifacts that path produces **are** frozen: `run/original.wf`,
+ * `run/original.wfs`, `run/converted.wf`, `run/normalized.wf`. This test is the evidence:
  *
  *   - boot each recorded scenario from the recorded sources (`oracle/<scenario>/run/original.*`),
  *   - compare every artifact with the golden byte-for-byte,

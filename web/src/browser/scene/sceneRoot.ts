@@ -1,27 +1,35 @@
 /**
- * Lane L18 (browser wiring) — scene graph assembly (fog, lights, ground, agents, barriers, objects).
+ * Lane L18 (browser wiring) — scene graph assembly (clear colour, ground, agents, barriers, objects).
  *
- * PORT-NOTE (L18/visuals): the native scene's lighting/materials live in `graphics/`
- * (lanes L15/L16) and none of it is frozen. What this module *does* take from the model is the
- * worldfile: extent, ground/food/brick/barrier colours and heights, the domain rectangle, the food
- * patches, the barrier segment and brick-patch declarations (`sim/worldParams.ts`), and the agent
- * height. Everything else here is look.
+ * Native's scene is drawn by `QtSceneRenderer::render()` (`qtrenderer/renderer/qt/QtSceneRenderer.cc`)
+ * and `gstage::Draw()`:
  *
- * PORT-NOTE (L18/draw): since L18c the scene draws every world object native's own renderer does —
- * the model's `food` and `brick` boxes (`objects.ts`), the worldfile's barrier walls
- * (`barriers.ts`), and the agent field (`agents.ts`). All of them are fed from the model's current
- * step and use one `InstancedMesh` per kind, so the frame cost is proportional to object count, not
- * to a draw call per object; there are no shadows, no post-processing and no per-frame allocation
- * in steady state. A field grows its buffers only when a step's object count passes the allocation.
+ *   - `glClearColor(0,0,0,1)` — pure black, no fog (`QtSceneRenderer.cc:89`);
+ *   - the stage's set list (the ground and the barrier walls), then props, then the cast list
+ *     (agents and the `food`/`brick` boxes) — `gstage.cc:168-175`;
+ *   - **no lighting**: nothing in `app/`, `library/sim/`, `library/graphics/` or `qtrenderer/`
+ *     ever calls `glEnable(GL_LIGHTING)` (the sole `glLightfv(GL_LIGHT0, …)` in
+ *     `QtSceneRenderer::render` positions a light that is never enabled), so every object is drawn
+ *     at its raw `glColor` with no shade, falloff or highlight.
+ *
+ * PORT-NOTE (L18d/faithful-scene): until L18d this module added a hemisphere light, a key light, a
+ * fill light, an ambient light, a fog, an oversized `outer-plain` and a unit `ground-grid` — none of
+ * which exist in the native render. They are all removed here: what the page draws is what native
+ * draws. The materials are `MeshBasicMaterial` (unlit), matching native's un-lit `glColor` path, and
+ * the clear colour is native's black.
+ *
+ * What this module still takes from the *worldfile* is only what native takes: extent, colours,
+ * heights, the domain rectangle, the barrier segment and brick-patch declarations
+ * (`sim/worldParams.ts`), and the agent height. Everything on screen is the model's own geometry.
  */
 
 import * as THREE from 'three';
 import type { WorldParams } from '../sim/worldParams';
 import { createAgentField, type AgentField } from './agents';
 import { createBarrierField, type BarrierField } from './barriers';
-import { createGround, createGroundOuter, createGroundScale } from './ground';
+import { createGround } from './ground';
 import { createBoxField, type BoxField } from './objects';
-import { LIGHTING, PALETTE, rgbToHex } from './palette';
+import { SCENE_CLEAR } from './palette';
 
 export interface SceneRootOptions {
   readonly params: WorldParams;
@@ -45,41 +53,20 @@ export interface SceneRoot {
 export function createSceneRoot(options: SceneRootOptions): SceneRoot {
   const { params } = options;
   const worldSize = params.worldSize;
-  const groundHex = rgbToHex(params.colors.ground);
 
   const scene = new THREE.Scene();
   scene.name = 'polyworld-shell';
-  // Background and fog share one colour so the ground's far edge dissolves into the sky.
-  scene.background = new THREE.Color(PALETTE.sky);
-  scene.fog = new THREE.Fog(PALETTE.sky, worldSize * 0.9, worldSize * 2.8);
-
-  // Hemispheric fill does most of the work: it is one light and gives flat-shaded facets their
-  // retro two-tone read without a shadow pass. Its ground colour is the worldfile's.
-  const hemisphere = new THREE.HemisphereLight(PALETTE.sky, groundHex, 1.15);
-  hemisphere.position.set(0, worldSize, 0);
-
-  const key = new THREE.DirectionalLight(LIGHTING.keyColor, LIGHTING.keyIntensity);
-  key.position.set(worldSize * 0.6, worldSize * 1.1, worldSize * 0.45);
-  key.target.position.set(0, 0, 0);
-
-  const fill = new THREE.DirectionalLight(LIGHTING.fillColor, LIGHTING.fillIntensity);
-  fill.position.set(-worldSize * 0.7, worldSize * 0.5, -worldSize * 0.6);
-  fill.target.position.set(0, 0, 0);
-
-  const ambient = new THREE.AmbientLight(LIGHTING.ambient, LIGHTING.ambientIntensity);
+  // Native `glClearColor(0,0,0,1)`. No fog: native clears to black and draws the world on top.
+  scene.background = new THREE.Color(SCENE_CLEAR);
 
   const ground = createGround({
     worldSize,
-    domain: params.domain,
-    patches: params.patches,
     groundColor: params.colors.ground,
-    foodColor: params.colors.food,
+    groundClearance: params.groundClearance,
   });
-  const outerPlain = createGroundOuter(worldSize, params.colors.ground);
-  const scale = createGroundScale(worldSize);
   const agents = createAgentField(options.agentCapacity, params.agent.height);
   const barriers = createBarrierField(
-    rgbToHex(params.colors.barrier),
+    params.colors.barrier,
     Math.max(1, params.barriers.length),
   );
   // Brick patches declare the world's brick ceiling (`BrickCount` each); food is unbounded in the
@@ -88,21 +75,7 @@ export function createSceneRoot(options: SceneRootOptions): SceneRoot {
   const bricks = createBoxField('bricks', declaredBricks(params));
   const food = createBoxField('food', Math.max(1, params.maxAgents));
 
-  scene.add(
-    hemisphere,
-    key,
-    key.target,
-    fill,
-    fill.target,
-    ambient,
-    outerPlain,
-    scale,
-    ground,
-    barriers.group,
-    bricks.group,
-    food.group,
-    agents.group,
-  );
+  scene.add(ground, barriers.group, bricks.group, food.group, agents.group);
 
   return {
     scene,
@@ -112,28 +85,12 @@ export function createSceneRoot(options: SceneRootOptions): SceneRoot {
     food,
     worldSize,
     dispose(): void {
-      scene.remove(
-        hemisphere,
-        key,
-        key.target,
-        fill,
-        fill.target,
-        ambient,
-        outerPlain,
-        scale,
-        ground,
-        barriers.group,
-        bricks.group,
-        food.group,
-        agents.group,
-      );
+      scene.remove(ground, barriers.group, bricks.group, food.group, agents.group);
       agents.dispose();
       barriers.dispose();
       bricks.dispose();
       food.dispose();
-      disposeTree(outerPlain);
-      disposeTree(scale);
-      ground.traverse((child) => disposeTree(child));
+      disposeTree(ground);
       scene.clear();
     },
   };

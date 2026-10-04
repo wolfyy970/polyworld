@@ -44,6 +44,15 @@ The single excluded artifact is `run/movie.pmv`, the recorded movie — the orig
 does not reproduce it between two runs on the same machine, which is documented in
 [PARITY.md](PARITY.md) along with the full evidence trail.
 
+## The render is faithful too
+
+![Native C++ build (left) vs the browser port (right) — same world, matched camera](docs/media/visual-parity-minitest_voff.png)
+
+*Left: the original C++ build. Right: the port. Same scenario, matched camera — ground,
+barriers, food and agent colours identical, and the run trees byte-identical as well.
+The only differences are anti-aliasing (WebGL MSAA on; native has none) and one 1-px
+wall-top line, both recorded as deliberate in PARITY.md.*
+
 ## Run it
 
 ```bash
@@ -105,6 +114,14 @@ in [PARITY.md](PARITY.md).
 
 *(the video: native build → browser build → the parity result; it ships with the repo at
 [`docs/media/polyworld-ports.mp4`](docs/media/polyworld-ports.mp4))*
+
+## Visual parity (native ↔ browser)
+
+The browser scene is held to the native renderer as its contract (PORT_SPEC → *The render is a
+fidelity surface*). Same simulation step, same camera — native Polyworld C++ on the left, the
+browser port on the right:
+
+![Native and browser side by side, same step](docs/media/visual-parity-minitest_voff.png)
 
 ## Credits & license
 

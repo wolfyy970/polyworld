@@ -46,8 +46,25 @@ export interface SimulationAgent {
   readonly yaw: number;
   /** Native agent radius — the `Size` gene (`agent.cc:574`, `setRadius`). */
   readonly size: number;
+  /**
+   * Native `fLengthX` (`agent.cc:999`): the body mesh's X extent, `Size() / sqrt(maxSpeed)`. The
+   * drawn mesh is `etc/objects/agent.obj` scaled by `(fLengthX, agentHeight, fLengthZ)`
+   * (`agent::SetGeometry`, `agent.cc:1002-1010`), so the renderer needs both lengths, not the
+   * radius (which is a *collision* quantity derived from them — `agent.cc:790`).
+   */
+  readonly lengthX: number;
+  /** Native `fLengthZ` (`agent.cc:1000`): `Size() * sqrt(maxSpeed)`. */
+  readonly lengthZ: number;
   /** The model's own body colour, `agent::color()` (`agent.cc:1901`), native 0..1 floats. */
   readonly color: readonly [number, number, number];
+  /**
+   * `agent::fNoseColor` (`agent.cc:1901`). `agent::draw()` paints polygons 0..4 with this colour
+   * — or with `color` when the worldfile's `NoseColor` is `B` (`NC_BODY`, `agent.cc:1824`) — and
+   * polygons 5..9 with `color`. See `noseIsBody`.
+   */
+  readonly noseColor: readonly [number, number, number];
+  /** True when `agent::config.noseColor == NC_BODY`: polygons 0..4 are drawn in the body colour. */
+  readonly noseIsBody: boolean;
   readonly alive: boolean;
 }
 
@@ -155,9 +172,15 @@ export function nativeHeading(yawDegrees: number): { readonly dx: number; readon
 }
 
 /**
- * Native yaw → three.js rotation about +Y. A rotation by φ maps local +x to
- * (cos φ, 0, -sin φ); the native heading is (-sin θ, -cos θ), so φ = θ + π/2.
+ * Native yaw → three.js rotation about +Y, for the **native body mesh**.
+ *
+ * `gobject::position()` applies `glRotatef( fAngle[0], 0, 1, 0 )` after the translation, and the
+ * agent mesh's forward axis is local `-z` (the narrow "nose" end of `etc/objects/agent.obj`).
+ * An OpenGL about-Y rotation by θ maps local `(x, z)` to `(x cosθ + z sinθ, −x sinθ + z cosθ)`, so
+ * local `-z` — the heading — lands on `(−sinθ, −cosθ)`, which is exactly `nativeHeading(θ)`
+ * above. Scene space is native space translated (`nativeXToScene`/`nativeZToScene`), so the
+ * rotation carries over unchanged: `rotation.y = yaw * DEGTORAD`.
  */
-export function yawToSceneRotation(yawDegrees: number): number {
-  return yawDegrees * DEGTORAD + Math.PI / 2;
+export function yawToMeshRotation(yawDegrees: number): number {
+  return yawDegrees * DEGTORAD;
 }

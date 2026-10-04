@@ -1,8 +1,20 @@
-> ***This fork** (`wolfyy970/polyworld`) modernizes the build for current macOS — Qt 6,
-> Apple Silicon, Homebrew — and adds a **byte-exact browser port** of the simulation
-> (TypeScript + Three.js) under [`web/`](web/README.md), graded file-for-file against this
-> build. See [`docs/MODERNIZATION.md`](docs/MODERNIZATION.md) for the native changes and
-> [`web/README.md`](web/README.md) for the port.*
+<div align="center">
+
+# Polyworld — now in your browser, byte-for-byte
+
+**The artificial-life system, modernized for current macOS and re-implemented in TypeScript + Three.js — graded file-for-file against the original C++ build.**
+
+[▶ Watch the 30-second tour](web/docs/media/polyworld-ports.mp4) · [The port →](web/README.md) · [What changed on macOS →](docs/MODERNIZATION.md)
+
+![The original C++ build (left) and the browser port (right) — same world, matched camera](web/docs/media/visual-parity-minitest_voff.png)
+
+*Left: native C++ build. Right: browser port. Same scenario, same camera — and the run trees are byte-identical.*
+
+</div>
+
+> **This fork** (`wolfyy970/polyworld`) adds:
+> - a **modern macOS build** — Qt 6, Apple Silicon, Homebrew toolchain (`docs/MODERNIZATION.md`)
+> - a **byte-exact browser port** — the full simulation in TypeScript + Three.js, in [`web/`](web/README.md)
 >
 > *The original README follows.*
 

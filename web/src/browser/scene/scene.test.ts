@@ -95,7 +95,7 @@ describe('L18 scene — the box field (`food`, `brick`)', () => {
 
 describe('L18 scene — the barrier walls', () => {
   it('draws a segment as a wall of its length and `gBarrierHeight`, along its direction', () => {
-    const field = createBarrierField(0x594026, 2);
+    const field = createBarrierField({ r: 0.35, g: 0.25, b: 0.15 }, 2);
     field.sync([{ xa: 0, za: 0, xb: 10, zb: 0, height: 5 }], 25);
 
     const mesh = firstMesh(field.group);
@@ -118,7 +118,7 @@ describe('L18 scene — the barrier walls', () => {
   });
 
   it('does not draw a degenerate segment (the `growingBarriers` world boots with them)', () => {
-    const field = createBarrierField(0x59402, 2);
+    const field = createBarrierField({ r: 0.35, g: 0.25, b: 0.15 }, 2);
     field.sync([{ xa: 5, za: -5, xb: 5, zb: -5, height: 5 }], 25);
     expect(field.drawn).toBe(0);
     expect(instanceCount(firstMesh(field.group))).toBe(0);

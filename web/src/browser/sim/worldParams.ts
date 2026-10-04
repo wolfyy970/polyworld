@@ -139,6 +139,11 @@ export interface WorldParams {
   readonly patches: readonly PatchRect[];
   /** Native `barrier::gBarrierHeight` — every wall's height (`BarrierHeight`). */
   readonly barrierHeight: number;
+  /**
+   * Native `GroundClearance` — the ground plane sits at `y = -GroundClearance`
+   * (`TSimulation::InitGround`, `Simulation.cc:824`).
+   */
+  readonly groundClearance: number;
   /** Native `brick::gBrickHeight` — every brick's side (`BrickHeight`). */
   readonly brickHeight: number;
   /** The worldfile's barrier walls, in `Barriers` order (`barrier::updateVertices`). */
@@ -408,6 +413,10 @@ export function readWorldParams(cfg: Config): WorldParamsRead {
     level: 'required',
     consumer: 'barrier::gBarrierHeight (lane L10) — the drawn wall height',
   });
+  const groundClearance = reads.float('GroundClearance', {
+    level: 'required',
+    consumer: 'TSimulation::InitGround (Simulation.cc:824) — the ground plane’s y is -GroundClearance',
+  });
   const brickHeight = reads.float('BrickHeight', {
     level: 'required',
     consumer: 'brick::gBrickHeight (lane L10) — the drawn brick size',
@@ -464,6 +473,7 @@ export function readWorldParams(cfg: Config): WorldParamsRead {
       domain: domain.rect,
       patches,
       barrierHeight,
+      groundClearance,
       brickHeight,
       barriers,
       declaredBarriers: barrierRead.declared,

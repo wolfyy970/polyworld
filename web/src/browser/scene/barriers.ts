@@ -14,10 +14,16 @@
  *
  * PORT-NOTE (L18/no-per-frame-allocation): one `InstancedMesh` for every barrier, grown only if a
  * step ever adds one (native's barrier list is fixed after `processWorldFile`, so it never does).
+ *
+ * PORT-NOTE (L18d/no-top-edge-line): `barrier::draw()` (`barrier.cc:69-77`) also strokes a
+ * `GL_LINES` segment between the quad's two top corners in `gBarrierColor` — a one-pixel outline
+ * with no three.js equivalent short of a screen-space-width line primitive, and invisible at the
+ * recorded 640×480. It is deliberately not drawn; the fill (what the wall *is*) is.
  */
 
 import * as THREE from 'three';
 import { nativeXToScene, nativeZToScene, type SimulationBarrier } from '../sim/simSeam';
+import type { Rgb } from '../sim/worldParams';
 
 export interface BarrierField {
   readonly group: THREE.Group;
@@ -28,14 +34,13 @@ export interface BarrierField {
   dispose(): void;
 }
 
-export function createBarrierField(colorHex: number, capacity: number): BarrierField {
+export function createBarrierField(color: Rgb, capacity: number): BarrierField {
   // A unit quad in the XY plane; instances scale it to (length, height, 1) and stand it up.
   const geometry = new THREE.PlaneGeometry(1, 1);
-  const material = new THREE.MeshLambertMaterial({
-    color: colorHex,
-    flatShading: true,
-    side: THREE.DoubleSide,
-  });
+  // Unlit (`MeshBasicMaterial`): native enables no `GL_LIGHTING`, so `barrier::draw()`'s
+  // `gpoly::draw()` writes `BarrierColor` flat. Double-sided: native leaves culling off.
+  const material = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide });
+  material.color.setRGB(color.r, color.g, color.b);
 
   let current = Math.max(1, Math.floor(capacity));
   let mesh = newInstanced(geometry, material, current);

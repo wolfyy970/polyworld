@@ -9,9 +9,12 @@ agents on screen are the run's live roster: their positions, yaw, radius and bod
 (`run/stats/stat.<timestep>`) included, because the page mounts lane L14's `MonitorManager` off
 `stepEnding` exactly as native's app does.
 
-Nothing here is on the frozen surface (`PORT_SPEC.md`: "Not frozen — windowing, widgets, camera
-feel, Three.js visuals, tool UIs") **except** the run-tree artifacts, which are compared
-byte-for-byte with the native run (see *Verification*).
+The run-tree artifacts are compared byte-for-byte with the native run (see *Verification*), and —
+since L18d (`PORT_SPEC.md` → *The render is a fidelity surface*) — **the scene itself is a fidelity
+surface too**: the page must *look* the way the native build renders it. The renderer values
+(clear colour, ground, agent mesh, boxes, barriers, lighting, default camera) come from the native
+source, not from a house style; the handful of deliberate differences are each a
+`PORT-NOTE (L18d/…)` with its reason.
 
 ## Run
 
@@ -68,13 +71,16 @@ sim/                 no three.js imports; plain numbers and the model's own read
                      trees (`hello`'s is a file of its own: its worldfile records a different
                      artifact set), step maths, config parsing
 
-scene/               the visuals (worldfile-driven where the file says something)
-  palette.ts         presentation colours + worldfile RGB -> hex + camera framing
-  ground.ts          domain plane, food patches at their real rectangles, outer plane, grid
-  agents.ts          agent field: 2 instanced meshes, the model's own radius and colour
+scene/               the visuals, drawn the way the native renderer draws them (L18d)
+  palette.ts         native clear colour + worldfile RGB helpers + the native MainScene camera pose
+  agentMesh.ts       the agent body mesh from etc/objects/agent.obj, split into native's two ranges
+  ground.ts          the ground: etc/objects/ground.obj, worldSize-scaled, at -GroundClearance
+  agents.ts          agent field: 2 instanced meshes (nose range + body range), the model's own
+                     mesh lengths and two colours
   objects.ts         food/brick boxes: one instanced mesh per kind, the model's own size and colour
   barriers.ts        barrier walls: one instanced mesh, the worldfile's segments + BarrierColor
-  sceneRoot.ts       scene assembly (fog, lights, ground, agents, barriers, objects)
+  sceneRoot.ts       scene assembly (native black clear, ground, barriers, boxes, agents; no lights,
+                     no fog, no grid — nothing native does not draw)
   scene.test.ts      L18c: the native->scene mapping and the per-instance transforms, no WebGL
 
 render/              the GPU-facing layer
@@ -111,8 +117,12 @@ verify/demoEvidence.mjs  CDP driver: request budget, controls, screenshot, and t
   invents it. Since L18c the scene draws all three object families (`scene/objects.ts`,
   `scene/barriers.ts`), and the status panel's `scene objects` row states what is drawn and what is
   not (`0 bricks (no BrickPatches)`, `0/2 barriers` for the boot-degenerate `growingBarriers` walls).
-* **Visuals (L15/L16).** Everything visual lives under `scene/`; `sceneRoot` builds and hands
-  back the scene, and `app.ts` never touches three.js internals beyond rendering it.
+* **Visuals (L15/L16/L18d).** Everything visual lives under `scene/`; `sceneRoot` builds and hands
+  back the scene, and `app.ts` never touches three.js internals beyond rendering it. Since L18d the
+  scene is held to the native renderer as its contract (`PORT_SPEC.md` → *The render is a fidelity
+  surface*): no lights (native never enables `GL_LIGHTING`), native's black clear, the agent body
+  mesh from `etc/objects/agent.obj`, the ground from `etc/objects/ground.obj`, and the native
+  `MainScene` camera as the default view.
 * **Expression evaluation (L4).** `worldParams.ts` reports every unevaluated worldfile expression it
   meets; nothing is substituted, so a worldfile the interpreter cannot read is a fatal panel with
   the keys named.

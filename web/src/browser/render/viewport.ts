@@ -11,7 +11,7 @@
  */
 
 import * as THREE from 'three';
-import { PALETTE } from '../scene/palette';
+import { SCENE_CLEAR } from '../scene/palette';
 
 export interface Viewport {
   readonly renderer: THREE.WebGLRenderer;
@@ -35,6 +35,11 @@ export function createViewport(mount: HTMLElement): Viewport {
 
   const renderer = new THREE.WebGLRenderer({
     canvas,
+    // PORT-NOTE (L18d/antialias): native's offscreen GL surface draws with no multisampling, so its
+    // edges are hard; the browser keeps WebGL's MSAA on. This is a display-quality choice, not a
+    // scene difference — objects, placement, colours and framing are identical either way (see
+    // `docs/media/visual-parity-minitest_voff.png`), and the browser's softer edges are the only
+    // visible residue.
     antialias: true,
     alpha: false,
     powerPreference: 'high-performance',
@@ -51,8 +56,15 @@ export function createViewport(mount: HTMLElement): Viewport {
   };
 
   renderer.setPixelRatio(clampPixelRatio());
-  renderer.setClearColor(PALETTE.sky, 1);
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  // PORT-NOTE (L18d/raw-colour-output): native writes `glColor3f` values straight to the
+  // framebuffer — `GroundColor {0.1, 0.15, 0.05}` lands as bytes `(25, 38, 13)`, no sRGB
+  // round-trip. three.js normally treats colours as sRGB (converting in and out), which would
+  // brighten every one of them. Colour management is therefore off and the output colour space is
+  // the linear working space, so a `0.1/0.15/0.05` material renders as the same bytes native
+  // writes.
+  THREE.ColorManagement.enabled = false;
+  renderer.setClearColor(SCENE_CLEAR, 1);
+  renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
   // Flat retro look: no filmic curve, no shadows.
   renderer.toneMapping = THREE.NoToneMapping;
   renderer.shadowMap.enabled = false;

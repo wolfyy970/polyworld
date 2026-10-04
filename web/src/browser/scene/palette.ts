@@ -1,17 +1,16 @@
 /**
- * Lane L18 (browser wiring) — scene palette + world-scale helpers.
+ * Lane L18 (browser wiring) — clear colour, world-scale helpers and the **native camera**.
  *
- * Single source of truth for the shell's *presentation* colours and for the mapping from the
- * worldfile's colours (`{ R G B }`, 0..1 blocks) to three.js hex. The CSS file
- * (src/browser/style.css) mirrors the UI subset by hand; both are owned by this lane.
+ * PORT-NOTE (L18d/native-camera-is-the-contract): until L18d this file owned a "look" palette and
+ * free camera feel (`PORT_SPEC` "camera feel" was not frozen). Since the user's L18d requirement
+ * the on-screen render is a fidelity surface, so the values here are the native ones, not choices:
+ * the clear colour is `glClearColor(0,0,0,1)` (`QtSceneRenderer::render`), and the default camera
+ * is native's `MainScene` — `CameraSettings "Default"` (`FieldOfView 90.0`) driven by
+ * `CameraControllerSettings "Main"`, mode `Rotate` (`etc/monitors.mfs`), the exact pose
+ * `CameraController::initRotation`/`setRotationAngle` produce (`monitor/CameraController.cc:44-81`).
  *
- * PORT-NOTE (L18/visuals): visuals are explicitly NOT part of the frozen surface
- * (PORT_SPEC.md "Not frozen — Three.js visuals, camera feel"). Nothing in this file may
- * influence model behaviour. Colours that the worldfile *does* describe (ground, food, brick,
- * barrier) are read from it (`sim/worldParams.ts`); colours it does not describe are this
- * file's invention. Since L18b the agents' own colour is **not** one of them: it comes from the
- * model (`agent::color()`), and `PALETTE.agents` is only the instance buffers' initial fill
- * (it is overwritten by the first `sync()` and exists so `instanceColor` is allocated).
+ * The only thing left that is a choice is *interaction*: `OrbitControls` still lets a human spin
+ * the rig, but the pose they return to (`reset`, and the pose the page boots on) is native's.
  */
 
 import type { Rgb } from '../sim/worldParams';
@@ -23,51 +22,51 @@ import type { Rgb } from '../sim/worldParams';
  */
 export const DEFAULT_WORLD_SIZE = 25;
 
-/** Hex colours, kept as numbers for three.js and mirrored in style.css as CSS vars. */
-export const PALETTE = {
-  /** Sky/clear colour and fog colour — one value, so the horizon disappears cleanly. */
-  sky: 0x0b0f0c,
-  groundEdge: 0x2f4a2f,
-  accent: 0xb9e26b,
-  /** Presentation agent colours, picked by `SimulationAgent.colorIndex` (see the header). */
-  agents: [0xb9e26b, 0x8fd6a0, 0x6fc2d0, 0xe3a04b, 0xd47a7a, 0xb99ce0],
+/** Native `glClearColor(0, 0, 0, 1)` (`QtSceneRenderer::render`, `QtSceneRenderer.cc:89`). */
+export const SCENE_CLEAR = 0x000000;
+
+/**
+ * Native `MainScene` camera numbers, verbatim from `etc/monitors.mfs`:
+ *
+ *   CameraSettings "Default":        FieldOfView 90.0
+ *   CameraControllerSettings "Main": Mode Rotate
+ *                                    Rotate { Radius 0.6; Height 0.35; Rate 0.09; AngleStart 0.0
+ *                                             Fixation { X 0.5; Y 0.0; Z 0.5 } }
+ *
+ * `MonitorManager.cc:229-238` builds the `RotationParms` from those, scaling the fixation X and Z
+ * by `globals::worldsize` and negating Z (`-1 * fixZ * worldsize`), with `Radius`/`Height` used as
+ * fractions of the world size (`CameraController.cc:78-80`).
+ */
+export const NATIVE_CAMERA = {
+  fov: 90,
+  near: 0.01,
+  /** `SceneRenderer.cc:24-27`: `SetPerspective(fov, aspect, 0.01, 1.5 * globals::worldsize)`. */
+  farWorldFactor: 1.5,
+  radius: 0.6,
+  height: 0.35,
+  /** `Rate` in degrees per step — `CameraController::step` advances the angle by this each step. */
+  rate: 0.09,
+  angleStart: 0.0,
+  fixation: { x: 0.5, y: 0.0, z: 0.5 },
 } as const;
 
-export const LIGHTING = {
-  ambient: 0x9fb69a,
-  ambientIntensity: 0.55,
-  keyColor: 0xfff3d6,
-  keyIntensity: 1.35,
-  fillColor: 0x8fc9d6,
-  fillIntensity: 0.35,
-} as const;
-
-/** A worldfile colour (`{ R G B }`, 0..1, f32) → three.js hex. */
+/** A worldfile colour (`{ R G B }`, 0..1, f32) → three.js hex (byte-quantised). */
 export function rgbToHex(color: Rgb): number {
   const channel = (value: number): number => Math.max(0, Math.min(255, Math.round(value * 255)));
   return (channel(color.r) << 16) | (channel(color.g) << 8) | channel(color.b);
 }
 
-/** Mix two hex colours, `t` = weight of `b` (0..1). Used for the food patches' tint. */
-export function mixHex(a: number, b: number, t: number): number {
-  const lerp = (shift: number): number => {
-    const ca = (a >> shift) & 0xff;
-    const cb = (b >> shift) & 0xff;
-    return Math.round(ca + (cb - ca) * t) & 0xff;
-  };
-  return (lerp(16) << 16) | (lerp(8) << 8) | lerp(0);
-}
-
 /**
- * Camera framing, expressed as fractions of the world so it survives a worldfile change.
+ * The native camera pose, in scene coordinates (the native→scene mapping is a pure translation,
+ * `simSeam.ts`), for a rotation `angle` in degrees.
  *
- * PORT-NOTE (L18/camera-fit): the native monitor camera positions itself in world-size units
- * too (`monitor/CameraController.cc:68-80`: translations of `0.5 * globals::worldsize`,
- * `parms.height * globals::worldsize`, …). Camera *feel* is not frozen (PORT_SPEC), and this
- * rig is an orbit rig over the world centre rather than the native's scene/agent cameras, but
- * the framing fractions are chosen so the whole world fits at the default distance.
+ * Native eye (`CameraController.cc:78-80`):
+ *   `((0.5 + radius·sin(angle))·W,  height·W,  (-0.5 + radius·cos(angle))·W)`
+ * Native fixation (`MonitorManager.cc:235-237`): `(0.5·W, 0, -0.5·W)`.
+ * `nativeXToScene`/`nativeZToScene` then shift by `∓W/2`, so the fixation becomes the scene origin
+ * and the eye becomes `(radius·W·sin, height·W, radius·W·cos)`.
  */
-export function cameraDefaults(worldSize: number): {
+export function cameraDefaults(worldSize: number, angleDegrees: number = NATIVE_CAMERA.angleStart): {
   fov: number;
   near: number;
   far: number;
@@ -77,16 +76,17 @@ export function cameraDefaults(worldSize: number): {
   maxDistance: number;
   maxPolarAngle: number;
 } {
-  const unit = (fraction: number): number => worldSize * fraction;
+  const angle = (angleDegrees * Math.PI) / 180;
+  const radius = NATIVE_CAMERA.radius * worldSize;
+  const height = NATIVE_CAMERA.height * worldSize;
   return {
-    fov: 45,
-    near: Math.max(0.01, unit(0.008)),
-    far: unit(60),
-    /** A low, slightly off-axis three-quarter view — same framing the shell has always had. */
-    position: [unit(0.375), unit(0.29), unit(0.49)],
+    fov: NATIVE_CAMERA.fov,
+    near: NATIVE_CAMERA.near,
+    far: NATIVE_CAMERA.farWorldFactor * worldSize,
+    position: [radius * Math.sin(angle), height, radius * Math.cos(angle)],
     target: [0, 0, 0],
-    minDistance: unit(0.05),
-    maxDistance: unit(2),
+    minDistance: worldSize * 0.05,
+    maxDistance: worldSize * 3,
     maxPolarAngle: Math.PI * 0.49,
   };
 }

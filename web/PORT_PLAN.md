@@ -70,7 +70,7 @@ These four are owned by the plan, frozen early, and are the only shared surface.
 | L15 | graphics scene | `graphics/**` minus rasterizer | 3.9k | types | camera/frustum vectors |
 | L16 | vision raster | fixed-function GL → WebGL2 or shader | — | L15, L9 | model logs stay byte-exact (fast, not pixel-faithful) |
 | L17 | tools | `tools/**` (nullevo, passive, clustering, …) | 9.6k | L11+ | tool outputs |
-| L18 | browser shell | `app/ui`, `qtrenderer` → Three.js UI | 3.3k | L11, L16 | *not frozen* — UX only |
+| L18 | browser shell | `app/ui`, `qtrenderer` → Three.js UI | 3.3k | L11, L16 | run-tree artifacts byte-exact; the **render is a fidelity surface** since L18d (see PORT_SPEC) — the scene must look like native, values from the native source |
 
 **Order:** types → L1 → (L2, L3, L5, L15) → (L4, L6, L8, L10) → (L7, L9, L11, L12, L13,
 L14) → (L16, L17, L18). The four widest-fanout leaves land first; L11/L12 are fan-in
