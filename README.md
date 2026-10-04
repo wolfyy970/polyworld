@@ -4,11 +4,15 @@
 
 **The artificial-life system, modernized for current macOS and re-implemented in TypeScript + Three.js — graded file-for-file against the original C++ build.**
 
-[▶ Watch the 30-second tour](web/docs/media/polyworld-ports.mp4) · [The port →](web/README.md) · [What changed on macOS →](docs/MODERNIZATION.md)
+[▶ Watch the 30-second tour](https://github.com/wolfyy970/polyworld/blob/master/web/docs/media/polyworld-ports.mp4) · [The port →](web/README.md) · [What changed on macOS →](docs/MODERNIZATION.md)
 
 ![The original C++ build (left) and the browser port (right) — same world, matched camera](web/docs/media/visual-parity-minitest_voff.png)
 
 *Left: native C++ build. Right: browser port. Same scenario, same camera — and the run trees are byte-identical.*
+
+![The 30-second tour, playing](web/docs/media/teaser.gif)
+
+*The tour, in motion — native build → browser build → the parity result (the full video is linked above and lives in [`web/docs/media/`](web/docs/media/)).*
 
 </div>
 
