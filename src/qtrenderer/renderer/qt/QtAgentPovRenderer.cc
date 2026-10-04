@@ -2,9 +2,11 @@
 
 #include <assert.h>
 
-#include <QGLPixelBuffer>
-#include <QGLWidget>
+#include <QImage>
+#include <QPainter>
+#include <QOpenGLWidget>
 
+#include "PwOffscreenGLSurface.h"
 #include "agent/agent.h"
 #include "agent/Retina.h"
 
@@ -108,7 +110,7 @@ void QtAgentPovRenderer::beginStep()
 {
 	if( fPixelBuffer == NULL )
 	{
-		fPixelBuffer = new QGLPixelBuffer( fBufferWidth, fBufferHeight );
+		fPixelBuffer = new PwOffscreenGLSurface( fBufferWidth, fBufferHeight );
 		fPixelBuffer->makeCurrent();
 
 		glEnable( GL_DEPTH_TEST );
@@ -163,12 +165,16 @@ void QtAgentPovRenderer::endStep()
 
 //---------------------------------------------------------------------------
 // QtAgentPovRenderer::copyTo
+//
+// The frame is read back here, on demand: the original QGLPixelBuffer-based
+// code also paid for the read-back only when a view was displaying.
 //---------------------------------------------------------------------------
-void QtAgentPovRenderer::copyTo( QGLWidget *dst)
+void QtAgentPovRenderer::copyTo( QOpenGLWidget *dst)
 {
 	if( fPixelBuffer )
 	{
 		QImage image = fPixelBuffer->toImage();
+
 		QPainter painter( dst );
 		painter.drawImage( QRect(0,0,dst->width(),dst->height()), image );
 	}

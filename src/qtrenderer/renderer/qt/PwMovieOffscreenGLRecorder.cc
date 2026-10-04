@@ -1,25 +1,26 @@
-#include "PwMovieQGLPixelBufferRecorder.h"
+#include "PwMovieOffscreenGLRecorder.h"
 
 #include <gl.h>
-#include <QGLPixelBuffer>
+
+#include "PwOffscreenGLSurface.h"
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 //---
-//--- PwMovieQGLPixelBufferRecorder
+//--- PwMovieOffscreenGLRecorder
 //---
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
-PwMovieQGLPixelBufferRecorder::PwMovieQGLPixelBufferRecorder( QGLPixelBuffer *pixelBuffer,
-															  PwMovieWriter *writer )
+PwMovieOffscreenGLRecorder::PwMovieOffscreenGLRecorder( PwOffscreenGLSurface *surface,
+														PwMovieWriter *writer )
 {
-	this->pixelBuffer = pixelBuffer;
+	this->surface = surface;
 	this->writer = writer;
 
-	width = pixelBuffer->size().width();
-	height = pixelBuffer->size().height();
+	width = surface->size().width();
+	height = surface->size().height();
 	
 	rgbBufOld = NULL;
 	rgbBufNew = NULL;
@@ -29,15 +30,15 @@ PwMovieQGLPixelBufferRecorder::PwMovieQGLPixelBufferRecorder( QGLPixelBuffer *pi
 	rgbBufNew = (uint32_t *)malloc( rgbBufSize );
 }
 
-PwMovieQGLPixelBufferRecorder::~PwMovieQGLPixelBufferRecorder()
+PwMovieOffscreenGLRecorder::~PwMovieOffscreenGLRecorder()
 {
 	if( rgbBufOld ) free( rgbBufOld );
 	if( rgbBufNew ) free( rgbBufNew );
 }
 
-void PwMovieQGLPixelBufferRecorder::recordFrame( uint32_t timestep )
+void PwMovieOffscreenGLRecorder::recordFrame( uint32_t timestep )
 {
-	pixelBuffer->makeCurrent();
+	surface->makeCurrent();
 
 	glReadPixels( 0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE, rgbBufNew );
 
@@ -47,5 +48,5 @@ void PwMovieQGLPixelBufferRecorder::recordFrame( uint32_t timestep )
 	rgbBufNew = rgbBufOld;
 	rgbBufOld = rgbBufSwap;
 
-	pixelBuffer->doneCurrent();
+	surface->doneCurrent();
 }

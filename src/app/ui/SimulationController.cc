@@ -19,6 +19,7 @@ SimulationController::SimulationController( TSimulation *simulation_,
     , monitorManager( monitorManager_ )
 	, timer( new QTimer(this) )
 	, paused( false )
+	, stepsPerSecond( simulation_->GetStepsPerSecond() )
 {
 	connect(timer, SIGNAL(timeout()), this, SLOT(execStep()));
 
@@ -55,7 +56,54 @@ MonitorManager *SimulationController::getMonitorManager()
 void SimulationController::start()
 {
 	// Start the simulation
-	timer->start( 0 );
+	timer->start( stepInterval() );
+}
+
+//---------------------------------------------------------------------------
+// SimulationController::stepInterval
+//
+// The QTimer interval that realizes the requested steps-per-second cap.
+// 0 means "no cap": QTimer then fires whenever the event loop is idle, which
+// is the original behavior.
+//---------------------------------------------------------------------------
+int SimulationController::stepInterval() const
+{
+	if( stepsPerSecond <= 0 )
+		return 0;
+
+	int interval = 1000 / stepsPerSecond;
+
+	return interval > 0 ? interval : 1;
+}
+
+//---------------------------------------------------------------------------
+// SimulationController::getStepsPerSecond
+//---------------------------------------------------------------------------
+int SimulationController::getStepsPerSecond() const
+{
+	return stepsPerSecond;
+}
+
+//---------------------------------------------------------------------------
+// SimulationController::setStepsPerSecond
+//
+// Pace control only; see the note in the header.  Takes effect immediately,
+// including mid-run.
+//---------------------------------------------------------------------------
+void SimulationController::setStepsPerSecond( int stepsPerSecond_ )
+{
+	if( stepsPerSecond_ < 0 )
+		stepsPerSecond_ = 0;
+
+	if( stepsPerSecond_ == stepsPerSecond )
+		return;
+
+	stepsPerSecond = stepsPerSecond_;
+
+	if( !paused )
+		timer->start( stepInterval() );
+
+	stepsPerSecondChanged( stepsPerSecond );
 }
 
 //---------------------------------------------------------------------------
@@ -103,7 +151,7 @@ void SimulationController::resume()
 	if( paused )
 	{
 		timer->setSingleShot( false );
-		timer->start( 0 );
+		timer->start( stepInterval() );
 		paused = false;
 	}
 }

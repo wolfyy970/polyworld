@@ -5,7 +5,6 @@
 
 #include <stdint.h>
 
-#include <QGLWidget>
 #include <QKeyEvent>
 #include <QMainWindow>
 #include <QSlider>

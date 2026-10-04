@@ -1,9 +1,22 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
+
+"""
+Polyworld configuration script.
+
+Modernized for Python 3 and current macOS (Apple Silicon / Homebrew) while
+retaining the command-line interface and the generated Makefile.conf layout
+of the original script.
+
+Side effects: writes ./Makefile.conf (twice; a speculative one that is used
+to probe OpenMP support, then the final one) and runs `make clean` plus
+`make omp_test` in the process.
+"""
 
 import argparse
 import os
 import os.path
 import platform
+import shutil
 import subprocess
 import sys
 
@@ -12,7 +25,7 @@ import sys
 # Constants
 #
 ######################################################################
-Conf='Makefile.conf'
+Conf = 'Makefile.conf'
 
 Supported_OSes = ['linux', 'darwin', 'bigred2']
 Supported_OSes_display = ','.join(Supported_OSes)
@@ -24,11 +37,84 @@ Default_CXX = {'linux': 'g++',
                'darwin': 'clang++',
                'bigred2': 'g++'}
 
+# Homebrew formulae that provide the library dependencies
+Formulae = {'gsl': 'gsl',
+            'libomp': 'libomp',
+            'qt': 'qt'}
+
+######################################################################
+#
+# Helpers
+#
+######################################################################
+
+def check_exit(cmd):
+    """Run cmd in bash and return True if it succeeded (output not shown)."""
+    try:
+        subprocess.check_output(['bash', '-c', cmd], stderr=subprocess.STDOUT)
+        return True
+    except Exception:
+        return False
+
+
+def output(cmd):
+    """Run cmd in bash and return its stdout (stripped), or '' on failure."""
+    try:
+        return subprocess.check_output(['bash', '-c', cmd],
+                                       stderr=subprocess.DEVNULL).decode().strip()
+    except Exception:
+        return ''
+
+
+def which(name, extra_dirs=()):
+    """Locate an executable on PATH or in extra_dirs; return a real path."""
+    found = shutil.which(name)
+    if found:
+        return os.path.realpath(found)
+    for d in extra_dirs:
+        candidate = os.path.join(d, name)
+        if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
+            return os.path.realpath(candidate)
+    return None
+
+
+def find_brew():
+    """Locate the Homebrew prefix, if any."""
+    brew = shutil.which('brew')
+    if brew:
+        prefix = output('"%s" --prefix' % brew)
+        if prefix and os.path.isdir(prefix):
+            return prefix
+    # Fall back to the conventional locations: Apple Silicon, then Intel.
+    for prefix in ('/opt/homebrew', '/usr/local'):
+        if os.path.isdir(os.path.join(prefix, 'opt')):
+            return prefix
+    return None
+
+
+def brew_prefix(brew, formula):
+    """Resolve the prefix of an installed Homebrew formula."""
+    if not brew:
+        return None
+    brew_exe = shutil.which('brew')
+    if brew_exe:
+        prefix = output('"%s" --prefix %s 2>/dev/null' % (brew_exe, formula))
+        if prefix and os.path.isdir(prefix):
+            return prefix
+    # `brew --prefix <formula>` fails for absent formulae; try the
+    # conventional opt/ layout before giving up.
+    candidate = os.path.join(brew, 'opt', formula)
+    if os.path.isdir(candidate):
+        return candidate
+    return None
+
+
 ######################################################################
 #
 # main()
 #
 ######################################################################
+
 def main():
     # sanity check
     if not check_exit('which bash'):
@@ -68,7 +154,17 @@ def main():
     if not config['os'] in Supported_OSes:
         sys.exit("Unsupported OS (" + config['os'] + "). Supported = " + Supported_OSes_display)
 
-    print 'Operating System:', config['os']
+    print('Operating System:', config['os'])
+
+    #
+    # Locate Homebrew (macOS dependency provider)
+    #
+    config['brew'] = find_brew() if config['os'] == 'darwin' else None
+    if config['os'] == 'darwin':
+        if config['brew']:
+            print('Homebrew Prefix:', config['brew'])
+        else:
+            print('Homebrew not found; relying on default system paths')
 
     #
     # Determine compiler
@@ -77,33 +173,90 @@ def main():
         config['cxx'] = Default_CXX[config['os']]
     else:
         config['cxx'] = config['cxx'][0]
-    print 'CXX:', config['cxx']
+    print('CXX:', config['cxx'])
 
-    if not check_exit('which '+config['cxx']):
+    cxx_path = which(config['cxx'])
+    if not cxx_path:
         sys.exit('Cannot locate compiler')
+    config['cxx'] = cxx_path
 
     if 'clang' in config['cxx']:
         config['toolchain'] = 'llvm'
     else:
         config['toolchain'] = 'gcc'
-    print 'Toolchain:', config['toolchain']
+    print('Toolchain:', config['toolchain'])
+
+    if config['toolchain'] not in Supported_Toolchains:
+        sys.exit("Unsupported toolchain (" + config['toolchain'] + "). Supported = " + Supported_Toolchains_display)
 
     #
-    # Verify qmake
+    # Verify qmake (Qt 6)
     #
+    config['qt_prefix'] = brew_prefix(config['brew'], Formulae['qt']) if config['brew'] else None
     if not config['qmake']:
-        config['qmake'] = 'qmake'
+        search_dirs = ['/opt/homebrew/bin', '/usr/local/bin']
+        if config['qt_prefix']:
+            search_dirs.insert(0, os.path.join(config['qt_prefix'], 'bin'))
+        found = None
+        for name in ('qmake6', 'qmake'):
+            found = which(name, extra_dirs = search_dirs)
+            if found:
+                break
+        if not found:
+            sys.exit('Cannot locate qmake. On macOS, install Qt 6 with: brew install qt')
+        config['qmake'] = found
     else:
         config['qmake'] = config['qmake'][0]
-    if not check_exit('which '+config['qmake']):
-        sys.exit('Cannot locate qmake')
-    print 'QMake:', config['qmake']
+        if not which(config['qmake']):
+            sys.exit('Cannot locate qmake')
+    print('QMake:', config['qmake'])
+
+    qt_version = output('"%s" -query QT_VERSION 2>/dev/null' % config['qmake'])
+    if qt_version:
+        print('Qt Version:', qt_version)
+        if not qt_version.startswith('6.'):
+            print('Warning: Polyworld requires Qt 6; found Qt ' + qt_version)
+
+    #
+    # Locate GSL
+    #
+    gsl_prefix = None
+    gsl_config = shutil.which('gsl-config')
+    if gsl_config:
+        gsl_prefix = output('"%s" --prefix' % gsl_config) or None
+    if (not gsl_prefix) and config['brew']:
+        gsl_prefix = brew_prefix(config['brew'], Formulae['gsl'])
+    if (not gsl_prefix) and os.path.isdir('/usr/local/include/gsl'):
+        gsl_prefix = '/usr/local'
+    if not gsl_prefix or not os.path.isfile(os.path.join(gsl_prefix, 'include', 'gsl', 'gsl_math.h')):
+        sys.exit('Cannot locate GSL. On macOS, install it with: brew install gsl')
+    print('GSL Prefix:', gsl_prefix)
+    config['gsl_prefix'] = gsl_prefix
+
+    #
+    # Locate libomp (OpenMP runtime for the LLVM toolchain)
+    #
+    libomp_prefix = None
+    if config['toolchain'] == 'llvm' and config['os'] == 'darwin':
+        if config['brew']:
+            libomp_prefix = brew_prefix(config['brew'], Formulae['libomp'])
+        if not libomp_prefix:
+            for candidate in ('/opt/homebrew/opt/libomp', '/usr/local/opt/libomp'):
+                if os.path.isdir(candidate):
+                    libomp_prefix = candidate
+                    break
+        if libomp_prefix:
+            print('libomp Prefix:', libomp_prefix)
+        else:
+            print('Warning: libomp not found; OpenMP support will be disabled '
+                  '(macOS: brew install libomp)')
+    config['libomp_prefix'] = libomp_prefix
 
     #
     # Determine optimization level
     #
     config['optimization'] = 'debug' if config['debug'] else 'optimized'
-    print 'Optimization:', config['optimization']
+    print('Optimization:', config['optimization'])
 
     #
     # Create speculative conf and clean
@@ -118,7 +271,7 @@ def main():
     #
     if not check_exit('make omp_test'):
         config['omp'] = False
-    print 'OpenMP Supported:', config['omp']
+    print('OpenMP Supported:', config['omp'])
 
     #
     # Create final configuration
@@ -128,27 +281,17 @@ def main():
     #
     # Let user know we're done
     #
-    print 'Configure complete.'
+    print('Configure complete.')
 
-######################################################################
-#
-# Run cmd in bash and return True if succeeded (output not shown)
-#
-######################################################################
-def check_exit(cmd):
-    try:
-        subprocess.check_output(['bash', '-c', cmd], stderr=subprocess.STDOUT)
-        return True
-    except:
-        return False
 
 ######################################################################
 #
 # Create ./Makefile.conf
 #
 ######################################################################
+
 def generate_conf(config):
-    pwhome=os.path.realpath('.')
+    pwhome = os.path.realpath('.')
     f = open( os.path.join(pwhome, Conf), 'w' )
 
     f.write( 'PWHOME = %s\n' % pwhome )
@@ -159,8 +302,19 @@ def generate_conf(config):
     f.write( 'PWQMAKE = %s\n' % config['qmake'] )
     f.write( 'CXX = %s\n' % config['cxx'] )
 
+    # Dependency locations discovered above; consumed by etc/bld/Makefile.conf.
+    if config.get('brew'):
+        f.write( 'PWBREW = %s\n' % config['brew'] )
+    if config.get('gsl_prefix'):
+        f.write( 'PWGSL_PREFIX = %s\n' % config['gsl_prefix'] )
+    if config.get('libomp_prefix'):
+        f.write( 'PWLIBOMP_PREFIX = %s\n' % config['libomp_prefix'] )
+    if config.get('qt_prefix'):
+        f.write( 'PWQT_PREFIX = %s\n' % config['qt_prefix'] )
+
     f.write( 'include ${PWHOME}/etc/bld/Makefile.conf\n' )
 
     f.close()
+
 
 main()

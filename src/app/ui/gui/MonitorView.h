@@ -2,9 +2,9 @@
 
 #include <list>
 
-#include <QGLWidget>
+#include <QOpenGLWidget>
 
-class MonitorView : public QGLWidget
+class MonitorView : public QOpenGLWidget
 {
  public:
 	MonitorView( class Monitor *monitor,

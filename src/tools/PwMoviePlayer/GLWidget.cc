@@ -6,22 +6,26 @@
 #include <stdio.h>
 #include <sstream>
 
+// OpenGL
+#include <gl.h>
+
 // Qt
-#include <QtGui>
-#include <QtOpenGL>
+#include <QImage>
+#include <QFont>
+#include <QPainter>
 
 // Self
 #include "GLWidget.h"
 
 #if GLW_DEBUG
-	#define glwPrint( x... ) { printf( "%s: ", __FUNCTION__ ); printf( x ); }
+	#define glwPrint( ... ) { printf( "%s: ", __FUNCTION__ ); printf( __VA_ARGS__ ); }
 #else
-	#define glwPrint( x... )
+	#define glwPrint( ... )
 #endif
 
 GLWidget::GLWidget( QWidget *parent,
 					char** legendParam )
-	: QGLWidget( parent )
+	: QOpenGLWidget( parent )
 {
 //	printf( "%s: width = %lu\n", __func__, width );
 
@@ -46,14 +50,34 @@ void GLWidget::initializeGL()
 {
 	glwPrint( "called\n" );
 
-	qglClearColor( Qt::black );
-    glColor4ub( 255, 255, 255, 255 );
-	setAutoBufferSwap( false );
+	glClearColor( 0.0f, 0.0f, 0.0f, 1.0f );
+	glColor4ub( 255, 255, 255, 255 );
 }
 
 void GLWidget::Draw()
 {
-	makeCurrent();
+	// QOpenGLWidget renders in paintGL(); this asks for the repaint.
+	update();
+}
+
+void GLWidget::paintGL()
+{
+	QPainter painter( this );
+
+	//
+	// The frame, drawn with plain OpenGL.  QGLWidget's makeCurrent() /
+	// swapBuffers() / setAutoBufferSwap() no longer exist, so the widget
+	// simply draws into its own framebuffer here.
+	//
+	painter.beginNativePainting();
+
+	// 2D pixel-space projection, what resizeGL() used to establish.
+	glViewport( 0, 0, width(), height() );
+	glMatrixMode( GL_PROJECTION );
+	glLoadIdentity();
+	glOrtho( 0, width(), 0, height(), -1.0, 1.0 );
+	glMatrixMode( GL_MODELVIEW );
+	glLoadIdentity();
 
 	if( frame == NULL )
 	{
@@ -64,13 +88,27 @@ void GLWidget::Draw()
 		glRasterPos2i( 0, 0 );
 		glPixelZoom( width()/float(frame->width), height()/float(frame->height) );
 		glDrawPixels( frame->width, frame->height, GL_RGBA, GL_UNSIGNED_BYTE, frame->rgbBuf );
+	}
+
+	painter.endNativePainting();
+
+	//
+	// Text overlay.  QGLWidget::renderText() was removed in Qt 6; QPainter
+	// draws the same strings.
+	//
+	if( frame != NULL )
+	{
+		painter.setPen( Qt::white );
 
 		// Superimpose the timestep number
 		QFont font( "Monospace", 8 );
 		font.setStyleHint( QFont::TypeWriter );
+		font.setPixelSize( 8 );
+		painter.setFont( font );
+
 		char timestepString[16];
 		sprintf( timestepString, "%8u", frame->timestep );
-		renderText( width() - 60, 15, timestepString, font );
+		painter.drawText( width() - 60, 15, timestepString );
 
 		// Draw the legend
 		if( legend )
@@ -82,18 +120,14 @@ void GLWidget::Draw()
 			QFont font3( "Arial", 20 );
 			while( legend[i] )
 			{
-				if( i == 0 )
-					renderText( 10, y, legend[i], font2 );
-				else
-					renderText( 10, y, legend[i], font3 );
+				painter.setFont( i == 0 ? font2 : font3 );
+				painter.drawText( 10, y, legend[i] );
+
 				i++;
 				y += 24;
 			}
 		}
 	}
-
-	// Done drawing, so show it
-	swapBuffers();
 }
 
 void GLWidget::Write( FILE *file )
@@ -109,17 +143,7 @@ void GLWidget::Save()
 	image.rgbSwapped().mirrored().save( fileName.str().c_str() );
 }
 
-void GLWidget::paintGL()
-{
-	Draw();
-}
-
 void GLWidget::resizeGL( int width, int height )
 {
-	glViewport( 0, 0, width, height );
-	glMatrixMode( GL_PROJECTION );
-	glLoadIdentity();
-	glOrtho( 0, width, 0, height, -1.0, 1.0 );
-
 	glwPrint( "width = %lu, height = %lu\n", width, height );
 }

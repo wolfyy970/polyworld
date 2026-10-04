@@ -35,7 +35,7 @@ BrainMonitorView::BrainMonitorView( BrainMonitor *monitor )
 
     updateTarget_handle =
         monitor->getTracker()->targetChanged += [=](AgentTracker *tracker) {this->updateTarget(tracker);};
-    monitor->update += [=]() {this->draw();};
+    monitor->update += [=]() {this->update();};
 }
 
 
@@ -62,7 +62,7 @@ void BrainMonitorView::paintGL()
 //---------------------------------------------------------------------------
 void BrainMonitorView::initializeGL()
 {
-	qglClearColor( Qt::black );
+	glClearColor( 0.0f, 0.0f, 0.0f, 1.0f );
     glShadeModel( GL_SMOOTH );
 }
 
@@ -82,21 +82,22 @@ void BrainMonitorView::resizeGL(int width, int height)
     
 //---------------------------------------------------------------------------
 // BrainMonitorView::draw
+//
+// Draws into the widget's GL context; QOpenGLWidget calls this from
+// paintGL(), which is the only place its context is current.
 //---------------------------------------------------------------------------
 void BrainMonitorView::draw()
 {	
 	if( !isVisible() )
 		return;
 
-	makeCurrent();
-
-	qglClearColor( Qt::black );
+	glClearColor( 0.0f, 0.0f, 0.0f, 1.0f );
 	glClear( GL_COLOR_BUFFER_BIT );
 
 	if( fAgent != NULL )
 	{
 		// Frame and draw the actual vision pixels
-		qglColor( Qt::gray );
+		glColor3f( 0.5f, 0.5f, 0.5f );
 		glRecti( 2*PATCH_WIDTH-1, 0, (2+Brain::config.retinaWidth)*PATCH_WIDTH+1, PATCH_HEIGHT );
 		glPixelZoom( float(PATCH_WIDTH), float(PATCH_HEIGHT) );
 		glRasterPos2i( 2*PATCH_WIDTH, 0 );
@@ -106,8 +107,6 @@ void BrainMonitorView::draw()
 		// Render brain
 		fAgent->GetBrain()->getRenderer()->render( PATCH_WIDTH, PATCH_HEIGHT );
 	}
-
-	swapBuffers();
 }
 
 //---------------------------------------------------------------------------

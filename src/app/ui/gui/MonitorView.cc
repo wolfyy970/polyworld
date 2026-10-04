@@ -14,12 +14,13 @@ MonitorView::MonitorView( Monitor *_monitor,
 						  int _defaultWidth,
 						  int _defaultHeight,
 						  bool _fixedSize )
-	: QGLWidget( NULL, NULL, Qt::Tool )
+	: QOpenGLWidget( NULL )
 	, monitor( _monitor )
 	, defaultWidth( _defaultWidth )
 	, defaultHeight( _defaultHeight )
 	, fixedSize( _fixedSize )
 {
+	setWindowFlags( Qt::Tool );
 	setWindowTitle( monitor->getTitle() );
 }
 

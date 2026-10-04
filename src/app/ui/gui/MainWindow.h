@@ -41,6 +41,7 @@ private slots:
 	void pauseOrResume();
 	void endAtTimestep();
 	void endNow();
+	void syncSpeedMenu( int stepsPerSecond );
     
 private:
 	MonitorViews monitorViews;

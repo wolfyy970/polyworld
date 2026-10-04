@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QImage>
+
 #include "monitor/SceneRenderer.h"
 
 class QtSceneRenderer : public SceneRenderer
@@ -13,9 +15,9 @@ public:
 
     virtual void render() override;
 
-	void copyTo( class QGLWidget *dst );
+	void copyTo( class QOpenGLWidget *dst );
 	class MovieRecorder *createMovieRecorder( class PwMovieWriter *writer ) override;
 
 private:
-	class QGLPixelBuffer *pixelBuffer;
+	class PwOffscreenGLSurface *pixelBuffer;
 };

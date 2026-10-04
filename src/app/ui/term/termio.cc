@@ -15,6 +15,12 @@ namespace termio
 
 	bool isKeyPressed()
 	{
+		// Without a terminal there is no interactive input to poll; treating
+		// stdin as readable here would start a prompt thread whose read
+		// returns EOF immediately.
+		if( !isatty( STDIN_FILENO ) )
+			return false;
+
 		struct timeval tv;
 		fd_set fds;
 		tv.tv_sec = 0;
@@ -55,14 +61,20 @@ namespace termio
 
 	void setEchoEnabled( bool enabled )
 	{
+		// Without a terminal there is no echo to control, and SYSTEM()
+		// treats any failing command as fatal (exit(1)), which would kill
+		// the run before the first step.
+		if( !isatty( STDIN_FILENO ) )
+			return;
+
 		if( enabled )
-        {
+	{
 			SYSTEM( "stty echo" );
-        }
+	}
 		else
-        {
+	{
 			SYSTEM( "stty -echo" );
-        }
+	}
 	}
 
 }

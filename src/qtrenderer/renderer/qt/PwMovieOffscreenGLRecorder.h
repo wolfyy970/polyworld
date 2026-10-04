@@ -4,18 +4,21 @@
 #include "utils/PwMovieUtils.h"
 
 //===========================================================================
-// PwMovieQGLPixelBufferRecorder
+// PwMovieOffscreenGLRecorder
+//
+// Records frames off a PwOffscreenGLSurface (the QGLPixelBuffer replacement)
+// into a PwMovie.
 //===========================================================================
-class PwMovieQGLPixelBufferRecorder : public MovieRecorder
+class PwMovieOffscreenGLRecorder : public MovieRecorder
 {
  public:
-	PwMovieQGLPixelBufferRecorder( class QGLPixelBuffer *pixelBuffer, PwMovieWriter *writer );
-	virtual ~PwMovieQGLPixelBufferRecorder();
+	PwMovieOffscreenGLRecorder( class PwOffscreenGLSurface *surface, PwMovieWriter *writer );
+	virtual ~PwMovieOffscreenGLRecorder();
 	
 	virtual void recordFrame( uint32_t timestep ) override;
 
  private:
-	class QGLPixelBuffer *pixelBuffer;
+	class PwOffscreenGLSurface *surface;
 	PwMovieWriter *writer;
 	uint32_t width;
 	uint32_t height;

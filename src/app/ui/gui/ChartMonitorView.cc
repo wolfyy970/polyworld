@@ -7,6 +7,9 @@
 #include <glu.h>
 #include <stdio.h>
 
+// Qt
+#include <QPainter>
+
 // Local
 #include "monitor/Monitor.h"
 #include "utils/error.h"
@@ -106,6 +109,11 @@ void ChartMonitorView::init( short ncurves, int width, int height )
 //---------------------------------------------------------------------------
 void ChartMonitorView::paintGL()
 {
+	QPainter painter( this );
+
+	// The chart itself is drawn with plain OpenGL...
+	painter.beginNativePainting();
+
 	glPushMatrix();
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
@@ -114,6 +122,11 @@ void ChartMonitorView::paintGL()
 
 		draw();
 	glPopMatrix();
+
+	painter.endNativePainting();
+
+	// ...and the labels with QPainter (QGLWidget::renderText() is gone in Qt 6).
+	drawAxisLabels( painter );
 }
 
 
@@ -133,7 +146,7 @@ void ChartMonitorView::draw()
 //---------------------------------------------------------------------------
 void ChartMonitorView::initializeGL()
 {
-	qglClearColor( Qt::black );
+	glClearColor( 0.0f, 0.0f, 0.0f, 1.0f );
     glShadeModel( GL_SMOOTH );
 }
 
@@ -191,10 +204,9 @@ void ChartMonitorView::plotPoint(short index, long x, long y)
 //---------------------------------------------------------------------------
 void ChartMonitorView::drawAxes()
 {
-	char s[256];
     long y0;
 
-	qglColor( Qt::white );
+	glColor3f( 1.0f, 1.0f, 1.0f );
 
     if ((lowV[0]<=0.0) && (highV[0]>=0.0))
         y0 = (long)((highY-lowY) * (0.0 - lowV[0]) / (highV[0] - lowV[0]) + lowY);
@@ -213,35 +225,16 @@ void ChartMonitorView::drawAxes()
     	glVertex2f(lowX, highY);
 	glEnd();
 
-    // label the y-axis (but not the x)
+    // tick at the low end of the y-axis
     glBegin(GL_LINES);
     	glVertex2f(lowX - 2, lowY);
     	glVertex2f(lowX + 2, lowY);
 	glEnd();
 
-
-	QFont font("Monospace", 8, QFont::Normal);
-	font.setStyleHint(QFont::TypeWriter);
-	QFontMetrics metrics(font);
-
-    if (highV[0] > 1.0 && highV[0] == highV[0] && lowV[0] == lowV[0])
-		sprintf(s, "%ld", long(lowV[0]));
-    else
-        sprintf(s,"%.1f", lowV[0]);
-	qglColor( Qt::white );
-	renderText(lowX - metrics.width(s) - 2, highY, s, font);
-
-	glBegin(GL_LINES);
+    glBegin(GL_LINES);
     	glVertex2f(lowX - 2, highY);
     	glVertex2f(lowX + 2, highY);
     glEnd();
-
-    if (highV[0] > 1.0 && highV[0] == highV[0])
-        sprintf(s, "%ld", long(highV[0]));
-    else
-        sprintf(s, "%.1f",highV[0]);
-	qglColor( Qt::white );
-	renderText(lowX - metrics.width(s) - 3, lowY + (metrics.height() / 2) + 1, s, font);
 
     if (decimation)
     {
@@ -256,6 +249,47 @@ void ChartMonitorView::drawAxes()
             y += 8;
         }
     }
+}
+
+
+//---------------------------------------------------------------------------
+// ChartMonitorView::drawAxisLabels
+//
+// The y-axis labels that QGLWidget::renderText() used to draw.  Positions are
+// converted from GL coordinates (origin bottom-left) to Qt's widget
+// coordinates (origin top-left).
+//---------------------------------------------------------------------------
+void ChartMonitorView::drawAxisLabels( QPainter &painter )
+{
+	char s[256];
+
+	QFont font("Monospace", 8, QFont::Normal);
+	font.setStyleHint(QFont::TypeWriter);
+	QFontMetrics metrics(font);
+
+	painter.setPen( Qt::white );
+	painter.setFont( font );
+
+	if (highV[0] > 1.0 && highV[0] == highV[0] && lowV[0] == lowV[0])
+	{
+		sprintf(s, "%ld", long(lowV[0]));
+	}
+	else
+	{
+		sprintf(s,"%.1f", lowV[0]);
+	}
+	painter.drawText( lowX - metrics.horizontalAdvance(s) - 2, height() - highY, s );
+
+	if (highV[0] > 1.0 && highV[0] == highV[0])
+	{
+		sprintf(s, "%ld", long(highV[0]));
+	}
+	else
+	{
+		sprintf(s, "%.1f",highV[0]);
+	}
+	painter.drawText( lowX - metrics.horizontalAdvance(s) - 3,
+					  height() - (lowY + (metrics.height() / 2) + 1), s );
 }
 
 
@@ -314,7 +348,6 @@ void ChartMonitorView::addPoint( short ic, float val )
 {
     long i;
     long j;
-	bool repaint = false;
 
     if( y == NULL )  // first time must allocate space
     {
@@ -332,19 +365,16 @@ void ChartMonitorView::addPoint( short ic, float val )
             numPoints[jc] = i;
         }
         decimation++;
-		repaint = true;
     }
 
 	y[(long)((ic * maxPoints) + numPoints[ic])] = (long)((val - lowV[ic]) * dydv[ic]  +  lowY);
 
 	if( isVisible() )
 	{
-		makeCurrent();
-		if( repaint )
-			draw();
-		else
-			plotPoint( ic, numPoints[ic] + lowX, y[(ic * maxPoints) + numPoints[ic]] );
-		swapBuffers();
+		// The chart used to be drawn incrementally into the widget's GL
+		// buffer.  QOpenGLWidget only draws in paintGL(), so request a
+		// repaint; a full redraw of the stored points is what it renders.
+		update();
 	}
     numPoints[ic]++;
 }
@@ -400,4 +430,3 @@ void ChartMonitorView::dump(std::ostream& out)
         }
     }
 }
-

@@ -6,8 +6,7 @@
 
 // Qt
 #include <QApplication>
-#include <QDesktopWidget>
-#include <QGLWidget>
+#include <QScreen>
 #include <QVBoxLayout>
 #include <QMainWindow>
 #include <QMenuBar>
@@ -350,14 +349,16 @@ void MainWindow::SaveVisibility()
 //---------------------------------------------------------------------------
 void MainWindow::RestoreFromPrefs()
 {
-	QDesktopWidget* desktop = QApplication::desktop();
+	// QDesktopWidget is gone in Qt 6; the primary screen's geometry supplies
+	// the same numbers desktop->width()/height() did.
+	const QRect screenRect = QGuiApplication::primaryScreen()->geometry();
 
 	// Set up some defaults
 	int defX = 1;
 	int titleHeight = 22;
 	int defY = kMenuBarHeight + titleHeight;
-// 	int defWidth = desktop->width() - defX;
-// 	int defHeight = desktop->height() - defY;
+// 	int defWidth = screenRect.width() - defX;
+// 	int defHeight = screenRect.height() - defY;
 
 	// Attempt to restore window size and position from prefs
 	// Save size and location to prefs
@@ -379,10 +380,10 @@ void MainWindow::RestoreFromPrefs()
 	settings.endGroup();
 
 	// Pin values
-	if (defX < desktop->x() || defX > desktop->width())
+	if (defX < screenRect.x() || defX > screenRect.width())
 		defX = 0;
 
-	if (defY < desktop->y() + kMenuBarHeight + titleHeight || defY > desktop->height())
+	if (defY < screenRect.y() + kMenuBarHeight + titleHeight || defY > screenRect.height())
 		defY = kMenuBarHeight + titleHeight;
 
 	// Set window size and location based on prefs

@@ -806,6 +806,10 @@ void Logs::BrainFunctionLog::processEvent( const BrainAnalysisBeginEvent &e )
 
 	e.a->GetBrain()->endFunctional( file, e.a->CurrentHeuristicFitness() );
 	delete file;
+	// The file is gone: clear the agent's slot so the end-of-run cleanup in
+	// processEvent(SimEndEvent) doesn't delete the same pointer a second time.
+	// (Freeing twice aborts the process with modern malloc implementations.)
+	setAgentState( e.a, NULL );
 
 	char s[256];
 	char t[256];
@@ -851,7 +855,13 @@ void Logs::BrainFunctionLog::processEvent( const SimEndEvent &e )
 	agent *a;
 	objectxsortedlist::gXSortedObjects.reset();
 	while( objectxsortedlist::gXSortedObjects.nextObj( AGENTTYPE, (gobject**)&a ) )
-		delete getFile( a );
+	{
+		AbstractFile *file = getFile( a );
+		// Agents whose analysis already ran have a cleared slot (see the
+		// BrainAnalysisBeginEvent handler).
+		if( file )
+			delete file;
+	}
 }
 
 //---------------------------------------------------------------------------

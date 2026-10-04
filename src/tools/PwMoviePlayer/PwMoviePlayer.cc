@@ -11,7 +11,8 @@
 
 // Qt
 #include <QApplication>
-#include <QGLFormat>
+#include <QOpenGLContext>
+#include <QSurfaceFormat>
 
 // Self
 #include "PwMoviePlayer.h"
@@ -45,16 +46,31 @@ int main( int argc, char **argv )
 
 //	Q_INIT_RESOURCE(application);
 
+	// Fixed-function OpenGL is used throughout, so request the compatibility
+	// profile (the legacy 2.1 context on macOS) before creating the app.
+	QSurfaceFormat surfaceFormat;
+	surfaceFormat.setRenderableType( QSurfaceFormat::OpenGL );
+	surfaceFormat.setProfile( QSurfaceFormat::CompatibilityProfile );
+	surfaceFormat.setVersion( 2, 1 );
+	surfaceFormat.setDepthBufferSize( 24 );
+	surfaceFormat.setStencilBufferSize( 8 );
+	QSurfaceFormat::setDefaultFormat( surfaceFormat );
+
 	// Create application instance.
 	// Moved this call above hasOpenGL() call due to Linux requirement
 	// of PMPApp being created prior to call (CMB 3/7/08)
 	PMPApp app( argc, argv );
 
 	// It is important the we have OpenGL support
-    if (!QGLFormat::hasOpenGL())
     {
-		qWarning("This system has no OpenGL support. Exiting.");
-		return -1;
+		// QGLFormat::hasOpenGL() went away with Qt 5; creating a context is
+		// the Qt 6 way of asking the same question.
+		QOpenGLContext context;
+		if( !context.create() )
+		{
+			qWarning("This system has no OpenGL support. Exiting.");
+			return -1;
+		}
     }
 
 #if 0
@@ -234,7 +250,7 @@ PMPApp::PMPApp(int &argc, char** argv) : QApplication(argc, argv)
 	QCoreApplication::setOrganizationDomain( "indiana.edu" );
 	QCoreApplication::setApplicationName( "pwmovieplayer" );
 
-	mainWindow = new MainWindow( "Polyworld MoviePlayer", "Main", 0, reader, legend, startFrame, endFrame, frameDelta, frameRate, loop, write );
+	mainWindow = new MainWindow( "Polyworld MoviePlayer", "Main", Qt::WindowFlags(), reader, legend, startFrame, endFrame, frameDelta, frameRate, loop, write );
 	mainWindow->show();
 }
 

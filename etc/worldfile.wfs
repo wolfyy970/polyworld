@@ -108,6 +108,15 @@ MaxSteps {
   min   0
 }
 
+# Cap on how fast the simulation runs, in steps per second.  The model is
+# step-indexed, so this changes only the pace of the run, never its outcome.
+# 0 means "as fast as the machine allows".
+StepsPerSecond {
+  type    Int
+  default 0
+  min     0
+}
+
 MinAgents {
   type    Int
   default 90

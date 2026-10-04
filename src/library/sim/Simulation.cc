@@ -743,6 +743,11 @@ void TSimulation::Step()
 //---------------------------------------------------------------------------
 void TSimulation::End( const string &reason )
 {
+	if( fEnded )
+		return;
+
+	fEnded = true;
+
 	{
 		ofstream fout( "run/endReason.txt" );
 		fout << reason << endl;
@@ -3821,6 +3826,7 @@ void TSimulation::processWorldFile( proplib::Document *docWorldFile )
 	fLockStepWithBirthsDeathsLog = doc.get( "PassiveLockstep" );
 	fAdaptivityMode = doc.get( "AdaptivityMode" );
 	fMaxSteps = doc.get( "MaxSteps" );
+	fStepsPerSecond = doc.get( "StepsPerSecond" );
 	fEndOnPopulationCrash = doc.get( "EndOnPopulationCrash" );
 	fDumpFrequency = doc.get( "CheckPointFrequency" );
 	{

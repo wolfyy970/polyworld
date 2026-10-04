@@ -14,4 +14,10 @@ Polyworld.app
 *.patch
 *.eps
 .gdb_history
+# qmake droppings from the generated Qt project files
+.qmake.stash
+.qt.pro
+.qt.mak
 
+# compiled helper from tools/pmv2raw
+tools/pmv2raw/pmv2raw

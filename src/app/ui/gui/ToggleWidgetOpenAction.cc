@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include <QEvent>
+#include <QWidget>
 
 ToggleWidgetOpenAction::ToggleWidgetOpenAction( QObject *_parent,
 													  QWidget *_widget,

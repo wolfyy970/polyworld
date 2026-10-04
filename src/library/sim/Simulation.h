@@ -79,6 +79,7 @@ public:
 
 	long getStep() const;
 	long GetMaxSteps() const;
+	int GetStepsPerSecond() const;
 
 	void MaintainEnergyCosts();
 	double EnergyScaleFactor( long minAgents, long maxAgents, long numAgents );
@@ -243,7 +244,15 @@ private:
 	Scheduler fScheduler;
 
 	long fMaxSteps;
+	// Steps-per-second cap for the UI's step timer; 0 means unlimited.  The
+	// simulation itself is step-indexed, so this never affects results.
+	int fStepsPerSecond = 0;
 	bool fEndOnPopulationCrash;
+	// End() must take effect at most once.  Step() can re-trigger an end
+	// condition (e.g. MaxSteps) on the next timer tick, before the application
+	// has processed the quit request, which would dispatch a second SimEnd
+	// event to every logger.
+	bool fEnded = false;
 	int fDumpFrequency;
 	bool fLoadState;
 
@@ -568,6 +577,7 @@ inline float TSimulation::getFoodEnergy()
 inline GeneStats &TSimulation::getGeneStats() { return fGeneStats; }
 inline long TSimulation::getStep() const { return fStep; }
 inline long TSimulation::GetMaxSteps() const { return fMaxSteps; }
+inline int TSimulation::GetStepsPerSecond() const { return fStepsPerSecond; }
 inline float TSimulation::EnergyFitnessParameter() const { return fEnergyFitnessParameter; }
 inline float TSimulation::AgeFitnessParameter() const { return fAgeFitnessParameter; }
 inline float TSimulation::LifeFractionRecent() { return fLifeFractionRecentStats.mean(); }

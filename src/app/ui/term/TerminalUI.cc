@@ -85,6 +85,17 @@ void TerminalUI::step()
 				cout << "GUI shown. You may need to raise the window." << endl;
 			}
 		}
+		else if( cmd.compare( 0, 6, "speed " ) == 0 )
+		{
+			int stepsPerSecond = atoi( cmd.c_str() + 6 );
+
+			simulationController->setStepsPerSecond( stepsPerSecond );
+
+			if( stepsPerSecond > 0 )
+				cout << "Speed: " << stepsPerSecond << " steps/second" << endl;
+			else
+				cout << "Speed: unlimited" << endl;
+		}
 		else
 		{
 			if( cmd != "help" )
@@ -95,6 +106,7 @@ void TerminalUI::step()
 			cerr << "help - Show this message." << endl;
 			cerr << "end - End simulation." << endl;
 			cerr << "gui - Show GUI." << endl;
+			cerr << "speed N - Limit the simulation to N steps/second (0 = unlimited)." << endl;
 		}
 	}
 }

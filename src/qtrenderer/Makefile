@@ -9,7 +9,7 @@ blddir=${QTRENDERER_BLDDIR}
 qt_project=./.qt.pro
 qt_makefile=./.qt.mak
 
-qt_modules=gui opengl core
+qt_modules=core gui widgets opengl openglwidgets
 cxxflags=${CXXFLAGS} ${LIBRARY_CXXFLAGS} ${OMP_CXXFLAGS} ${OPENGL_CXXFLAGS}
 libs=${PWLIB_LDFLAGS} ${LIBRARY_LIBS} ${OMP_LIBS} ${OPENGL_LIBS}
 

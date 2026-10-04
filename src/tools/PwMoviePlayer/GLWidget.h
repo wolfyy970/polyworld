@@ -4,11 +4,11 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#include <QGLWidget>
+#include <QOpenGLWidget>
 
 #include "utils/PwMovieUtils.h"
 
-class GLWidget : public QGLWidget
+class GLWidget : public QOpenGLWidget
 {
 	Q_OBJECT
 

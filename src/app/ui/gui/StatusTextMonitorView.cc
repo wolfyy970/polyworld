@@ -3,6 +3,9 @@
 
 #include <glu.h>
 
+// Qt
+#include <QPainter>
+
 // Local
 #include "monitor/Monitor.h"
 #include "sim/simtypes.h"
@@ -81,7 +84,9 @@ void StatusTextMonitorView::update()
 				lineHeight * statusText.size()  +  3 );
 	}
 
-	draw();
+	// QOpenGLWidget content is drawn in paintGL(); ask for a repaint rather
+	// than drawing here.  (Qualified: this class hides QWidget::update().)
+	QOpenGLWidget::update();
 }
 
 
@@ -92,22 +97,20 @@ void StatusTextMonitorView::draw()
 {
 	StatusText &statusText = monitor->getStatusText();
 
-	makeCurrent();
+	// QGLWidget's qglClearColor() / renderText() / swapBuffers() are gone in
+	// Qt 6; QPainter draws the same text on the widget.
+	QPainter painter( this );
 
-	// Clear the window to black
-	qglClearColor( Qt::black );
-	glClear( GL_COLOR_BUFFER_BIT );
+	painter.fillRect( rect(), Qt::black );
 
-	// Draw text in white
-    glColor4ub( 255, 255, 255, 255 );
+	painter.setPen( Qt::white );
+	painter.setFont( font );
 
 	int y = lineHeight;
 
 	itfor( StatusText, statusText, iter )
 	{
-		renderText( 7, y, *iter, font );
+		painter.drawText( 7, y, *iter );
 		y += lineHeight;
 	}
-
-	swapBuffers();
 }

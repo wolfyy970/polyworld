@@ -165,7 +165,9 @@ class InterpreterProcess {
             // redirect stdout
             REQUIRE( -1 != dup2(stdoutPipe[PIPE_WRITE], STDOUT_FILENO) );
 
-            // run child process image
+            // run child process image.  Current macOS ships no "python"
+            // (i.e. Python 2) binary, so prefer python3 and fall back.
+            execlp("python3", "python3", script_path.c_str(), NULL);
             execlp("python", "python", script_path.c_str(), NULL);
             PANIC();
         }

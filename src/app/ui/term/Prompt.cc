@@ -127,8 +127,17 @@ void Prompt::InputThread::run()
 	char buf[4096];
 
 	char *input = fgets( buf, sizeof(buf), stdin );
-		
+
+	if( input == NULL )
+	{
+		// stdin reached end of file (e.g. it is not an interactive terminal);
+		// there is no user input to report.
+		prompt->dismissed();
+		return;
+	}
+
 	// strip trailing newline
+	// PORT-NOTE: the original indexed input[ strlen(input) - 1 ] unconditionally.
 	input[ strlen(input) - 1 ] = 0;
 		
 	prompt->addUserInput( strdup(input) );

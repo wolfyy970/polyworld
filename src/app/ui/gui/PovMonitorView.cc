@@ -37,7 +37,7 @@ PovMonitorView::~PovMonitorView()
 //---------------------------------------------------------------------------
 void PovMonitorView::paintGL()
 {
-	draw();
+	renderer->copyTo( this );
 }
 
 //---------------------------------------------------------------------------
@@ -45,8 +45,10 @@ void PovMonitorView::paintGL()
 //---------------------------------------------------------------------------
 void PovMonitorView::draw()
 {
+	// Called from the renderer's completion signal.  QOpenGLWidget content can
+	// only be drawn from paintGL(), so schedule a repaint.
 	if( isVisible() )
 	{
-		renderer->copyTo( this );
+		update();
 	}
 }

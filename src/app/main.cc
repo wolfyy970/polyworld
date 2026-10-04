@@ -7,8 +7,9 @@
 #include <string>
 
 // Qt
-#include <qgl.h>
 #include <QApplication>
+#include <QOpenGLContext>
+#include <QSurfaceFormat>
 
 // Local
 #include "monitor/Monitor.h"
@@ -120,12 +121,28 @@ int main( int argc, char** argv )
 	}
 #endif
 
+	// Polyworld draws with the fixed-function OpenGL API, so ask for the
+	// compatibility profile (the legacy 2.1 context on macOS) application-wide,
+	// before any widget or context is created.
+	QSurfaceFormat surfaceFormat;
+	surfaceFormat.setRenderableType( QSurfaceFormat::OpenGL );
+	surfaceFormat.setProfile( QSurfaceFormat::CompatibilityProfile );
+	surfaceFormat.setVersion( 2, 1 );
+	surfaceFormat.setDepthBufferSize( 24 );
+	surfaceFormat.setStencilBufferSize( 8 );
+	QSurfaceFormat::setDefaultFormat( surfaceFormat );
+
 	QApplication app(argc, argv);
 
-    if (!QGLFormat::hasOpenGL())
     {
-		qWarning("This system has no OpenGL support. Exiting.");
-		return -1;
+		// QGLFormat::hasOpenGL() went away with Qt 5; creating a context is
+		// the Qt 6 way of asking the same question.
+		QOpenGLContext context;
+		if( !context.create() )
+		{
+			qWarning("This system has no OpenGL support. Exiting.");
+			return -1;
+		}
     }
 
 	// Establish how our preference settings file will be named

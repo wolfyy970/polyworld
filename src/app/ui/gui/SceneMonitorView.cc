@@ -42,7 +42,7 @@ void SceneMonitorView::showEvent( QShowEvent *event )
     draw_handle =
         renderer->renderComplete += [=]() {this->draw();};
 
-	QGLWidget::showEvent( event );
+	QOpenGLWidget::showEvent( event );
 }
 
 //---------------------------------------------------------------------------
@@ -52,7 +52,7 @@ void SceneMonitorView::hideEvent( QHideEvent *event )
 {
     renderer->renderComplete -= draw_handle;
 
-	QGLWidget::hideEvent( event );
+	QOpenGLWidget::hideEvent( event );
 }
 
 //---------------------------------------------------------------------------
@@ -60,7 +60,7 @@ void SceneMonitorView::hideEvent( QHideEvent *event )
 //---------------------------------------------------------------------------
 void SceneMonitorView::paintGL()
 {
-	draw();
+	renderer->copyTo( this );
 }
 
 //---------------------------------------------------------------------------
@@ -68,7 +68,9 @@ void SceneMonitorView::paintGL()
 //---------------------------------------------------------------------------
 void SceneMonitorView::draw()
 {
-	renderer->copyTo( this );
+	// Called from the renderer's completion signal.  QOpenGLWidget content can
+	// only be drawn from paintGL(), so schedule a repaint.
+	update();
 }
 
 //---------------------------------------------------------------------------

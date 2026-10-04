@@ -1,7 +1,9 @@
-#include <QGLPixelBuffer>
-#include <QGLWidget>
+#include <QImage>
+#include <QPainter>
+#include <QOpenGLWidget>
 
-#include "PwMovieQGLPixelBufferRecorder.h"
+#include "PwMovieOffscreenGLRecorder.h"
+#include "PwOffscreenGLSurface.h"
 #include "QtSceneRenderer.h"
 #include "utils/PwMovieUtils.h"
 
@@ -58,7 +60,7 @@ void QtSceneRenderer::render()
 
 	if( pixelBuffer == NULL )
 	{
-		pixelBuffer = new QGLPixelBuffer( width, height );
+		pixelBuffer = new PwOffscreenGLSurface( width, height );
 		pixelBuffer->makeCurrent();
 
 		static GLfloat pos[4] = { 5.0, 5.0, 10.0, 1.0 };
@@ -98,12 +100,16 @@ void QtSceneRenderer::render()
 
 //---------------------------------------------------------------------------
 // QtSceneRenderer::copyTo
+//
+// The frame is read back here, on demand: the original QGLPixelBuffer-based
+// code also paid for the read-back only when a view was displaying.
 //---------------------------------------------------------------------------
-void QtSceneRenderer::copyTo( QGLWidget *dst )
+void QtSceneRenderer::copyTo( QOpenGLWidget *dst )
 {
 	if( pixelBuffer )
 	{
 		QImage image = pixelBuffer->toImage();
+
 		QPainter painter( dst );
 		painter.drawImage( QRect(0,0,dst->width(),dst->height()), image );
 	}
@@ -116,5 +122,5 @@ MovieRecorder *QtSceneRenderer::createMovieRecorder( PwMovieWriter *writer )
 {
 	assert( pixelBuffer );
 
-	return new PwMovieQGLPixelBufferRecorder( pixelBuffer, writer );
+	return new PwMovieOffscreenGLRecorder( pixelBuffer, writer );
 }

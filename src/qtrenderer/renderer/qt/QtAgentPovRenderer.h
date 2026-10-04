@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QImage>
 #include <map>
 
 #include "agent/AgentAttachedData.h"
@@ -21,7 +22,7 @@ class QtAgentPovRenderer : public AgentPovRenderer
 	virtual void render( class agent *a ) override;
 	virtual void endStep() override;
 
-	void copyTo( class QGLWidget *dst );
+	void copyTo( class QOpenGLWidget *dst );
 	int getBufferWidth();
 	int getBufferHeight();
 
@@ -34,7 +35,7 @@ class QtAgentPovRenderer : public AgentPovRenderer
 		short width;
 		short height;
 	};
-	class QGLPixelBuffer *fPixelBuffer;
+	class PwOffscreenGLSurface *fPixelBuffer;
 	int fBufferWidth;
 	int fBufferHeight;
 	// This gives us a reference to a per-agent opaque pointer.

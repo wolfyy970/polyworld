@@ -5,11 +5,12 @@
 
 // Qt
 #include <QApplication>
+#include <QActionGroup>
 #include <QCloseEvent>
-#include <QDesktopWidget>
 #include <QInputDialog>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QScreen>
 #include <QSettings>
 
 // Local
@@ -41,7 +42,7 @@ static QMenuBar *menuBar = NULL;
 //---------------------------------------------------------------------------
 MainWindow::MainWindow( SimulationController *_simulationController,
 						bool _endOnClose )
-	: QMainWindow( 0, 0 )
+	: QMainWindow( 0, Qt::WindowFlags() )
 	, simulationController( _simulationController )
 	, endOnClose( _endOnClose )
 {
@@ -186,6 +187,42 @@ void MainWindow::addRunMenu( QMenuBar *menuBar )
 
 	menu->addSeparator();
 
+	//
+	// Speed: a cap on how fast the simulation runs.  The model is step-indexed,
+	// so this sets the pace of a run, never its outcome.
+	//
+	QMenu *speedMenu = menu->addMenu( "&Speed" );
+
+	QActionGroup *speedGroup = new QActionGroup( this );
+	speedGroup->setObjectName( "speedActions" );
+
+	static const struct { const char *label; int stepsPerSecond; } speedOptions[] = {
+		{ "&Unlimited",   0 },
+		{ "1000 steps/s", 1000 },
+		{ "100 steps/s",  100 },
+		{ "30 steps/s",   30 },
+		{ "10 steps/s",   10 },
+		{ "1 step/s",     1 },
+	};
+
+	for( const auto &option : speedOptions )
+	{
+		QAction *action = speedMenu->addAction( option.label );
+		action->setCheckable( true );
+		action->setChecked( option.stepsPerSecond == simulationController->getStepsPerSecond() );
+		action->setProperty( "stepsPerSecond", option.stepsPerSecond );
+		speedGroup->addAction( action );
+
+		int stepsPerSecond = option.stepsPerSecond;
+		connect( action, &QAction::triggered,
+				 this, [=]() { simulationController->setStepsPerSecond( stepsPerSecond ); } );
+	}
+
+	connect( simulationController, SIGNAL(stepsPerSecondChanged(int)),
+			 this, SLOT(syncSpeedMenu(int)) );
+
+	menu->addSeparator();
+
 	menu->addAction( "End At &Timestep...", this, SLOT(endAtTimestep()));
 	menu->addAction( "End &Now", this, SLOT(endNow()));
 
@@ -193,6 +230,26 @@ void MainWindow::addRunMenu( QMenuBar *menuBar )
 	// This is automatically moved over to the application menu.
     menu->addAction( "&Quit", this, SLOT(endNow()) );
 #endif
+}
+
+//---------------------------------------------------------------------------
+// MainWindow::syncSpeedMenu
+//
+// Keep the Speed menu's check mark honest when the pace is changed from
+// somewhere else (e.g. the terminal UI).
+//---------------------------------------------------------------------------
+void MainWindow::syncSpeedMenu( int stepsPerSecond )
+{
+	QActionGroup *speedGroup = findChild<QActionGroup *>( "speedActions" );
+	if( !speedGroup )
+		return;
+
+	const QList<QAction *> actions = speedGroup->actions();
+	for( QAction *action : actions )
+	{
+		if( action->property( "stepsPerSecond" ).toInt() == stepsPerSecond )
+			action->setChecked( true );
+	}
 }
 
 //---------------------------------------------------------------------------
@@ -287,13 +344,15 @@ void MainWindow::loadSettings()
 	QSettings settings;
 	settings.beginGroup( "mainWindow" );
 
-	QDesktopWidget* desktop = QApplication::desktop();
+	// QDesktopWidget is gone in Qt 6; the primary screen's geometry supplies
+	// the same numbers desktop->width()/height() did.
+	const QRect screenRect = QGuiApplication::primaryScreen()->geometry();
 
-	resize( settings.value("w", int(desktop->width() * 0.5)).toInt(),
-			settings.value("h", int(desktop->height() * 0.5)).toInt() );
+	resize( settings.value("w", int(screenRect.width() * 0.5)).toInt(),
+			settings.value("h", int(screenRect.height() * 0.5)).toInt() );
 
-	move( settings.value("x", int(desktop->width() * 0.25)).toInt(),
-		  settings.value("y", int(desktop->height() * 0.25)).toInt() );
+	move( settings.value("x", int(screenRect.width() * 0.25)).toInt(),
+		  settings.value("y", int(screenRect.height() * 0.25)).toInt() );
 }
 
 //---------------------------------------------------------------------------
