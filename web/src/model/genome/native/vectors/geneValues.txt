@@ -1,0 +1,11 @@
+# genevalueprobe — the native union read of an interpolated gene's Scalar.
+# &(Scalar::__val) is the union's address; the property's own type picks the member.
+# float= / int= are undefined for a BOOL Scalar (Scalar::Scalar(bool) writes bval only).
+scalar label=float_0.2 kind=FLOAT str=FLOAT 0.200000 low32=3e4ccccd float=0.20000000298023224 int=1045220557 bool=True
+scalar label=float_0.5 kind=FLOAT str=FLOAT 0.500000 low32=3f000000 float=0.5 int=1056964608 bool=False
+scalar label=float_-0.970895 kind=FLOAT str=FLOAT -0.970895 low32=bf788c93 float=-0.97089499235153198 int=-1082618733 bool=True
+scalar label=int_7 kind=INT str=INT 7 low32=00000007 float=9.8090892502737195e-45 int=7 bool=True
+scalar label=int_-1 kind=INT str=INT -1 low32=ffffffff float=nan int=-1 bool=True
+scalar label=int_1065353216 kind=INT str=INT 1065353216 low32=3f800000 float=1 int=1065353216 bool=False
+scalar label=bool_true kind=BOOL str=BOOL true low32=undefined float=undefined int=undefined bool=True
+scalar label=bool_false kind=BOOL str=BOOL false low32=undefined float=undefined int=undefined bool=False

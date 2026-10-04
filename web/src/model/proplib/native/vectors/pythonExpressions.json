@@ -1,0 +1,1585 @@
+{
+  "formatVersion": 1,
+  "python": "3.9.6",
+  "interpreter": "str( eval( text ) ) via src/library/proplib/interpreter.py",
+  "corpusCount": 121,
+  "vectors": [
+    {
+      "source": "\"All\"",
+      "value": "All"
+    },
+    {
+      "source": "\"All\" if True else \"False\"",
+      "value": "All"
+    },
+    {
+      "source": "\"Approximate\" if True else \"False\"",
+      "value": "Approximate"
+    },
+    {
+      "source": "\"Array\"",
+      "value": "Array"
+    },
+    {
+      "source": "\"B\"",
+      "value": "B"
+    },
+    {
+      "source": "\"Bit\"",
+      "value": "Bit"
+    },
+    {
+      "source": "\"Bool\"",
+      "value": "Bool"
+    },
+    {
+      "source": "\"Color\"",
+      "value": "Color"
+    },
+    {
+      "source": "\"Enum\"",
+      "value": "Enum"
+    },
+    {
+      "source": "\"F\"",
+      "value": "F"
+    },
+    {
+      "source": "\"Field\"",
+      "value": "Field"
+    },
+    {
+      "source": "\"Fight\"",
+      "value": "Fight"
+    },
+    {
+      "source": "\"FindEnergyPolarity\"",
+      "value": "FindEnergyPolarity"
+    },
+    {
+      "source": "\"Float\"",
+      "value": "Float"
+    },
+    {
+      "source": "\"Gene\"",
+      "value": "Gene"
+    },
+    {
+      "source": "\"Groups\"",
+      "value": "Groups"
+    },
+    {
+      "source": "\"I\"",
+      "value": "I"
+    },
+    {
+      "source": "\"Int\"",
+      "value": "Int"
+    },
+    {
+      "source": "\"L\"",
+      "value": "L"
+    },
+    {
+      "source": "\"Legacy\"",
+      "value": "Legacy"
+    },
+    {
+      "source": "\"Mate\"",
+      "value": "Mate"
+    },
+    {
+      "source": "\"MaxIndependent\"",
+      "value": "MaxIndependent"
+    },
+    {
+      "source": "\"NeurGroup\" if \"Groups\" == \"Groups\" else \"None\"",
+      "value": "NeurGroup"
+    },
+    {
+      "source": "\"Normal\"",
+      "value": "Normal"
+    },
+    {
+      "source": "\"Null\"",
+      "value": "Null"
+    },
+    {
+      "source": "\"O\"",
+      "value": "O"
+    },
+    {
+      "source": "\"Object\"",
+      "value": "Object"
+    },
+    {
+      "source": "\"Oppose\"",
+      "value": "Oppose"
+    },
+    {
+      "source": "\"P\"",
+      "value": "P"
+    },
+    {
+      "source": "\"Permutations\"",
+      "value": "Permutations"
+    },
+    {
+      "source": "\"R\"",
+      "value": "R"
+    },
+    {
+      "source": "\"Sheet\"",
+      "value": "Sheet"
+    },
+    {
+      "source": "\"Standard\"",
+      "value": "Standard"
+    },
+    {
+      "source": "\"String\"",
+      "value": "String"
+    },
+    {
+      "source": "\"U\"",
+      "value": "U"
+    },
+    {
+      "source": "(  0.3333 if True else  (0.3333 * 25) )",
+      "value": "0.3333"
+    },
+    {
+      "source": "(  0.6667 if True else  (0.6667 * 25) )",
+      "value": "0.6667"
+    },
+    {
+      "source": "( (-1.0 == -1.0) or (-1.0 >= 0.0) )",
+      "value": "True"
+    },
+    {
+      "source": "( (0.8 == -1.0) or (0.8 >= 0.0) )",
+      "value": "True"
+    },
+    {
+      "source": "( (1.0 == -1.0) or (1.0 >= 0.0) )",
+      "value": "True"
+    },
+    {
+      "source": "( -0.1    if True else -0.1*25 )",
+      "value": "-0.1"
+    },
+    {
+      "source": "( -1.0    if True else -25 )",
+      "value": "-1.0"
+    },
+    {
+      "source": "( -1.0 if True else -25 )",
+      "value": "-1.0"
+    },
+    {
+      "source": "( 0.01 if \"Bit\" == \"Bit\" else 0.08 )",
+      "value": "0.01"
+    },
+    {
+      "source": "( 0.05 if \"Bit\" == \"Bit\" else 0.4 )",
+      "value": "0.05"
+    },
+    {
+      "source": "( 0.2 if False else 0.5 )",
+      "value": "0.5"
+    },
+    {
+      "source": "( 1.0 if True else 25 )",
+      "value": "1.0"
+    },
+    {
+      "source": "( 10 if 10 > 0 else 90 )",
+      "value": "10"
+    },
+    {
+      "source": "( 22 == 22 )",
+      "value": "True"
+    },
+    {
+      "source": "( 25 >= 0 and 25 <= 25 ) or False",
+      "value": "True"
+    },
+    {
+      "source": "( 25 >= 20 and 25 <= 25 ) or False",
+      "value": "True"
+    },
+    {
+      "source": "( True if \"F\" == \"S\" else False )",
+      "value": "False"
+    },
+    {
+      "source": "( True or False )",
+      "value": "True"
+    },
+    {
+      "source": "( not False or True or False )",
+      "value": "True"
+    },
+    {
+      "source": "-1",
+      "value": "-1"
+    },
+    {
+      "source": "-1.0",
+      "value": "-1.0"
+    },
+    {
+      "source": "-180.0",
+      "value": "-180.0"
+    },
+    {
+      "source": "-30",
+      "value": "-30"
+    },
+    {
+      "source": "-7.5",
+      "value": "-7.5"
+    },
+    {
+      "source": "-80",
+      "value": "-80"
+    },
+    {
+      "source": "-90.0",
+      "value": "-90.0"
+    },
+    {
+      "source": "0",
+      "value": "0"
+    },
+    {
+      "source": "0.0",
+      "value": "0.0"
+    },
+    {
+      "source": "0.0 > 0.0 or not False",
+      "value": "True"
+    },
+    {
+      "source": "0.001",
+      "value": "0.001"
+    },
+    {
+      "source": "0.01",
+      "value": "0.01"
+    },
+    {
+      "source": "0.05",
+      "value": "0.05"
+    },
+    {
+      "source": "0.1",
+      "value": "0.1"
+    },
+    {
+      "source": "0.15",
+      "value": "0.15"
+    },
+    {
+      "source": "0.2",
+      "value": "0.2"
+    },
+    {
+      "source": "0.25",
+      "value": "0.25"
+    },
+    {
+      "source": "0.3",
+      "value": "0.3"
+    },
+    {
+      "source": "0.35",
+      "value": "0.35"
+    },
+    {
+      "source": "0.4",
+      "value": "0.4"
+    },
+    {
+      "source": "0.5",
+      "value": "0.5"
+    },
+    {
+      "source": "0.6",
+      "value": "0.6"
+    },
+    {
+      "source": "0.75",
+      "value": "0.75"
+    },
+    {
+      "source": "0.8",
+      "value": "0.8"
+    },
+    {
+      "source": "0.99",
+      "value": "0.99"
+    },
+    {
+      "source": "1",
+      "value": "1"
+    },
+    {
+      "source": "1.0",
+      "value": "1.0"
+    },
+    {
+      "source": "1.5",
+      "value": "1.5"
+    },
+    {
+      "source": "10",
+      "value": "10"
+    },
+    {
+      "source": "10.0",
+      "value": "10.0"
+    },
+    {
+      "source": "100",
+      "value": "100"
+    },
+    {
+      "source": "100.0",
+      "value": "100.0"
+    },
+    {
+      "source": "1000",
+      "value": "1000"
+    },
+    {
+      "source": "1000.0",
+      "value": "1000.0"
+    },
+    {
+      "source": "140.0",
+      "value": "140.0"
+    },
+    {
+      "source": "16",
+      "value": "16"
+    },
+    {
+      "source": "180.0",
+      "value": "180.0"
+    },
+    {
+      "source": "2",
+      "value": "2"
+    },
+    {
+      "source": "2.0",
+      "value": "2.0"
+    },
+    {
+      "source": "2.5",
+      "value": "2.5"
+    },
+    {
+      "source": "20",
+      "value": "20"
+    },
+    {
+      "source": "20.0",
+      "value": "20.0"
+    },
+    {
+      "source": "200",
+      "value": "200"
+    },
+    {
+      "source": "200.0",
+      "value": "200.0"
+    },
+    {
+      "source": "22",
+      "value": "22"
+    },
+    {
+      "source": "25",
+      "value": "25"
+    },
+    {
+      "source": "25.0",
+      "value": "25.0"
+    },
+    {
+      "source": "255",
+      "value": "255"
+    },
+    {
+      "source": "3",
+      "value": "3"
+    },
+    {
+      "source": "30",
+      "value": "30"
+    },
+    {
+      "source": "301",
+      "value": "301"
+    },
+    {
+      "source": "33",
+      "value": "33"
+    },
+    {
+      "source": "400.0",
+      "value": "400.0"
+    },
+    {
+      "source": "42",
+      "value": "42"
+    },
+    {
+      "source": "5",
+      "value": "5"
+    },
+    {
+      "source": "5.0",
+      "value": "5.0"
+    },
+    {
+      "source": "500",
+      "value": "500"
+    },
+    {
+      "source": "500.0",
+      "value": "500.0"
+    },
+    {
+      "source": "6.0",
+      "value": "6.0"
+    },
+    {
+      "source": "7.5",
+      "value": "7.5"
+    },
+    {
+      "source": "8.0",
+      "value": "8.0"
+    },
+    {
+      "source": "90",
+      "value": "90"
+    },
+    {
+      "source": "90.0",
+      "value": "90.0"
+    },
+    {
+      "source": "False",
+      "value": "False"
+    },
+    {
+      "source": "True",
+      "value": "True"
+    },
+    {
+      "source": "not False or not False",
+      "value": "True"
+    },
+    {
+      "source": "not True or ( not False and ( 0 == 0 ) and ( True or False ) )",
+      "value": "True"
+    },
+    {
+      "source": "1 + 2",
+      "value": "3"
+    },
+    {
+      "source": "2 - 3",
+      "value": "-1"
+    },
+    {
+      "source": "2 * 3",
+      "value": "6"
+    },
+    {
+      "source": "7 / 2",
+      "value": "3.5"
+    },
+    {
+      "source": "7 // 2",
+      "value": "3"
+    },
+    {
+      "source": "-7 // 2",
+      "value": "-4"
+    },
+    {
+      "source": "7 % 3",
+      "value": "1"
+    },
+    {
+      "source": "-7 % 3",
+      "value": "2"
+    },
+    {
+      "source": "7 % -3",
+      "value": "-2"
+    },
+    {
+      "source": "2 ** 10",
+      "value": "1024"
+    },
+    {
+      "source": "2 ** 0",
+      "value": "1"
+    },
+    {
+      "source": "0 ** 0",
+      "value": "1"
+    },
+    {
+      "source": "2 ** -1",
+      "value": "0.5"
+    },
+    {
+      "source": "10 / 5",
+      "value": "2.0"
+    },
+    {
+      "source": "1 + 2 * 3",
+      "value": "7"
+    },
+    {
+      "source": "( 1 + 2 ) * 3",
+      "value": "9"
+    },
+    {
+      "source": "- - 5",
+      "value": "5"
+    },
+    {
+      "source": "+ 5",
+      "value": "5"
+    },
+    {
+      "source": "~ 5",
+      "value": "-6"
+    },
+    {
+      "source": "5 & 3",
+      "value": "1"
+    },
+    {
+      "source": "5 | 3",
+      "value": "7"
+    },
+    {
+      "source": "5 ^ 3",
+      "value": "6"
+    },
+    {
+      "source": "1 << 10",
+      "value": "1024"
+    },
+    {
+      "source": "1024 >> 3",
+      "value": "128"
+    },
+    {
+      "source": "10000000000000000000000 * 3",
+      "value": "30000000000000000000000"
+    },
+    {
+      "source": "2 ** 200",
+      "value": "1606938044258990275541962092341162602522202993782792835301376"
+    },
+    {
+      "source": "0x1f + 1",
+      "value": "32"
+    },
+    {
+      "source": "9999999999999999999 + 1",
+      "value": "10000000000000000000"
+    },
+    {
+      "source": "1 / 3",
+      "value": "0.3333333333333333"
+    },
+    {
+      "source": "0.1 + 0.2",
+      "value": "0.30000000000000004"
+    },
+    {
+      "source": "1e16",
+      "value": "1e+16"
+    },
+    {
+      "source": "1e15",
+      "value": "1000000000000000.0"
+    },
+    {
+      "source": "1e-4",
+      "value": "0.0001"
+    },
+    {
+      "source": "1e-5",
+      "value": "1e-05"
+    },
+    {
+      "source": "0.0001",
+      "value": "0.0001"
+    },
+    {
+      "source": "0.00001",
+      "value": "1e-05"
+    },
+    {
+      "source": "-0.0",
+      "value": "-0.0"
+    },
+    {
+      "source": "1e308",
+      "value": "1e+308"
+    },
+    {
+      "source": "1e309",
+      "value": "inf"
+    },
+    {
+      "source": "-1e309",
+      "value": "-inf"
+    },
+    {
+      "source": "float(\"nan\")",
+      "value": "nan"
+    },
+    {
+      "source": "float(\"inf\")",
+      "value": "inf"
+    },
+    {
+      "source": "float(\"-inf\")",
+      "value": "-inf"
+    },
+    {
+      "source": "3.0 // 2",
+      "value": "1.0"
+    },
+    {
+      "source": "3.0 % 2",
+      "value": "1.0"
+    },
+    {
+      "source": "7.5 % 2",
+      "value": "1.5"
+    },
+    {
+      "source": "-7.5 % 2",
+      "value": "0.5"
+    },
+    {
+      "source": "2.5 ** 2",
+      "value": "6.25"
+    },
+    {
+      "source": "10.0 / 4",
+      "value": "2.5"
+    },
+    {
+      "source": "float(1) / 3",
+      "value": "0.3333333333333333"
+    },
+    {
+      "source": ".5",
+      "value": "0.5"
+    },
+    {
+      "source": "1.",
+      "value": "1.0"
+    },
+    {
+      "source": "0.3333 * 25",
+      "value": "8.3325"
+    },
+    {
+      "source": "0.6667 * 25",
+      "value": "16.6675"
+    },
+    {
+      "source": "-0.1 * 25",
+      "value": "-2.5"
+    },
+    {
+      "source": "round(2.5)",
+      "value": "2"
+    },
+    {
+      "source": "round(3.5)",
+      "value": "4"
+    },
+    {
+      "source": "round(-2.5)",
+      "value": "-2"
+    },
+    {
+      "source": "round(0.5)",
+      "value": "0"
+    },
+    {
+      "source": "round(1.5)",
+      "value": "2"
+    },
+    {
+      "source": "round(2.675, 2)",
+      "value": "2.67"
+    },
+    {
+      "source": "round(1234.5678, -2)",
+      "value": "1200.0"
+    },
+    {
+      "source": "round(7)",
+      "value": "7"
+    },
+    {
+      "source": "round(2.675)",
+      "value": "3"
+    },
+    {
+      "source": "round(-0.5)",
+      "value": "0"
+    },
+    {
+      "source": "1 < 2",
+      "value": "True"
+    },
+    {
+      "source": "1 < 2 < 3",
+      "value": "True"
+    },
+    {
+      "source": "1 < 2 > 3",
+      "value": "False"
+    },
+    {
+      "source": "2 > 1",
+      "value": "True"
+    },
+    {
+      "source": "2 >= 2",
+      "value": "True"
+    },
+    {
+      "source": "2 <= 1",
+      "value": "False"
+    },
+    {
+      "source": "1 == 1.0",
+      "value": "True"
+    },
+    {
+      "source": "1 == \"1\"",
+      "value": "False"
+    },
+    {
+      "source": "True == 1",
+      "value": "True"
+    },
+    {
+      "source": "1 != 2",
+      "value": "True"
+    },
+    {
+      "source": "\"a\" < \"b\"",
+      "value": "True"
+    },
+    {
+      "source": "\"a\" == \"a\"",
+      "value": "True"
+    },
+    {
+      "source": "not True",
+      "value": "False"
+    },
+    {
+      "source": "not 0",
+      "value": "True"
+    },
+    {
+      "source": "not \"\"",
+      "value": "True"
+    },
+    {
+      "source": "1 and 2",
+      "value": "2"
+    },
+    {
+      "source": "0 and 2",
+      "value": "0"
+    },
+    {
+      "source": "1 or 2",
+      "value": "1"
+    },
+    {
+      "source": "0 or 2",
+      "value": "2"
+    },
+    {
+      "source": "0 or \"\" or 3",
+      "value": "3"
+    },
+    {
+      "source": "None == None",
+      "value": "True"
+    },
+    {
+      "source": "None is None",
+      "value": "True"
+    },
+    {
+      "source": "\"a\" in \"abc\"",
+      "value": "True"
+    },
+    {
+      "source": "\"z\" in \"abc\"",
+      "value": "False"
+    },
+    {
+      "source": "3 in [ 1, 2, 3 ]",
+      "value": "True"
+    },
+    {
+      "source": "4 not in ( 1, 2 )",
+      "value": "True"
+    },
+    {
+      "source": "'k' in { 'k' : 1 }",
+      "value": "True"
+    },
+    {
+      "source": "1 if True else 2",
+      "value": "1"
+    },
+    {
+      "source": "1 if False else 2",
+      "value": "2"
+    },
+    {
+      "source": "0.3333 if True else 0.3333 * 25",
+      "value": "0.3333"
+    },
+    {
+      "source": "25 if False else 10",
+      "value": "10"
+    },
+    {
+      "source": "1 if 1 else 2",
+      "value": "1"
+    },
+    {
+      "source": "\"\" if False else \"x\"",
+      "value": "x"
+    },
+    {
+      "source": "\"a\" if 1 == 1 else \"b\"",
+      "value": "a"
+    },
+    {
+      "source": "- 1.0 if True else - 25",
+      "value": "-1.0"
+    },
+    {
+      "source": "1 if 0 else 2 if 0 else 3",
+      "value": "3"
+    },
+    {
+      "source": "\"abc\"",
+      "value": "abc"
+    },
+    {
+      "source": "'abc'",
+      "value": "abc"
+    },
+    {
+      "source": "\"a\\nb\"",
+      "value": "a\nb"
+    },
+    {
+      "source": "\"a\\tb\"",
+      "value": "a\tb"
+    },
+    {
+      "source": "\"q\\\"q\"",
+      "value": "q\"q"
+    },
+    {
+      "source": "\"a\\\\b\"",
+      "value": "a\\b"
+    },
+    {
+      "source": "\"\"",
+      "value": ""
+    },
+    {
+      "source": "\"a\" + \"b\"",
+      "value": "ab"
+    },
+    {
+      "source": "\"ab\" * 3",
+      "value": "ababab"
+    },
+    {
+      "source": "len(\"abcd\")",
+      "value": "4"
+    },
+    {
+      "source": "len(\"\")",
+      "value": "0"
+    },
+    {
+      "source": "str(1)",
+      "value": "1"
+    },
+    {
+      "source": "str(1.0)",
+      "value": "1.0"
+    },
+    {
+      "source": "str(True)",
+      "value": "True"
+    },
+    {
+      "source": "str(None)",
+      "value": "None"
+    },
+    {
+      "source": "str(1.5)",
+      "value": "1.5"
+    },
+    {
+      "source": "str(\"x\")",
+      "value": "x"
+    },
+    {
+      "source": "repr(\"a\")",
+      "value": "'a'"
+    },
+    {
+      "source": "repr(\"a'b\")",
+      "value": "\"a'b\""
+    },
+    {
+      "source": "repr(1.5)",
+      "value": "1.5"
+    },
+    {
+      "source": "repr(None)",
+      "value": "None"
+    },
+    {
+      "source": "repr([ 1, \"a\" ])",
+      "value": "[1, 'a']"
+    },
+    {
+      "source": "int(\"42\")",
+      "value": "42"
+    },
+    {
+      "source": "int(3.9)",
+      "value": "3"
+    },
+    {
+      "source": "int(-3.9)",
+      "value": "-3"
+    },
+    {
+      "source": "int(True)",
+      "value": "1"
+    },
+    {
+      "source": "int(\"42\", 16)",
+      "value": "66"
+    },
+    {
+      "source": "float(\"2.5\")",
+      "value": "2.5"
+    },
+    {
+      "source": "float(2)",
+      "value": "2.0"
+    },
+    {
+      "source": "bool(0)",
+      "value": "False"
+    },
+    {
+      "source": "bool(\"\")",
+      "value": "False"
+    },
+    {
+      "source": "bool([1])",
+      "value": "True"
+    },
+    {
+      "source": "abs(-3)",
+      "value": "3"
+    },
+    {
+      "source": "abs(-3.5)",
+      "value": "3.5"
+    },
+    {
+      "source": "min(3, 1, 2)",
+      "value": "1"
+    },
+    {
+      "source": "max(3, 1, 2)",
+      "value": "3"
+    },
+    {
+      "source": "min([ 3, 1, 2 ])",
+      "value": "1"
+    },
+    {
+      "source": "max(\"a\", \"b\")",
+      "value": "b"
+    },
+    {
+      "source": "sum([ 1, 2, 3 ])",
+      "value": "6"
+    },
+    {
+      "source": "sum([ 1.5, 2 ])",
+      "value": "3.5"
+    },
+    {
+      "source": "sorted([ 3, 1, 2 ])",
+      "value": "[1, 2, 3]"
+    },
+    {
+      "source": "list(\"ab\")",
+      "value": "['a', 'b']"
+    },
+    {
+      "source": "tuple([ 1, 2 ])",
+      "value": "(1, 2)"
+    },
+    {
+      "source": "divmod(7, 2)",
+      "value": "(3, 1)"
+    },
+    {
+      "source": "ord(\"a\")",
+      "value": "97"
+    },
+    {
+      "source": "chr(97)",
+      "value": "a"
+    },
+    {
+      "source": "pow(2, 8)",
+      "value": "256"
+    },
+    {
+      "source": "pow(2, 8, 5)",
+      "value": "1"
+    },
+    {
+      "source": "[ 1, 2 ]",
+      "value": "[1, 2]"
+    },
+    {
+      "source": "( 1, 2 )",
+      "value": "(1, 2)"
+    },
+    {
+      "source": "( 1, )",
+      "value": "(1,)"
+    },
+    {
+      "source": "[]",
+      "value": "[]"
+    },
+    {
+      "source": "()",
+      "value": "()"
+    },
+    {
+      "source": "{}",
+      "value": "{}"
+    },
+    {
+      "source": "{ 1, 2 }",
+      "value": "{1, 2}"
+    },
+    {
+      "source": "[ 1, \"a\", True ]",
+      "value": "[1, 'a', True]"
+    },
+    {
+      "source": "{ \"a\": 1 }",
+      "value": "{'a': 1}"
+    },
+    {
+      "source": "[ 1, 2 ][0]",
+      "value": "1"
+    },
+    {
+      "source": "[ 1, 2 ][-1]",
+      "value": "2"
+    },
+    {
+      "source": "\"abc\"[1]",
+      "value": "b"
+    },
+    {
+      "source": "\"abc\"[-1]",
+      "value": "c"
+    },
+    {
+      "source": "{ \"a\": 1 }[\"a\"]",
+      "value": "1"
+    },
+    {
+      "source": "len([ 1, 2, 3 ])",
+      "value": "3"
+    },
+    {
+      "source": "2 ** 3 ** 2",
+      "value": "512"
+    },
+    {
+      "source": "- 2 ** 2",
+      "value": "-4"
+    },
+    {
+      "source": "- - 1",
+      "value": "1"
+    },
+    {
+      "source": "not not 1",
+      "value": "True"
+    },
+    {
+      "source": "\"a\" * 0",
+      "value": ""
+    },
+    {
+      "source": "[ 1 ] * 0",
+      "value": "[]"
+    },
+    {
+      "source": "True + True",
+      "value": "2"
+    },
+    {
+      "source": "1 == True",
+      "value": "True"
+    },
+    {
+      "source": "True is True",
+      "value": "True"
+    },
+    {
+      "source": "True is 1",
+      "value": "False"
+    },
+    {
+      "source": "None is not None",
+      "value": "False"
+    },
+    {
+      "source": "0.1 == 0.1",
+      "value": "True"
+    },
+    {
+      "source": "float(1) / 3 * 3",
+      "value": "1.0"
+    },
+    {
+      "source": "int(\"  42  \")",
+      "value": "42"
+    },
+    {
+      "source": "\"x\" in [ \"x\" ]",
+      "value": "True"
+    },
+    {
+      "source": "( 1, 2 ) < ( 1, 3 )",
+      "value": "True"
+    },
+    {
+      "source": "sorted([ \"b\", \"a\" ])",
+      "value": "['a', 'b']"
+    },
+    {
+      "source": "len(r\"a\\nb\")",
+      "value": "4"
+    },
+    {
+      "source": "abs(-0.0)",
+      "value": "0.0"
+    },
+    {
+      "source": "-0.0 == 0.0",
+      "value": "True"
+    },
+    {
+      "source": "divmod(-7, 2)",
+      "value": "(-4, 1)"
+    },
+    {
+      "source": "10 // 3",
+      "value": "3"
+    },
+    {
+      "source": "sum([])",
+      "value": "0"
+    },
+    {
+      "source": "min([ 1 ])",
+      "value": "1"
+    },
+    {
+      "source": "chr(0)",
+      "value": "\u0000"
+    },
+    {
+      "source": "str([ 1, \"a\" ])",
+      "value": "[1, 'a']"
+    },
+    {
+      "source": "repr(1e16)",
+      "value": "1e+16"
+    },
+    {
+      "source": "\"ab\" < \"b\"",
+      "value": "True"
+    },
+    {
+      "source": "1e400",
+      "value": "inf"
+    },
+    {
+      "source": "5 // 2.0",
+      "value": "2.0"
+    },
+    {
+      "source": "None if 0 else 1",
+      "value": "1"
+    },
+    {
+      "source": "1.0 if True else 2",
+      "value": "1.0"
+    },
+    {
+      "source": "int(1e20)",
+      "value": "100000000000000000000"
+    },
+    {
+      "source": "2 ** 100 * 2",
+      "value": "2535301200456458802993406410752"
+    },
+    {
+      "source": "float(\"1e400\")",
+      "value": "inf"
+    },
+    {
+      "source": "( 1 if True else 2 ) + 3",
+      "value": "4"
+    },
+    {
+      "source": "str(2 ** 3 ** 2)",
+      "value": "512"
+    },
+    {
+      "source": "int(-2.9)",
+      "value": "-2"
+    },
+    {
+      "source": "pow(2, -1)",
+      "value": "0.5"
+    },
+    {
+      "source": "abs(-2 ** 31)",
+      "value": "2147483648"
+    },
+    {
+      "source": "min(\"a\", \"b\", \"c\")",
+      "value": "a"
+    },
+    {
+      "source": "sorted([ 3, 1, 2 ])[0]",
+      "value": "1"
+    },
+    {
+      "source": "[ 1, 2, 3 ][1:]",
+      "value": "[2, 3]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][:2]",
+      "value": "[1, 2]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][:]",
+      "value": "[1, 2, 3]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][::-1]",
+      "value": "[3, 2, 1]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][-1:]",
+      "value": "[3]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][:-1]",
+      "value": "[1, 2]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][::2]",
+      "value": "[1, 3]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][1:99]",
+      "value": "[2, 3]"
+    },
+    {
+      "source": "[ 1, 2, 3 ][-99:99]",
+      "value": "[1, 2, 3]"
+    },
+    {
+      "source": "\"abcdef\"[1:3]",
+      "value": "bc"
+    },
+    {
+      "source": "\"abcdef\"[::-1]",
+      "value": "fedcba"
+    },
+    {
+      "source": "\"abcdef\"[-2:]",
+      "value": "ef"
+    },
+    {
+      "source": "( 1, 2, 3 )[1:]",
+      "value": "(2, 3)"
+    },
+    {
+      "source": "[ 1, 2, 3 ][2:1]",
+      "value": "[]"
+    },
+    {
+      "source": "len(\"abcdef\"[1:3])",
+      "value": "2"
+    },
+    {
+      "source": "sorted([ 3, 1, 2 ])[:1]",
+      "value": "[1]"
+    },
+    {
+      "source": "1 if True else 2, 3",
+      "value": "(1, 3)"
+    },
+    {
+      "source": "1 ,",
+      "value": "(1,)"
+    },
+    {
+      "source": "r\"a\\nb\"",
+      "value": "a\\nb"
+    },
+    {
+      "source": "r'a\\tb'",
+      "value": "a\\tb"
+    },
+    {
+      "source": " 25 ",
+      "value": "25"
+    },
+    {
+      "source": "  1.0",
+      "value": "1.0"
+    },
+    {
+      "source": "- 25",
+      "value": "-25"
+    },
+    {
+      "source": "-0.1*25",
+      "value": "-2.5"
+    },
+    {
+      "source": "1 / 0",
+      "error": "division by zero",
+      "errorType": "ZeroDivisionError",
+      "syntax": false
+    },
+    {
+      "source": "1.0 / 0",
+      "error": "float division by zero",
+      "errorType": "ZeroDivisionError",
+      "syntax": false
+    },
+    {
+      "source": "1 // 0",
+      "error": "integer division or modulo by zero",
+      "errorType": "ZeroDivisionError",
+      "syntax": false
+    },
+    {
+      "source": "1 % 0",
+      "error": "integer division or modulo by zero",
+      "errorType": "ZeroDivisionError",
+      "syntax": false
+    },
+    {
+      "source": "undefined_name",
+      "error": "name 'undefined_name' is not defined",
+      "errorType": "NameError",
+      "syntax": false
+    },
+    {
+      "source": "undefined_name + 1",
+      "error": "name 'undefined_name' is not defined",
+      "errorType": "NameError",
+      "syntax": false
+    },
+    {
+      "source": "len(1)",
+      "error": "object of type 'int' has no len()",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "int(\"x\")",
+      "error": "invalid literal for int() with base 10: 'x'",
+      "errorType": "ValueError",
+      "syntax": false
+    },
+    {
+      "source": "float(\"x\")",
+      "error": "could not convert string to float: 'x'",
+      "errorType": "ValueError",
+      "syntax": false
+    },
+    {
+      "source": "\"a\" + 1",
+      "error": "can only concatenate str (not \"int\") to str",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "1 < \"a\"",
+      "error": "'<' not supported between instances of 'int' and 'str'",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "\"a\" - \"b\"",
+      "error": "unsupported operand type(s) for -: 'str' and 'str'",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "[ 1 ][5]",
+      "error": "list index out of range",
+      "errorType": "IndexError",
+      "syntax": false
+    },
+    {
+      "source": "\"a\"[3]",
+      "error": "string index out of range",
+      "errorType": "IndexError",
+      "syntax": false
+    },
+    {
+      "source": "{ 1: 2 }[3]",
+      "error": "3",
+      "errorType": "KeyError",
+      "syntax": false
+    },
+    {
+      "source": "abs(\"x\")",
+      "error": "bad operand type for abs(): 'str'",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "min([])",
+      "error": "min() arg is an empty sequence",
+      "errorType": "ValueError",
+      "syntax": false
+    },
+    {
+      "source": "ord(\"ab\")",
+      "error": "ord() expected a character, but string of length 2 found",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "chr(-1)",
+      "error": "chr() arg not in range(0x110000)",
+      "errorType": "ValueError",
+      "syntax": false
+    },
+    {
+      "source": "None + 1",
+      "error": "unsupported operand type(s) for +: 'NoneType' and 'int'",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "True + None",
+      "error": "unsupported operand type(s) for +: 'bool' and 'NoneType'",
+      "errorType": "TypeError",
+      "syntax": false
+    },
+    {
+      "source": "1 +",
+      "error": "unexpected EOF while parsing (<string>, line 1)",
+      "errorType": "SyntaxError",
+      "syntax": true
+    },
+    {
+      "source": "( 1",
+      "error": "unexpected EOF while parsing (<string>, line 1)",
+      "errorType": "SyntaxError",
+      "syntax": true
+    },
+    {
+      "source": "1 if 2",
+      "error": "unexpected EOF while parsing (<string>, line 1)",
+      "errorType": "SyntaxError",
+      "syntax": true
+    },
+    {
+      "source": "1 2",
+      "error": "unexpected EOF while parsing (<string>, line 1)",
+      "errorType": "SyntaxError",
+      "syntax": true
+    },
+    {
+      "source": "\"unterminated",
+      "error": "EOL while scanning string literal (<string>, line 1)",
+      "errorType": "SyntaxError",
+      "syntax": true
+    }
+  ],
+  "unsupportedByPort": [
+    "lambda: 1",
+    "[ x for x in [ 1 ] ]",
+    "[ x for x in [ 1 ] if x ]",
+    "{ k: 1 for k in [ 1 ] }",
+    "{ x for x in [ 1 ] }",
+    "( x for x in [ 1 ] )",
+    "f\"{1}\"",
+    "b\"x\"",
+    "rb\"x\"",
+    "1j",
+    "\"%d\" % 3",
+    "\"%s\" % \"x\"",
+    "x := 1",
+    "1 .real",
+    "( 1 ).real"
+  ]
+}

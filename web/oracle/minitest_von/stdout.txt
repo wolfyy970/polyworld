@@ -1,0 +1,174 @@
+/usr/bin/clang++ -I/opt/homebrew/include -g -std=c++17 -c -MMD -Wall -Wno-deprecated-declarations -O2 -Ipolyworld/src/library -DGL_SILENCE_DEPRECATION -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers -Wno-unused-variable  -o generated.o generated.cc
+/usr/bin/clang++ -dynamiclib -undefined dynamic_lookup -Wl,-install_name,@rpath/libcppprops.dylib -Wl,-rpath,polyworld/lib -Lpolyworld/lib -o libcppprops.dylib  ./generated.o -lpolyworld
+------------------------------------------------------------
+step = 1
+agents =   25
+food =   10
+foodEnergy = 5304.1
+created  =   25
+ -random =   25
+ -two    =    0
+ -one    =    0
+born     =    0
+died     =    0
+ -age    =    0
+ -energy =    0
+ -fight  =    0
+ -eat    =    0
+ -edge   =    0
+ -smite  =    0
+ -patch  =    0
+birthDenials = 2
+miscDenials = 0
+ageCreate = 0
+maxGapCreate = 0
+born/total = 0.00
+Fitness m=0.00, c=0.00, a=0.00
+Fittest =
+CurFit = 5 2 14 25 21
+   0.00  0.00  0.00  0.00  0.00
+avgFoodEnergy = -1.00
+totFoodEnergy = 0.98
+totEnergyEaten = 91.0
+EatRate = 0.0
+MateRate = 0.00
+LifeSpan = 0 � 0 [0, 0]
+RecLifeSpan = 0 � 0 [0, 0]
+CurNeurons = 37.0 � 0.0 [37, 37]
+CurNeurGroups = 13.0 � 0.0 [13, 13]
+CurSynapses = 74.0 � 0.0 [74, 74]
+Rate 0.0 (0.0) 0.0 (0.0) 0.0 (0.0)
+Domain 0
+  FP0 2   1  11   4.0 44.0   7.7
+  FP1 8  12  20  48.0 80.0  92.3
+  FP*  13  31  52.0 124.0 100.0
+------------------------------------------------------------
+step = 100
+agents =   23
+food =   15
+foodEnergy = 4557.5
+created  =   25
+ -random =   25
+ -two    =    0
+ -one    =    0
+born     =   12
+died     =   14
+ -age    =    0
+ -energy =   10
+ -fight  =    4
+ -eat    =    0
+ -edge   =    0
+ -smite  =    0
+ -patch  =    0
+birthDenials = 530
+miscDenials = 0
+ageCreate = 0
+maxGapCreate = 0
+born/total = 0.32
+Fitness m=0.05, c=0.05, a=0.00
+Fittest = 9 17 14 24 25
+   0.05  0.05  0.05  0.05  0.04
+CurFit = 8 16 15 20 23
+   0.05  0.05  0.02  0.02  0.02
+avgFoodEnergy = -0.55
+totFoodEnergy = 0.34
+totEnergyEaten = 9305.8
+EatRate = 93.1
+MateRate = 0.12
+LifeSpan = 70 � 20 [31, 100]
+RecLifeSpan = 70 � 20 [31, 100]
+CurNeurons = 35.8 � 3.0 [29, 40]
+CurNeurGroups = 13.0 � 0.0 [13, 13]
+CurSynapses = 76.4 � 5.9 [68, 98]
+Rate 33.0 (0.0) 32.4 (0.0) 32.0 (0.0)
+Domain 0
+  FP0 6   8   9  34.8 39.1  42.1
+  FP1 9  11  14  47.8 60.9  57.9
+  FP*  19  23  82.6 100.0 100.0
+------------------------------------------------------------
+step = 200
+agents =   25
+food =   15
+foodEnergy = 4329.0
+created  =   25
+ -random =   25
+ -two    =    0
+ -one    =    0
+born     =   36
+died     =   36
+ -age    =    0
+ -energy =   26
+ -fight  =   10
+ -eat    =    0
+ -edge   =    0
+ -smite  =    0
+ -patch  =    0
+birthDenials = 539
+miscDenials = 0
+ageCreate = 0
+maxGapCreate = 0
+born/total = 0.59
+Fitness m=0.12, c=0.12, a=0.06
+Fittest = 10 15 16 21 23
+   0.12  0.11  0.11  0.09  0.08
+CurFit = 8 20 31 43 36
+   0.12  0.07  0.07  0.05  0.05
+avgFoodEnergy = -0.42
+totFoodEnergy = 0.21
+totEnergyEaten = 16875.2
+EatRate = 75.7
+MateRate = 0.24
+LifeSpan = 84 � 45 [16, 194]
+RecLifeSpan = 84 � 45 [16, 194]
+CurNeurons = 36.9 � 6.0 [30, 57]
+CurNeurGroups = 13.1 � 0.4 [13, 15]
+CurSynapses = 88.6 � 21.9 [57, 159]
+Rate 33.1 (0.0) 32.8 (0.0) 32.8 (0.0)
+Domain 0
+  FP0 5   9  10  36.0 40.0  37.5
+  FP1 10  15  16  60.0 64.0  62.5
+  FP*  24  26  96.0 104.0 100.0
+------------------------------------------------------------
+step = 300
+agents =   24
+food =   19
+foodEnergy = 6095.0
+created  =   25
+ -random =   25
+ -two    =    0
+ -one    =    0
+born     =   58
+died     =   59
+ -age    =    0
+ -energy =   40
+ -fight  =   19
+ -eat    =    0
+ -edge   =    0
+ -smite  =    0
+ -patch  =    0
+birthDenials = 547
+miscDenials = 0
+ageCreate = 0
+maxGapCreate = 0
+born/total = 0.70
+Fitness m=0.15, c=0.04, a=0.00
+Fittest = 20 32 36 50 10
+   0.15  0.14  0.14  0.13  0.12
+CurFit = 68 53 72 78 66
+   0.04  0.03  0.02  0.02  0.02
+avgFoodEnergy = -0.24
+totFoodEnergy = 0.18
+totEnergyEaten = 27373.6
+EatRate = 105.0
+MateRate = 0.22
+LifeSpan = 93 � 52 [16, 232]
+RecLifeSpan = 93 � 52 [16, 232]
+CurNeurons = 38.5 � 6.5 [29, 58]
+CurNeurGroups = 13.4 � 0.7 [13, 16]
+CurSynapses = 116.4 � 71.0 [66, 447]
+Rate 31.4 (0.0) 31.9 (0.0) 32.7 (0.0)
+Domain 0
+  FP0 7   3   8  12.5 33.3  15.0
+  FP1 12  17  20  70.8 83.3  85.0
+  FP*  20  28  83.3 116.7 100.0
+Simulation stopped after step 301

@@ -1,0 +1,10 @@
+# lane L13 (complexity) — GSL kernels, measured on Darwin/arm64 26.5.2
+# library: /opt/homebrew/opt/gsl/lib/libgsl.dylib
+# produced by src/model/complexity/native/run_gslprobe.sh — regenerate, do not edit
+vector a 3fd3333333333333 bffb333333333333 4007333333333333 3fa999999999999a bfdc28f5c28f5c29 3ff3333333333333 c008cccccccccccd 3fe999999999999a
+vector b bfeccccccccccccd 3fe3333333333333 3ff8cccccccccccd c00199999999999a 3fd3d70a3d70a3d7 3fb1eb851eb851ec 4003333333333333 bff199999999999a
+gsl_stats_mean 3f547ae147ae1440
+gsl_stats_covariance bfe821223b197428
+gsl_stats_variance 400a99eb0d4861d5
+plain_sum_over_n 3f547ae147ae1480
+plain_sum_over_n_done

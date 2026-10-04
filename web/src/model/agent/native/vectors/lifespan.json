@@ -1,0 +1,5 @@
+{
+  "kind": "agent.LifeSpan",
+  "birth": ["INVALID","SIMINIT","CREATE","NATURAL","LOCKSTEP","VIRTUAL"],
+  "death": ["INVALID","SIMEND","SMITE","PATCH","NATURAL","FIGHT","EAT","LOCKSTEP","RANDOM"]
+}

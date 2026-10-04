@@ -1,0 +1,289 @@
+{
+ "formatVersion": 1,
+ "recorded": "see meta per entry",
+ "native_root": "polyworld",
+ "schema": "polyworld/etc/worldfile.wfs",
+ "schema_sha256": "f9d45e0be318a0adbf825892ecb4e816c830940ec7809dd6d168e79ca5ea3106",
+ "scenarios": {
+  "minitest_voff": {
+   "worldfile": "polyworld/worldfiles/tests/low-spec-pc/minitest.wf",
+   "native_args": [
+    "--Vision",
+    "False"
+   ],
+   "generated_cc": "native/minitest_voff.generated.cc",
+   "farm_log": "native/minitest_voff.farm.log",
+   "state": "state/minitest_voff.state.json",
+   "steps_recorded": 301,
+   "state_samples": 301,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "agents"
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the state trace comes from Simulation::getStatusText (independent of the cppprops path). Alive0 == AgentCount at every recorded step of every single-metabolism scenario (a run with two definitions records both counts and they diverge -- see `two_metabolisms`).",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0"
+   ],
+   "sha256": {
+    "generated_cc": "3bb7415e7ee134cc973717f2ac435f2679d5f07212847dccf42562e7f87ba7bb",
+    "farm_log": "622acad9fbb19f079ec7080b79247aa4853e5c03c4b3bd3de9626ec99c65d96a",
+    "state": "07781f603d3e3df6227e5bee32ee188767fac576a17ede5d8bad04018c9ed78c"
+   }
+  },
+  "microtest_voff": {
+   "worldfile": "polyworld/worldfiles/tests/low-spec-pc/microtest.wf",
+   "native_args": [
+    "--Vision",
+    "False"
+   ],
+   "generated_cc": "native/microtest_voff.generated.cc",
+   "farm_log": "native/microtest_voff.farm.log",
+   "state": "state/microtest_voff.state.json",
+   "steps_recorded": 1,
+   "state_samples": 1,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "agents"
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the state trace comes from Simulation::getStatusText (independent of the cppprops path). Alive0 == AgentCount at every recorded step of every single-metabolism scenario (a run with two definitions records both counts and they diverge -- see `two_metabolisms`).",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0"
+   ],
+   "sha256": {
+    "generated_cc": "3bb7415e7ee134cc973717f2ac435f2679d5f07212847dccf42562e7f87ba7bb",
+    "farm_log": "8778c7a1b47890a81d03a99962fb968e6ce3409fc9729896fd927acd2e8d40b7",
+    "state": "00963b254c171fa3ea87aa4cddfa5ab918da28b42262d85f8a26679793874961"
+   }
+  },
+  "growers_small": {
+   "worldfile": "staging/w1h-mirror/growingBarriers_small.wf",
+   "native_args": [
+    "--Vision",
+    "False"
+   ],
+   "generated_cc": "native/growers_small.generated.cc",
+   "farm_log": "native/growers_small.farm.log",
+   "state": "state/growers_small.state.json",
+   "steps_recorded": 300,
+   "state_samples": 300,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "agents"
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the state trace comes from Simulation::getStatusText (independent of the cppprops path). Alive0 == AgentCount at every recorded step of every single-metabolism scenario (a run with two definitions records both counts and they diverge -- see `two_metabolisms`).",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0",
+    "B0Z2",
+    "B1Z2",
+    "P0On",
+    "P1On",
+    "P2On"
+   ],
+   "sha256": {
+    "generated_cc": "ec0f5f8594fcdb12c0c879b8a0fdd8312eb083766e15995b582ae3b2d3e03497",
+    "farm_log": "c40989c2ee4b4fd3439777b3df8f9641fc6e5b3ec10dba3187cffcaf2b76976a",
+    "state": "fab74adce2545dd762671f035f48d9a8cad009d7b55dbb63c24f20605cbf3f88"
+   }
+  },
+  "growers_dyn": {
+   "worldfile": "tools/cppprops/fixtures/worldfiles/growers_dyn.wf",
+   "native_args": [
+    "--Vision False"
+   ],
+   "generated_cc": "native/growers_dyn.generated.cc",
+   "farm_log": "native/growers_dyn.farm.log",
+   "state": "state/growers_dyn.state.json",
+   "steps_recorded": 300,
+   "state_samples": 300,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "agents"
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the trace comes from Simulation::getStatusText (independent of the cppprops path). Alive0 == AgentCount at every recorded step (single-metabolism scenario; `two_metabolisms` records the split case where they differ).",
+   "propertyNote": "growers_small with the dyn gate moved from Step<10000 to Step<10, so the dynamic branch is actually exercised: Barriers[0].Z2 walks -1 -> -0.970895 over steps 10..300 (292 distinct values) and Barriers[1].Z2 mirroring it exercises the antecedent ordering. Everything else is byte-identical to growers_small.wf.",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0",
+    "B0Z2",
+    "B1Z2",
+    "P0On",
+    "P1On",
+    "P2On"
+   ],
+   "sha256": {
+    "generated_cc": "0d9d31f5e0911465b9a5cb73dd3061ce4171d28308a6c30d1ce356f47842b436",
+    "farm_log": "c8c18283272ab22f0ce2dd5aec477b00d7937d8342737eddc1810bf530e7ed34",
+    "state": "9e9731e4c2bd50ad96cb45b05954da0ce411a081df80c25ec3cdb516b10ef6c5"
+   }
+  },
+  "gene_dyn": {
+   "worldfile": "tools/cppprops/fixtures/worldfiles/gene_dyn.wf",
+   "native_args": [
+    "--Vision False"
+   ],
+   "generated_cc": "native/gene_dyn.generated.cc",
+   "farm_log": "native/gene_dyn.farm.log",
+   "state": "state/gene_dyn.state.json",
+   "steps_recorded": 300,
+   "state_samples": 300,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "agents"
+   },
+   "genesFromGenerange": {
+    "source": "native/gene_dyn.generange.txt",
+    "names": [
+     "MateEnergyFraction"
+    ],
+    "note": "The one engine input this scenario has that the state trace cannot supply: a gene-bound property needs a gene source (`ctx.engine.genes`), or `run_cppprops.mjs` exits 1 with 'gene binding: no gene source'. The table is parsed out of the recorded run's own `run/genome/meta/generange.txt` (kept verbatim as `native/gene_dyn.generange.txt`): `MateEnergyFraction` is `None FLOAT 0.500000 FLOAT 0.800000 MateEnergyFraction`, i.e. `{kind: FLOAT, min: 0.5, max: 0.8}` - the gene range the worldfile's `dyn( 0.5 )` sets, which is also what the port's genome layer reproduces (tests/cppprops-gene-binding.test.ts pins `geneTableFromGenomeUtil` against this very line). Nothing is typed here: `names` only says which gene the spec's `$[gene, MateEnergyFraction, min]` symbol reads."
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the trace comes from Simulation::getStatusText (independent of the cppprops path). Alive0 == AgentCount at every recorded step (single-metabolism scenario: the worldfile is growers_dyn with one added dyn form, and the recorded ordering difference between AgentCount and AgentMetabolisms[0] is handled by the mapping, not by the values).",
+   "crosscheckNote": "Byte-identical to `native/gene_dyn.generated.cc`, including the schema location in the emitted error text: line 153 is `genome::GenomeUtil::getGene( \"MateEnergyFraction\", \"./etc/worldfile.wfs:1619: Cannot find gene 'MateEnergyFraction'\" )`, whose `path:line` is native `propSym.getLocation().getDescription()` - the *schema* document's own name (`./etc/worldfile.wfs`, the literal native Simulation.cc:270 passes to buildSchemaDocument) and the line of the schema's `cppsym` property. `verify_cppprops.py` derives that name from this manifest's `native_root` + `schema` and hands it to the extractor as `--schema-name`; a wrong derivation fails the crosscheck instead of passing with a plausible path. No exemption is needed (it was ported rather than waived).",
+   "propertyNote": "growers_dyn.wf with one added form on `MinEnergyFractionToOffspring` (whose schema cppsym is the gene read `$[gene, MateEnergyFraction, min]`): `dyn( 0.5 ) { if( Step < 10 ) return value; return min( 0.5, value + 0.001 ); }`. The gene's minimum is what the property *is* (its storage is `...->smin.__val`), and `MinEnergyFractionToOffspring` configures `MateEnergyFraction.min`, so the gene value and the worldfile value coincide - the recorded `generange.txt` says `FLOAT 0.500000` where the same worldfile without the dyn form says `0.200000`. The farm log carries the property as the added `term.mf` entry `MinEFOff`, 0.5 on all 300 steps (1 distinct value); the discriminating evidence for the *binding* is synthetic (a spec seeded 0.9 that must serve 0.2), see tests/cppprops-gene-binding.test.ts. `term.mf`'s added entry is additive: FarmMonitor skips a monitored name that is not in the metadata table, so no other scenario's log changes.",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0",
+    "B0Z2",
+    "B1Z2",
+    "P0On",
+    "P1On",
+    "P2On",
+    "MinEFOff"
+   ],
+   "sha256": {
+    "generated_cc": "bc97f54d55a232d10771ee8afc3911446793ea4d6e2d1daf955c53898a6b7942",
+    "farm_log": "996bff1ce575aa6dfb40adcd4ee5352005e79433ec7fb11201cc52e140287350",
+    "state": "05b3b111d54503b14a6d95357633e23cbf79ece7210b5d3e9a44968e90c509b5"
+   }
+  },
+  "growers_ring": {
+   "worldfile": "tools/cppprops/fixtures/worldfiles/growers_ring.wf",
+   "native_args": [
+    "--Vision",
+    "False"
+   ],
+   "generated_cc": "native/growers_ring.generated.cc",
+   "farm_log": "native/growers_ring.farm.log",
+   "state": "state/growers_ring.state.json",
+   "steps_recorded": 300,
+   "state_samples": 300,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "agents"
+   },
+   "engineFromState": {
+    "table": "patchAgentInsideCount",
+    "field": "agentInsideCount",
+    "stepShift": -1
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the trace comes from Simulation::getStatusText (independent of the cppprops path). This scenario also records the per-patch `foodPatches` block (`Simulation.cc` getStatusText FP lines): steps[i][\"foodPatches\"][\"<domain>.<patch>\"][\"agentInsideCount\"].",
+   "engineNote": "engineFromState feeds the FoodPatchTokenRing binding its `FoodPatch::agentInsideCount` input per step (verify_cppprops.py -> run_cppprops.mjs --engine). `table` names the engine table, `field` the state key it is read from, and `stepShift` which state record step N's table comes from (N + stepShift): -1, because the counts are accumulated at the END of a step (DeathAndStats, reached from Interact, after the agents have moved) while the ring runs at the START of it (CppProperties::update at Simulation.cc:648) - so the ring at step N reads the counts printed for step N-1, and step 1 reads the initial zeros. Measured against the native farm log, not fitted: shift -1 reproduces all 300 steps; shift 0 diverges at step 26 and shift +1 at step 25 (Domains[0].FoodPatches[1].On: interpreter False, native True) - those are the crossings where FP1's agentInsideCount reaches maxPopulation 2 only after the step-7 kill emptied the patch. See docs/specs/cppprops.md 8.2.",
+   "propertyNote": "growers_small/growers_dyn's worldfile with the FIRST token ring's parameter set lowered so the ring actually switches inside the 300-step window: `FoodPatchTokenRing::add( FoodPatches[0], 150, 2000, 400 )` -> `( 2, 20, 5 )`. 2 rather than the step-1 counts themselves (23/24/40), because a threshold inside the range the counts already sit in fires at step 2 under any alignment; 2 is reached again only by counting agents into a patch a previous cycle emptied, and those crossings are what pin the step alignment (see engineNote). Everything else is byte-identical to growers_dyn.wf (which never switches patch: P0On=True, P1On=P2On=False for all 300 steps). Measured in the native farm log: 35 P*On transitions covering all three ring branches - the maxPopulation branch with its delay window (12 transitions into 000, e.g. step 2 and step 28), the delayEnd findActive() / \"kill agents in the new patch\" path (12 transitions 000 -> *, e.g. step 7: the alive count drops 181 -> 139, and the run's own `-patch` death counter is non-zero), and the timeout/findImmediate branch (11 transitions * -> * with no delay window, e.g. step 27 and step 53).",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0",
+    "B0Z2",
+    "B1Z2",
+    "P0On",
+    "P1On",
+    "P2On"
+   ],
+   "sha256": {
+    "generated_cc": "2fbdd9c6f0dc1c070828318ca61c936b617f17166566eab46a0a0bfd652c2d1a",
+    "farm_log": "71a4faaaf95186e16e9aae0f65c01690f98f3ccf87054744c06618611237975b",
+    "state": "5772609c9ff4c129d696a29af0d23b1646a80a96cea3d7584a427f847548f587"
+   }
+  },
+  "two_metabolisms": {
+   "worldfile": "tools/cppprops/fixtures/worldfiles/two_metabolisms.wf",
+   "native_args": [
+    "--Vision False"
+   ],
+   "generated_cc": "native/two_metabolisms.generated.cc",
+   "farm_log": "native/two_metabolisms.farm.log",
+   "state": "state/two_metabolisms.state.json",
+   "steps_recorded": 301,
+   "state_samples": 301,
+   "runtimeMap": {
+    "Step": "step",
+    "AgentCount": "agents",
+    "FoodCount": "food",
+    "AgentMetabolisms[0].MetabolismAgentCount": "metabolism0",
+    "AgentMetabolisms[1].MetabolismAgentCount": "metabolism1"
+   },
+   "stateKeyNote": "runtime property -> key in state/<scn>.state.json; the state trace comes from Simulation::getStatusText (independent of the cppprops path). This scenario defines TWO metabolisms, so getStatusText prints ` -<Name> = <n>` per definition (Simulation.cc:4894-4904) and the state trace records them directly: `metabolism<j>` is `fNumberAliveWithMetabolism[ Metabolism::get( j )->index ]`, i.e. the value the `AgentMetabolisms[j].MetabolismAgentCount` cppsym reads -- a recording, not an inference from `agents`. The recorded order is the definition order; the names it printed are `metabolismNames` in the state file, and `-Alpha = 12 -Beta = 13` at step 1 (vs `agents = 25`) is what pins AgentMetabolisms[0] to Alpha -- the farm log's independent Alive0=12 agrees.",
+   "propertyNote": "minitest.wf + an explicit `AgentMetabolisms [ { Name \"Alpha\" } { Name \"Beta\" } ]` and `AgentMetabolismSelectionMode Random`; nothing else differs (first 17 lines byte-identical). Two definitions is the gate that makes getStatusText print the per-metabolism counts; Random spreads agents (and newborns) over both (agent.cc:490-505), so the counts split 12/13 at step 1 and diverge from `agents` at every one of the 301 steps (min 11, max 15, median 13); `metabolism0 + metabolism1 == agents` holds at all 301 steps (the counts partition the alive agents, deaths/births included). The farm log samples the four properties term.mf lists, so Alive0 is the native value of AgentMetabolisms[0].MetabolismAgentCount and no longer equals AgentCount.",
+   "properties": [
+    "Step",
+    "AgentCount",
+    "FoodCount",
+    "Alive0"
+   ],
+   "sha256": {
+    "generated_cc": "139b79cd0ac991612cae8c0ed5d2426125f7f6faee1766994fa3f7b08416ab04",
+    "farm_log": "f2b5274ff6a3883ae1daa715553dfcf8ea81d5a6c2b415089cf1b7bab2ef39d0",
+    "state": "35ae5f82747af96fefb582ffa2faa967cfe0a2d82a2785d9e9085383376acfc7"
+   }
+  }
+ },
+ "worldfiles": {
+  "growers_small": {
+   "path": "worldfiles/growers_small.wf",
+   "derived_from": "polyworld/worldfiles/m-neurons/growingBarriers.wf",
+   "edit": "MaxSteps 200000 -> 300 (W1h test worldfile)",
+   "sha256": "89e26c8f48a33bd9fdd58c073ddce4a7131a19afca5349872fecf22527257b42"
+  },
+  "growers_dyn": {
+   "path": "worldfiles/growers_dyn.wf",
+   "derived_from": "worldfiles/growers_small.wf",
+   "edit": "dyn gate 'if( Step < 10000 )' -> 'if( Step < 10 )' so the dynamic branch runs inside 300 steps",
+   "sha256": "f2f32bcdc1536953a2825ec0a5d6e71cc40bcca353b1b0b3285c63508fc6f457"
+  },
+  "growers_ring": {
+   "path": "worldfiles/growers_ring.wf",
+   "derived_from": "worldfiles/growers_dyn.wf",
+   "edit": "first token ring's `FoodPatchTokenRing::add( FoodPatches[0], 150, 2000, 400 )` -> `( 2, 20, 5 )` (all three arguments, so both the maxPopulation threshold and the timeout/delay windows fall inside the 300-step run), so the ring switches patch inside the window (35 P*On transitions, all three ring branches); plus a comment block. Byte-identical to growers_dyn.wf otherwise",
+   "worldfileNote": "This pin is hand-maintained: `record_scenario.py` writes no manifest entry (both the `scenarios` and `worldfiles` blocks are edited by hand), and this one drifted once - it held a stale `( 12, 20, 5 )` variant + hash from an exploratory grid run. `verify_cppprops.py` audits this block against disk on every run (a stale pin fails it), so keep the text and the hash describing what was actually recorded.",
+   "sha256": "316fb6cd54050f692cdcaad7f5f5d17194ce29ea155bd9ab1501f2874f83f64d"
+  },
+  "gene_dyn": {
+   "path": "worldfiles/gene_dyn.wf",
+   "derived_from": "worldfiles/growers_dyn.wf",
+   "edit": "one added `MinEnergyFractionToOffspring  dyn( 0.5 )` form -- `{`, `// C++ syntax from here on.`, `if( Step < 10 )`, `return value;`, `return min( 0.5, value + 0.001 );`, `}` -- plus its comment block (36 added lines in the comment-inclusive diff, i.e. that header block + the form). The comment-stripped diff is exactly those 10 lines (7 code/comment + 3 blank) with nothing changed or removed: byte-identical to `growers_dyn.wf` otherwise",
+   "sha256": "f3e58ccd512936a2ea80009d5fb268fc55f1a8fb7ca50df90a9bf48358bd9c77"
+  },
+  "two_metabolisms": {
+   "path": "worldfiles/two_metabolisms.wf",
+   "derived_from": "polyworld/worldfiles/tests/low-spec-pc/minitest.wf",
+   "edit": "appended `AgentMetabolisms [ { Name \"Alpha\" } { Name \"Beta\" } ]` + `AgentMetabolismSelectionMode Random`; the first 17 lines are byte-identical to minitest.wf (verified by diff), so the only delta is the metabolism count/selection",
+   "sha256": "bdbb8a5a684fae292b98568d98edbfc2fbb74bf597f4f61f387a823a659c39e2"
+  }
+ }
+}

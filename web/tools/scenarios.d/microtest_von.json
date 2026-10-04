@@ -1,0 +1,17 @@
+{
+  "_comment": "Lane-registered parity scenario (W1f harness). Merged over oracle/scenarios/scenarios.json by tools/parity_common.py; one file per scenario.",
+  "scenarios": [
+    {
+      "name": "microtest_von",
+      "worldfile": "worldfiles/tests/low-spec-pc/microtest.wf",
+      "args": [],
+      "tier": "B",
+      "ignore": [
+        "run/movie.pmv"
+      ],
+      "notes": "vision ON: the retina raster is in the loop. MaxSteps 1 smoke scenario for the vision/retina lanes (L9/L16). movie.pmv ignored by default (see PARITY.md).",
+      "registered_by": "tools/add_scenario.py",
+      "registered_at": "2026-09-28T14:28:00"
+    }
+  ]
+}

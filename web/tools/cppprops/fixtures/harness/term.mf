@@ -1,0 +1,20 @@
+@defaults term
+StatusText {
+  FrequencyDisplay 1
+  FrequencyStore 1
+}
+Farm {
+  Frequency 1
+  Properties [
+    { Name "Step"; Title "Step" },
+    { Name "AgentCount"; Title "AgentCount" },
+    { Name "FoodCount"; Title "FoodCount" },
+    { Name "AgentMetabolisms[0].MetabolismAgentCount"; Title "Alive0" },
+    { Name "Barriers[0].Z2"; Title "B0Z2" },
+    { Name "Barriers[1].Z2"; Title "B1Z2" },
+    { Name "Domains[0].FoodPatches[0].On"; Title "P0On" },
+    { Name "Domains[0].FoodPatches[1].On"; Title "P1On" },
+    { Name "Domains[0].FoodPatches[2].On"; Title "P2On" },
+    { Name "MinEnergyFractionToOffspring"; Title "MinEFOff" }
+  ]
+}

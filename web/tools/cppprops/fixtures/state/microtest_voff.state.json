@@ -1,0 +1,15 @@
+{
+ "formatVersion": 1,
+ "scenario": "microtest_voff",
+ "recordedBy": "tools/cppprops/fixtures/harness/run_native.sh",
+ "stateSource": "run status text (Simulation::getStatusText), independent of the cppprops path",
+ "valueSource": "native FarmMonitor -> PropertyMetadata::toString()",
+ "note": "state traces are the evaluator's INPUT; farm logs are the EXPECTED OUTPUT",
+ "steps": [
+  {
+   "step": 1,
+   "agents": 25,
+   "food": 10
+  }
+ ]
+}

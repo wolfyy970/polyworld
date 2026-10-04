@@ -1,0 +1,11 @@
+{
+  "kind": "monitor.Enums",
+  "monitorType": {"CHART":0,"BRAIN":1,"POV":2,"STATUS_TEXT":3,"FARM":4,"SCENE":5},
+  "trackerMode": {"FITNESS":0,"NUMBER":1},
+  "perspective": {"OVERHEAD":0,"POV":1},
+  "parms": {"fitness":{"mode":0,"trackTilDeath":1,"rank":1},
+            "fitnessNoTilDeath":{"mode":0,"trackTilDeath":0,"rank":1},
+            "number":{"mode":1,"trackTilDeath":1,"number":7}},
+  "stateTitle": {"noTarget":"No Agent","noTargetNumberMode":"No Agent"},
+  "names": {"fittest":"Fittest"}
+}

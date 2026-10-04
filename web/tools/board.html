@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>polyworld-web — board</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; padding:16px 18px; background:#0e1116; color:#e6edf3;
+         font:13px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  header { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
+  h1 { font-size:14px; margin:0; font-weight:600; letter-spacing:.02em; }
+  .muted { color:#8b949e; }
+  .counts { margin-left:auto; display:flex; gap:10px; }
+  .count { color:#e6edf3; }
+  .status { display:inline-block; min-width:70px; }
+  .running  { color:#58a6ff; }
+  .ready    { color:#d29922; }
+  .blocked  { color:#f85149; }
+  .done     { color:#3fb950; }
+  .table { display:grid; grid-template-columns: 14px 92px 78px 130px 1fr; gap:2px 10px; }
+  .hdr { color:#8b949e; border-bottom:1px solid #21262d; padding-bottom:4px; margin-bottom:4px; }
+  .row { display:contents; }
+  .row:hover .title { color:#fff; }
+  .title { color:#c9d1d9; }
+  footer { margin-top:12px; color:#8b949e; display:flex; gap:12px; }
+  .err { color:#f85149; white-space:pre-wrap; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>polyworld-web</h1>
+    <span class="muted">C++ → TypeScript + Three.js + WASM port — live board</span>
+    <span class="counts" id="counts"></span>
+  </header>
+  <div class="table" id="table"></div>
+  <footer>
+    <span id="updated" class="muted">loading…</span>
+    <span class="muted">auto-refresh 5s · source: hermes kanban --board polyworld-web ls</span>
+  </footer>
+<script>
+const ORDER = { running:0, blocked:1, ready:2, done:3 };
+function esc(s){ return (s??'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+async function tick(){
+  try {
+    const r = await fetch('/board.json', {cache:'no-store'});
+    const data = await r.json();
+    const counts = {};
+    for (const row of data.rows) counts[row.status] = (counts[row.status]||0)+1;
+    document.getElementById('counts').innerHTML =
+      ['running','ready','blocked','done'].filter(s=>counts[s]).map(s =>
+        `<span class="status ${s}">${counts[s]}</span><span class="muted">${s}</span>`).join(' ');
+    const rows = [...data.rows].sort((a,b)=>
+      (ORDER[a.status]??9)-(ORDER[b.status]??9) || a.id.localeCompare(b.id));
+    document.getElementById('table').innerHTML =
+      ['','id','status','assignee','title'].map(h=>`<div class="hdr">${h}</div>`).join('') +
+      rows.map(r=>`<div class="row"><div>${esc(r.mark)}</div><div class="muted">${esc(r.id)}</div>`+
+        `<div class="status ${esc(r.status)}">${esc(r.status)}</div><div class="muted">${esc(r.assignee)}</div>`+
+        `<div class="title">${esc(r.title)}</div></div>`).join('');
+    document.getElementById('updated').textContent = 'updated ' + new Date().toLocaleTimeString();
+  } catch(e) {
+    document.getElementById('updated').innerHTML = '<span class="err">board server unreachable: '+esc(String(e))+'</span>';
+  }
+}
+tick(); setInterval(tick, 5000);
+</script>
+</body>
+</html>

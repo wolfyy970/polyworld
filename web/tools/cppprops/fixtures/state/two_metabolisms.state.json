@@ -1,0 +1,5735 @@
+{
+ "formatVersion": 1,
+ "scenario": "two_metabolisms",
+ "recordedBy": "tools/cppprops/fixtures/harness/record_scenario.py",
+ "stateSource": "run status text (Simulation::getStatusText), independent of the cppprops path",
+ "valueSource": "native FarmMonitor -> PropertyMetadata::toString()",
+ "note": "state traces are the evaluator's INPUT; farm logs are the EXPECTED OUTPUT",
+ "steps": [
+  {
+   "step": 1,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 2,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 3,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 4,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 5,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 6,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 7,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 8,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 9,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 10,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 11,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 12,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 13,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 14,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 15,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 16,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 17,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 18,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 19,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 20,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 2,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 21,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 22,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 23,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 24,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 25,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 26,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 27,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 28,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 29,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 30,
+   "agents": 25,
+   "metabolism0": 12,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 31,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 32,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 33,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 34,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 35,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 36,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 37,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 38,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 39,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 40,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 41,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 42,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 43,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 44,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 45,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 46,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 47,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 48,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 49,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 50,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 51,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 52,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 53,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 54,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 55,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 56,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 57,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 58,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 59,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 60,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 61,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 62,
+   "agents": 24,
+   "metabolism0": 13,
+   "metabolism1": 11,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 63,
+   "agents": 25,
+   "metabolism0": 13,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 64,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 65,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 66,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 67,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 68,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 4
+    }
+   }
+  },
+  {
+   "step": 69,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 3
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 3
+    }
+   }
+  },
+  {
+   "step": 70,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 3
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 3
+    }
+   }
+  },
+  {
+   "step": 71,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 2
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 2
+    }
+   }
+  },
+  {
+   "step": 72,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 3
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 2
+    }
+   }
+  },
+  {
+   "step": 73,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 3
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 2
+    }
+   }
+  },
+  {
+   "step": 74,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 3
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 2
+    }
+   }
+  },
+  {
+   "step": 75,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 4
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 2
+    }
+   }
+  },
+  {
+   "step": 76,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 4
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 2
+    }
+   }
+  },
+  {
+   "step": 77,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 4
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 3
+    }
+   }
+  },
+  {
+   "step": 78,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 79,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 80,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 81,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 82,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 83,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 84,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 85,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 86,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 87,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 88,
+   "agents": 25,
+   "metabolism0": 11,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 89,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 90,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 91,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 92,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 93,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 94,
+   "agents": 25,
+   "metabolism0": 11,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 95,
+   "agents": 25,
+   "metabolism0": 11,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 96,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 97,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 98,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 99,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 100,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 101,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 102,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 103,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 104,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 105,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 106,
+   "agents": 25,
+   "metabolism0": 10,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 107,
+   "agents": 24,
+   "metabolism0": 9,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 108,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 109,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 110,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 111,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 112,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 113,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 114,
+   "agents": 23,
+   "metabolism0": 8,
+   "metabolism1": 15,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 115,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 116,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 117,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 118,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 119,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 120,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 121,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 122,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 123,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 124,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 125,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 126,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 127,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 128,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 129,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 130,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 131,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 132,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 133,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 134,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 135,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 136,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 137,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 138,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 139,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 140,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 141,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 142,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 143,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 144,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 145,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 146,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 147,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 148,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 149,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 150,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 151,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 152,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 153,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 154,
+   "agents": 21,
+   "metabolism0": 8,
+   "metabolism1": 13,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 155,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 156,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 157,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 158,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 159,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 160,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 161,
+   "agents": 22,
+   "metabolism0": 9,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 162,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 163,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 164,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 165,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 166,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 167,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 168,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 169,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 170,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 171,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 172,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 173,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 174,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 175,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 176,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 3
+    }
+   }
+  },
+  {
+   "step": 177,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 178,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 4
+    }
+   }
+  },
+  {
+   "step": 179,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 4
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 4
+    }
+   }
+  },
+  {
+   "step": 180,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 181,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 182,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 183,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 184,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 185,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 186,
+   "agents": 23,
+   "metabolism0": 10,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 187,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 188,
+   "agents": 21,
+   "metabolism0": 10,
+   "metabolism1": 11,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 189,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 190,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 191,
+   "agents": 22,
+   "metabolism0": 10,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 192,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 193,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 194,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 195,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 11,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 196,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 197,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 198,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 199,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 200,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 201,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 202,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 203,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 204,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 205,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 206,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 207,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 208,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 209,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 210,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 211,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 212,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 213,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 214,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 215,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 216,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 217,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 218,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 219,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 220,
+   "agents": 23,
+   "metabolism0": 11,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 221,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 16,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 222,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 223,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 224,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 13,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 225,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 226,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 227,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 228,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 229,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 230,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 231,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 232,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 6,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 233,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 234,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 235,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 236,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 237,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 15,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 5,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 238,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 239,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 240,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 241,
+   "agents": 24,
+   "metabolism0": 12,
+   "metabolism1": 12,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 242,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 243,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 14,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 244,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 245,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 246,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 247,
+   "agents": 24,
+   "metabolism0": 11,
+   "metabolism1": 13,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 248,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 249,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 250,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 251,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 252,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 253,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 254,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 12,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 255,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 256,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 257,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 258,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 259,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 260,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 261,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 262,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 263,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 264,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 265,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 10,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 6,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 266,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 267,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 268,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 269,
+   "agents": 22,
+   "metabolism0": 8,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 270,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 271,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 272,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 273,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 274,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 275,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 276,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 277,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 278,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 11,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 7,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 279,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 8,
+     "agentInsideCount": 11,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 280,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 281,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 282,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 10,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 283,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 284,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 285,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 286,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 4,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 287,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 288,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 289,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 290,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 291,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 292,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 293,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 294,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 295,
+   "agents": 24,
+   "metabolism0": 10,
+   "metabolism1": 14,
+   "food": 12,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 5,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 9,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 296,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 297,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 6,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 298,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 3,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 299,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 7,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 300,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 8,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 301,
+   "agents": 23,
+   "metabolism0": 9,
+   "metabolism1": 14,
+   "food": 13,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 3,
+     "agentInsideCount": 4,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 10,
+     "agentInsideCount": 9,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  }
+ ],
+ "foodPatchesKeyNote": "steps[i][\"foodPatches\"][\"<domain>.<patch>\"][\"agentInsideCount\"] = FoodPatch::agentInsideCount as printed by Simulation::getStatusText for step i; agentNeighborhoodCount is the printed inside+neighborhood column minus inside",
+ "metabolismNames": [
+  "Alpha",
+  "Beta"
+ ],
+ "metabolismKeyNote": "metabolism<j> = fNumberAliveWithMetabolism[ Metabolism::get( j )->index ]; the printed order IS the definition order, and the names above are what the run's status text printed for those indices"
+}

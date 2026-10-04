@@ -1,0 +1,24 @@
+{
+  "scenario": "hello",
+  "golden": "polyworld-web/oracle/hello",
+  "lock_wait_sec": 0.0,
+  "native_run_displaced": "polyworld/run.previous.1790626632",
+  "command": "polyworld/Polyworld --ui term --Vision False worldfiles/hello.wf",
+  "cwd": "polyworld",
+  "exit_code": 0,
+  "wall_sec": 5.48,
+  "end_reason": "MaxSteps",
+  "recorded": "2026-09-28T16:17:18",
+  "files_hashed": 19,
+  "tier": "A",
+  "manifest_excludes": [
+    "run/.cppprops/"
+  ],
+  "worldfile": "worldfiles/hello.wf",
+  "args": [
+    "--Vision",
+    "False"
+  ],
+  "runner": "tools/record_oracle.py",
+  "scenario_source": "polyworld-web/tools/scenarios.d/hello.json"
+}

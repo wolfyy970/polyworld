@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Polyworld">
+  <!-- Flat-shaded octahedron, matching the agent body in src/browser/scene/agents.ts.
+       Inline and tiny: one asset, no 404, works in dev and in dist/. -->
+  <rect width="32" height="32" rx="4" fill="#0b0f0c" />
+  <g fill="#b9e26b" stroke="#455a48" stroke-width="1" stroke-linejoin="round">
+    <polygon points="16,5 27,16 16,27 5,16" />
+  </g>
+  <path d="M16 5 L16 27 M5 16 L27 16" stroke="#455a48" stroke-width="1" />
+</svg>

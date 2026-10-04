@@ -1,0 +1,11 @@
+{
+  "scenario": "minitest_voff",
+  "command": "polyworld/Polyworld --ui term --Vision False worldfiles/tests/low-spec-pc/minitest.wf",
+  "cwd": "polyworld",
+  "exit_code": 0,
+  "wall_sec": 1.98,
+  "files_hashed": 1369,
+  "tier": "A",
+  "end_reason": "MaxSteps",
+  "recorded": "2026-09-28T14:15:12"
+}

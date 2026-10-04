@@ -1,0 +1,32 @@
+{
+  "_comment": "Each scenario runs the NATIVE Polyworld in its own repo checkout and snapshots the resulting run/ tree. Vision False removes the GPU rasterizer from the loop, so those scenarios are a byte-exact oracle for the model; Vision True is the Tier-B (statistical) tier. Volatile paths (run/.cppprops) are excluded from the manifest.",
+  "exclude_from_manifest": [
+    "run/.cppprops/"
+  ],
+  "scenarios": [
+    {
+      "name": "microtest_voff",
+      "worldfile": "worldfiles/tests/low-spec-pc/microtest.wf",
+      "args": [
+        "--Vision",
+        "False"
+      ],
+      "tier": "A"
+    },
+    {
+      "name": "minitest_voff",
+      "worldfile": "worldfiles/tests/low-spec-pc/minitest.wf",
+      "args": [
+        "--Vision",
+        "False"
+      ],
+      "tier": "A"
+    },
+    {
+      "name": "minitest_von",
+      "worldfile": "worldfiles/tests/low-spec-pc/minitest.wf",
+      "args": [],
+      "tier": "B"
+    }
+  ]
+}

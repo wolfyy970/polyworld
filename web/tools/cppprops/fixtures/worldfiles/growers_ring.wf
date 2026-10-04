@@ -1,0 +1,213 @@
+@version 2
+
+# Warning! It's important to start file with "@version 2" so the parser knows
+# which grammar to use.
+
+################################################################################
+#
+# Brain Type
+#
+################################################################################
+NeuronModel         T
+BrainArchitecture   Groups
+
+
+################################################################################
+#
+# Groups Brain
+#
+################################################################################
+MinInternalNeuralGroups             0
+MaxInternalNeuralGroups             5
+EnableTopologicalDistortionRngSeed  True
+EnableInitWeightRngSeed             True
+
+
+################################################################################
+#
+# Genome
+#
+################################################################################
+GenomeLayout        NeurGroup
+MinMutationRate     0.001
+MaxMutationRate     0.005
+MaxCrossoverPoints  8
+GrayCoding          True
+
+
+################################################################################
+#
+# Simulation
+#
+################################################################################
+MaxSteps        300
+MinFood         90
+MaxFood         MinFood
+SeedAgents      0
+AgentsAreFood   False
+EnableCarry     False
+
+BrickHeight     3.0
+BrickColor {
+  R 0.4
+  G 0.4
+  B 0.4
+}
+
+
+################################################################################
+#
+# Barriers
+#
+#   Defines 2 barriers that grow/shrink in response to population size.
+#
+################################################################################
+Barriers
+[
+  {
+    X1  0.3333 
+    Z1  -1.0
+    X2  X1
+
+    # Initialized to be Z1. Eventually grows to value of -0.1.
+    Z2  dyn( Z1 )
+        {
+          // We're now in C++ syntax.
+
+          // For first 10,000 steps we don't want barriers.
+          if( Step < 10 )
+            return value;
+
+          // If population healthy, grow barrier.
+          if( AgentCount > 175 )
+            return min( -0.1, value + 0.0001 ); // Don't let it go past -0.1
+
+          // If population crashing, shrink barrier quickly.
+          if( AgentCount <= 90 )
+            return max( Z1, value - 0.001 );   // Don't let it go past Z1
+
+          // If population struggling, shrink barrier.
+          if( AgentCount < 120 )
+            return max( Z1, value - 0.0005 );   // Don't let it go past Z1
+
+          // Don't change anything
+          return value;
+        }
+  }
+  ,
+  {
+    X1  0.6667
+    Z1  Barriers[0].Z1
+    X2  X1
+    Z2  dyn( Barriers[0].Z2 )  # Dynamically linked to Barriers[0].Z2
+  }
+]
+
+################################################################################
+#
+# Domains
+#
+#   Defines a single domain with three food patches, where no more than 1 food
+# patch will be active at any given moment. The food patches activate in a 
+# manner that is supposed to encourage migration of the swarm.
+#
+################################################################################
+Domains
+[
+  {
+    CenterX 0.5
+    CenterZ 0.5
+    SizeX   1.0
+    SizeZ   1.0
+
+    ########################################
+    #
+    # Food Patches
+    #
+    #   Three patches in a "token ring"
+    #
+    #   W1h residual 2: growers_dyn's parameter set (150 / 2000 / 400) never
+    #   switches the ring inside 300 steps at these populations, so
+    #   FoodPatch::agentInsideCount was never actually exercised.  Here
+    #   maxPopulation 150 -> 2, timeout 2000 -> 20 and delay 400 -> 5 (both
+    #   inside the window).  That exercises the maxPopulation branch (with its
+    #   delay window), the delayEnd findActive() - the "kill agents in the new
+    #   patch" path - and the timeout/findImmediate branch, in one 300-step run
+    #   (35 P*On transitions: 12 / 12 / 11).
+    #
+    #   2 rather than the "crossed by the real counts" ~10-20: any value below
+    #   the step-1 counts (~23/24/40) fires at step 2 the same way, but a 2 is
+    #   *only* reached again by patiently counting agents into a patch that a
+    #   previous cycle emptied.  Those crossings are what pin the step
+    #   alignment of the input: reading step N's counts instead of step N-1's
+    #   moves the switch at step 26 to step 25 (measured), so the native farm
+    #   log in fixtures/native/growers_ring.farm.log arbitrates the phase.
+    #
+    ########################################
+    FoodPatches
+    [
+      {
+        CenterX                 0.167
+        CenterZ                 0.25
+        SizeX                   0.33
+        SizeZ                   0.5
+        FoodFraction            0.33
+        MaxFoodFraction         1.0
+        MaxFoodGrownFraction    1.0
+        RemoveFood              True
+        On                      dyn (False)
+                                attrs
+                                {
+                                  init
+                                  {
+                                    // C++ syntax
+                                    FoodPatchTokenRing::add( FoodPatches[0], // patch
+                                                             2,              // maxPopulation
+                                                             20,             // timeout
+                                                             5 );            // delay
+                                  }
+                                  update
+                                  {
+                                    // C++ syntax
+                                    FoodPatchTokenRing::update( parent )
+                                  }
+                                }
+      }
+      ,
+      {
+        CenterX                   0.5
+        CenterZ                   0.25
+        SizeX                     0.33
+        SizeZ                     0.5
+        FoodFraction              0.33
+        MaxFoodFraction           1.0
+        MaxFoodGrownFraction      1.0
+        RemoveFood                True
+        On                        dyn (False)
+                                  attrs
+                                  {
+                                    init { FoodPatchTokenRing::add( FoodPatches[1] ); }
+                                    update { FoodPatchTokenRing::update( parent ) }
+                                  }
+      }
+      ,
+      {
+        CenterX                   0.833
+        CenterZ                   0.25
+        SizeX                     0.33
+        SizeZ                     0.5
+        FoodFraction              0.34
+        MaxFoodFraction           1.0
+        MaxFoodGrownFraction      1.0
+        RemoveFood                True
+        On                        dyn (False)
+                                  attrs
+                                  {
+                                    init { FoodPatchTokenRing::add( FoodPatches[2] ); }
+                                    update { FoodPatchTokenRing::update( parent ) }
+                                  }
+      }
+    ]
+
+  }
+]

@@ -1,0 +1,333 @@
+/* Lane W1g — browser shell styles.
+ *
+ * PORT-NOTE (W1g/design): this file deliberately carries no CSS framework (no Tailwind,
+ * no component library, no webfont download). Design goal is "fast, efficient, friendly
+ * to look at": flat surfaces, one accent, monospace numerals, 1px borders, no shadows,
+ * no gradients, no animation longer than 120ms. System font stacks only, so the demo has
+ * zero blocking network requests past the bundle itself.
+ */
+
+:root {
+  /* Design tokens. Shapes/colours mirror src/browser/scene/palette.ts (single source of
+   * truth for the 3D side; keep the two files in sync by hand — they are both W1g). */
+  --ink-0: #0b0f0c;
+  --ink-1: #121a14;
+  --ink-2: #1b271d;
+  --line: #2c3d2f;
+  --line-strong: #455a48;
+  --text-0: #e6efe4;
+  --text-1: #a9bda8;
+  --text-2: #74876f;
+  --accent: #b9e26b;
+  --accent-ink: #131a10;
+  --warn: #e3a04b;
+  --panel-bg: rgba(14, 20, 16, 0.82);
+  --radius: 3px;
+  --pad: 10px;
+  --gap: 8px;
+  --font-ui: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --fs-micro: 10px;
+  --fs-ui: 12px;
+  --fs-title: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--ink-0);
+  color: var(--text-0);
+  font-family: var(--font-ui);
+  font-size: var(--fs-ui);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+#app canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* ---------------------------------------------------------------- pre-boot state */
+
+.boot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  padding: 24px;
+}
+
+.boot h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.boot__sub {
+  margin: 0;
+  color: var(--text-1);
+}
+
+.boot__list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  max-width: 62ch;
+  color: var(--text-2);
+  font-size: var(--fs-micro);
+}
+
+.boot__hint {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--text-2);
+  font-size: var(--fs-micro);
+}
+
+/* --------------------------------------------------------------------- HUD frame */
+
+.hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* only the panels themselves take input */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--pad);
+  gap: var(--gap);
+}
+
+.hud__row {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hud__row--bottom {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.panel {
+  pointer-events: auto;
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--pad);
+  backdrop-filter: blur(2px);
+  min-width: 0;
+}
+
+.panel__title {
+  margin: 0 0 6px;
+  font-size: var(--fs-title);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.panel__subtitle {
+  margin: 0;
+  color: var(--text-1);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel__note {
+  margin: 6px 0 0;
+  max-width: 34ch;
+  color: var(--text-2);
+  font-size: var(--fs-micro);
+}
+
+/* ------------------------------------------------------------------ status panel */
+
+.status {
+  min-width: 232px;
+}
+
+.status__grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px 14px;
+}
+
+.status__key {
+  color: var(--text-2);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.status__val {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-0);
+}
+
+.status__val--accent {
+  color: var(--accent);
+}
+
+.status__val--warn {
+  color: var(--warn);
+}
+
+.status__sep {
+  grid-column: 1 / -1;
+  height: 1px;
+  margin: 5px 0;
+  background: var(--line);
+}
+
+/* ------------------------------------------------------------------ control bar */
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  font: inherit;
+  font-size: var(--fs-ui);
+  color: var(--text-0);
+  background: var(--ink-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  min-width: 34px;
+  cursor: pointer;
+  transition: background 100ms linear, border-color 100ms linear, color 100ms linear;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+}
+
+.btn:active {
+  background: var(--ink-1);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.btn[aria-pressed="true"],
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.btn--wide {
+  min-width: 76px;
+}
+
+.speed {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.speed__label {
+  color: var(--text-2);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+.speed .btn {
+  padding: 5px 7px;
+  min-width: 40px;
+  font-variant-numeric: tabular-nums;
+}
+
+.kbd {
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: var(--radius);
+  padding: 0 4px;
+  color: var(--text-1);
+  font-size: var(--fs-micro);
+}
+
+/* The shortcut legend gets its own line: inline, it wraps between a key and its label. */
+.controls__hint {
+  flex-basis: 100%;
+  max-width: none;
+  margin: 2px 0 0;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------------ error */
+
+.fatal {
+  pointer-events: auto;
+  max-width: 60ch;
+  border-color: var(--warn);
+}
+
+.fatal h2 {
+  margin: 0 0 6px;
+  font-size: var(--fs-title);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warn);
+}
+
+.fatal pre {
+  margin: 6px 0 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text-1);
+  font-size: var(--fs-micro);
+}
+
+@media (max-width: 720px) {
+  .hud__row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .status {
+    min-width: 0;
+  }
+
+  .panel__note {
+    display: none;
+  }
+}

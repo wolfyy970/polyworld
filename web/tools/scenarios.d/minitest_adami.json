@@ -1,0 +1,24 @@
+{
+  "_comment": "Lane-registered parity scenario (W1f harness). Merged over oracle/scenarios/scenarios.json by tools/parity_common.py; one file per scenario.",
+  "scenarios": [
+    {
+      "name": "minitest_adami",
+      "worldfile": "worldfiles/tests/low-spec-pc/minitest.wf",
+      "args": [
+        "--Vision",
+        "False",
+        "--RecordAdamiComplexity",
+        "True",
+        "--AdamiComplexityRecordFrequency",
+        "1"
+      ],
+      "tier": "A",
+      "ignore": [
+        "run/movie.pmv"
+      ],
+      "notes": "L13 adami differential: minitest_voff with the AdamiComplexity recorder ON (frequency 1) so run/genome/AdamiComplexity-*.txt pins complexity/adami.cc end to end. Same worldfile/args as minitest_voff otherwise.",
+      "registered_by": "tools/add_scenario.py",
+      "registered_at": "2026-09-28T17:27:57"
+    }
+  ]
+}

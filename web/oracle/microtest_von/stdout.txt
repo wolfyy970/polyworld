@@ -1,0 +1,45 @@
+/usr/bin/clang++ -I/opt/homebrew/include -g -std=c++17 -c -MMD -Wall -Wno-deprecated-declarations -O2 -Ipolyworld/src/library -DGL_SILENCE_DEPRECATION -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers -Wno-unused-variable  -o generated.o generated.cc
+/usr/bin/clang++ -dynamiclib -undefined dynamic_lookup -Wl,-install_name,@rpath/libcppprops.dylib -Wl,-rpath,polyworld/lib -Lpolyworld/lib -o libcppprops.dylib  ./generated.o -lpolyworld
+------------------------------------------------------------
+step = 1
+agents =   25
+food =   10
+foodEnergy = 5304.1
+created  =   25
+ -random =   25
+ -two    =    0
+ -one    =    0
+born     =    0
+died     =    0
+ -age    =    0
+ -energy =    0
+ -fight  =    0
+ -eat    =    0
+ -edge   =    0
+ -smite  =    0
+ -patch  =    0
+birthDenials = 2
+miscDenials = 0
+ageCreate = 0
+maxGapCreate = 0
+born/total = 0.00
+Fitness m=0.00, c=0.00, a=0.00
+Fittest =
+CurFit = 5 2 14 25 21
+   0.00  0.00  0.00  0.00  0.00
+avgFoodEnergy = -1.00
+totFoodEnergy = 0.98
+totEnergyEaten = 91.0
+EatRate = 0.0
+MateRate = 0.00
+LifeSpan = 0 ± 0 [0, 0]
+RecLifeSpan = 0 ± 0 [0, 0]
+CurNeurons = 37.0 ± 0.0 [37, 37]
+CurNeurGroups = 13.0 ± 0.0 [13, 13]
+CurSynapses = 74.0 ± 0.0 [74, 74]
+Rate 0.0 (0.0) 0.0 (0.0) 0.0 (0.0)
+Domain 0
+  FP0 2   1  11   4.0 44.0   7.7
+  FP1 8  12  20  48.0 80.0  92.3
+  FP*  13  31  52.0 124.0 100.0
+Simulation stopped after step 1

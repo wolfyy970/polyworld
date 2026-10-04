@@ -1,0 +1,6611 @@
+{
+ "formatVersion": 1,
+ "scenario": "growers_ring",
+ "recordedBy": "tools/cppprops/fixtures/harness/record_scenario.py",
+ "stateSource": "run status text (Simulation::getStatusText), independent of the cppprops path",
+ "valueSource": "native FarmMonitor -> PropertyMetadata::toString()",
+ "note": "state traces are the evaluator's INPUT; farm logs are the EXPECTED OUTPUT",
+ "steps": [
+  {
+   "step": 1,
+   "agents": 181,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 90,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 17
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 28
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 40,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 2,
+   "agents": 181,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 17
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 29
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 3,
+   "agents": 181,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 19
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 29
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 18
+    }
+   }
+  },
+  {
+   "step": 4,
+   "agents": 181,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 18
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 29
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 18
+    }
+   }
+  },
+  {
+   "step": 5,
+   "agents": 181,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 17
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 29
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 19
+    }
+   }
+  },
+  {
+   "step": 6,
+   "agents": 181,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 15
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 29
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 19
+    }
+   }
+  },
+  {
+   "step": 7,
+   "agents": 139,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 8,
+   "agents": 139,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 9,
+   "agents": 139,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 10,
+   "agents": 139,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 11,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 12,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 13,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 14,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 15,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 16,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 17,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 18,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 19,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 20,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 21,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 22,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 23,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 24,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 25,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 26,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 27,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 28,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 29,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 30,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 31,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 32,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 33,
+   "agents": 138,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 34,
+   "agents": 139,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 35,
+   "agents": 139,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 5
+    }
+   }
+  },
+  {
+   "step": 36,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 37,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 38,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 39,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 40,
+   "agents": 140,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 41,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 42,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 43,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 44,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 45,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 46,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 47,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 48,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 49,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 50,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 51,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 52,
+   "agents": 141,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 53,
+   "agents": 142,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 54,
+   "agents": 143,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 55,
+   "agents": 144,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 56,
+   "agents": 144,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    }
+   }
+  },
+  {
+   "step": 57,
+   "agents": 144,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 58,
+   "agents": 144,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 59,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 60,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 61,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 62,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 63,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 64,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 65,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 66,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 67,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 68,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 69,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 70,
+   "agents": 142,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 71,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 72,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 73,
+   "agents": 143,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 74,
+   "agents": 144,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 75,
+   "agents": 144,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 76,
+   "agents": 145,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 77,
+   "agents": 146,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 15
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 78,
+   "agents": 146,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 15
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 79,
+   "agents": 147,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 15
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 80,
+   "agents": 147,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 16
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 81,
+   "agents": 148,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 15
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 82,
+   "agents": 148,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 16
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 83,
+   "agents": 150,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 16
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 84,
+   "agents": 151,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 16
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 85,
+   "agents": 148,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 86,
+   "agents": 151,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 87,
+   "agents": 151,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 88,
+   "agents": 151,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 89,
+   "agents": 151,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 90,
+   "agents": 152,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 91,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 92,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 93,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 94,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 95,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 96,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 97,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 98,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 99,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 100,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 101,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 7
+    }
+   }
+  },
+  {
+   "step": 102,
+   "agents": 155,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 30,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 103,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 104,
+   "agents": 155,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 8
+    }
+   }
+  },
+  {
+   "step": 105,
+   "agents": 154,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 106,
+   "agents": 154,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 107,
+   "agents": 154,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 108,
+   "agents": 153,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 109,
+   "agents": 154,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 110,
+   "agents": 154,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 111,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 112,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 113,
+   "agents": 152,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 114,
+   "agents": 152,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 115,
+   "agents": 152,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 116,
+   "agents": 151,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 117,
+   "agents": 152,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 118,
+   "agents": 153,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 119,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 120,
+   "agents": 155,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 121,
+   "agents": 155,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 29,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 122,
+   "agents": 155,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 123,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 124,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 125,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 126,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 127,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 128,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 129,
+   "agents": 155,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 130,
+   "agents": 154,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 131,
+   "agents": 154,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 132,
+   "agents": 153,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 133,
+   "agents": 155,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 134,
+   "agents": 156,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 135,
+   "agents": 155,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 136,
+   "agents": 160,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 137,
+   "agents": 159,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 138,
+   "agents": 158,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 139,
+   "agents": 158,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 140,
+   "agents": 159,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 141,
+   "agents": 159,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 142,
+   "agents": 159,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 143,
+   "agents": 159,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 5
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 144,
+   "agents": 159,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 145,
+   "agents": 158,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 146,
+   "agents": 158,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 147,
+   "agents": 160,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 148,
+   "agents": 160,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 149,
+   "agents": 161,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 150,
+   "agents": 162,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 151,
+   "agents": 162,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 152,
+   "agents": 162,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 31,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 153,
+   "agents": 162,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 154,
+   "agents": 164,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 32,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 155,
+   "agents": 164,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 156,
+   "agents": 164,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 157,
+   "agents": 164,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 158,
+   "agents": 163,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 159,
+   "agents": 164,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 160,
+   "agents": 164,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 161,
+   "agents": 170,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 33,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 162,
+   "agents": 170,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 163,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 164,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 165,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 166,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 167,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 168,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 169,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 170,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 171,
+   "agents": 168,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 172,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 173,
+   "agents": 170,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 174,
+   "agents": 169,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 175,
+   "agents": 171,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 176,
+   "agents": 171,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 177,
+   "agents": 172,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 178,
+   "agents": 173,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 179,
+   "agents": 173,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 16
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 180,
+   "agents": 173,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 16
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 181,
+   "agents": 174,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 182,
+   "agents": 172,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 183,
+   "agents": 173,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 184,
+   "agents": 174,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 185,
+   "agents": 174,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 186,
+   "agents": 184,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 36,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 13
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 187,
+   "agents": 184,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 188,
+   "agents": 183,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 14
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 189,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 190,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 191,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 192,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 193,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 194,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 195,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 196,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 197,
+   "agents": 178,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 198,
+   "agents": 176,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 199,
+   "agents": 178,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 200,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 38,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 201,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 202,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 203,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 204,
+   "agents": 179,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 205,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 37,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 206,
+   "agents": 181,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 207,
+   "agents": 183,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 208,
+   "agents": 183,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 209,
+   "agents": 185,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 210,
+   "agents": 186,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 17
+    }
+   }
+  },
+  {
+   "step": 211,
+   "agents": 199,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 39,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 17
+    }
+   }
+  },
+  {
+   "step": 212,
+   "agents": 197,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 213,
+   "agents": 197,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 17
+    }
+   }
+  },
+  {
+   "step": 214,
+   "agents": 197,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 2,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 18
+    }
+   }
+  },
+  {
+   "step": 215,
+   "agents": 193,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 216,
+   "agents": 192,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 217,
+   "agents": 191,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 218,
+   "agents": 191,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 219,
+   "agents": 190,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 220,
+   "agents": 189,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 221,
+   "agents": 189,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 222,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 223,
+   "agents": 189,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 224,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 225,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 10
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 226,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 45,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 227,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 44,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 228,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 229,
+   "agents": 189,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 230,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 231,
+   "agents": 185,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 42,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 232,
+   "agents": 186,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 233,
+   "agents": 187,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 40,
+     "agentNeighborhoodCount": 13
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 234,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 13
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 235,
+   "agents": 188,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 14
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 236,
+   "agents": 201,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 41,
+     "agentNeighborhoodCount": 15
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 237,
+   "agents": 200,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 14
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 16
+    }
+   }
+  },
+  {
+   "step": 238,
+   "agents": 199,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 14
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 239,
+   "agents": 197,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 51,
+     "agentNeighborhoodCount": 15
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 240,
+   "agents": 197,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 51,
+     "agentNeighborhoodCount": 15
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 241,
+   "agents": 194,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 51,
+     "agentNeighborhoodCount": 13
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 242,
+   "agents": 194,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 243,
+   "agents": 195,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 26,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 244,
+   "agents": 195,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 245,
+   "agents": 195,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 246,
+   "agents": 195,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 247,
+   "agents": 192,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 248,
+   "agents": 192,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 249,
+   "agents": 192,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 51,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 27,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 250,
+   "agents": 194,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 251,
+   "agents": 194,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 50,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 252,
+   "agents": 192,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 49,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 253,
+   "agents": 191,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 49,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 254,
+   "agents": 189,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 255,
+   "agents": 190,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 256,
+   "agents": 191,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 257,
+   "agents": 191,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 258,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 12
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 259,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 28,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 260,
+   "agents": 185,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 12
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 25,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 261,
+   "agents": 199,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 262,
+   "agents": 199,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 60,
+     "agentNeighborhoodCount": 11
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 263,
+   "agents": 198,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 60,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 264,
+   "agents": 197,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 58,
+     "agentNeighborhoodCount": 10
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 15
+    }
+   }
+  },
+  {
+   "step": 265,
+   "agents": 196,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 57,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 24,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 266,
+   "agents": 196,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 57,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 1,
+     "agentNeighborhoodCount": 11
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 23,
+     "agentNeighborhoodCount": 14
+    }
+   }
+  },
+  {
+   "step": 267,
+   "agents": 192,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 55,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 13
+    }
+   }
+  },
+  {
+   "step": 268,
+   "agents": 191,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 54,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 9
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 269,
+   "agents": 190,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 270,
+   "agents": 189,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 271,
+   "agents": 187,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 9
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 272,
+   "agents": 187,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 273,
+   "agents": 187,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 274,
+   "agents": 186,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 275,
+   "agents": 188,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 276,
+   "agents": 187,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 277,
+   "agents": 186,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 278,
+   "agents": 186,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 279,
+   "agents": 184,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 50,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 6
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 280,
+   "agents": 183,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 281,
+   "agents": 184,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 282,
+   "agents": 182,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 283,
+   "agents": 181,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 284,
+   "agents": 182,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 48,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 285,
+   "agents": 181,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 286,
+   "agents": 196,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 287,
+   "agents": 194,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 59,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 12
+    }
+   }
+  },
+  {
+   "step": 288,
+   "agents": 192,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 58,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 289,
+   "agents": 190,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 55,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 290,
+   "agents": 188,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 291,
+   "agents": 188,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 292,
+   "agents": 189,
+   "food": 0,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 53,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 0,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 293,
+   "agents": 187,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 52,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 11
+    }
+   }
+  },
+  {
+   "step": 294,
+   "agents": 184,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 50,
+     "agentNeighborhoodCount": 7
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 295,
+   "agents": 184,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 49,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 7
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 296,
+   "agents": 185,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 49,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 297,
+   "agents": 182,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 47,
+     "agentNeighborhoodCount": 8
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 298,
+   "agents": 181,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 49,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 20,
+     "agentNeighborhoodCount": 10
+    }
+   }
+  },
+  {
+   "step": 299,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 49,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 21,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  },
+  {
+   "step": 300,
+   "agents": 180,
+   "food": 90,
+   "foodPatches": {
+    "0.0": {
+     "foodCount": 0,
+     "agentInsideCount": 46,
+     "agentNeighborhoodCount": 6
+    },
+    "0.1": {
+     "foodCount": 90,
+     "agentInsideCount": 0,
+     "agentNeighborhoodCount": 8
+    },
+    "0.2": {
+     "foodCount": 0,
+     "agentInsideCount": 22,
+     "agentNeighborhoodCount": 9
+    }
+   }
+  }
+ ],
+ "foodPatchesKeyNote": "steps[i][\"foodPatches\"][\"<domain>.<patch>\"][\"agentInsideCount\"] = FoodPatch::agentInsideCount as printed by Simulation::getStatusText for step i; agentNeighborhoodCount is the printed inside+neighborhood column minus inside"
+}

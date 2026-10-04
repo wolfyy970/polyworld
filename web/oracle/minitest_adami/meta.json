@@ -1,0 +1,28 @@
+{
+  "scenario": "minitest_adami",
+  "golden": "polyworld-web/oracle/minitest_adami",
+  "lock_wait_sec": 0.0,
+  "native_run_displaced": "polyworld/run.previous.1790630877",
+  "command": "polyworld/Polyworld --ui term --Vision False --RecordAdamiComplexity True --AdamiComplexityRecordFrequency 1 worldfiles/tests/low-spec-pc/minitest.wf",
+  "cwd": "polyworld",
+  "exit_code": 0,
+  "wall_sec": 4.16,
+  "end_reason": "MaxSteps",
+  "recorded": "2026-09-28T17:28:02",
+  "files_hashed": 1373,
+  "tier": "A",
+  "manifest_excludes": [
+    "run/.cppprops/"
+  ],
+  "worldfile": "worldfiles/tests/low-spec-pc/minitest.wf",
+  "args": [
+    "--Vision",
+    "False",
+    "--RecordAdamiComplexity",
+    "True",
+    "--AdamiComplexityRecordFrequency",
+    "1"
+  ],
+  "runner": "tools/record_oracle.py",
+  "scenario_source": "polyworld-web/tools/scenarios.d/minitest_adami.json"
+}

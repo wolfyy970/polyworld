@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vite/
+coverage/
+# native run output pulled in by the oracle tooling
+run/
+# native leftovers moved out of the source tree by tools/record_oracle.py
+oracle/_native_previous/
+oracle/_t_*/
+# lane L11's parity candidates (src/model/sim/runner.ts writes a run tree under here)
+.candidate/
+

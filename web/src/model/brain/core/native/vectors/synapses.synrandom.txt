@@ -1,0 +1,559 @@
+# native Brain::dumpSynapses -> loadSynapses -> copySynapses/scaleSynapses, driven
+# through the shipped libpolyworld.dylib.  Every value is an IEEE-754 float in hex.
+#
+#   src <k> <from> <to> <eff> <lrate>          the brain the dump was taken from
+#   rt <k> <from> <to> <eff> <lrate>           loadSynapses( dump ), default maxWeight
+#   range <n> <start> <end>                    the ranges setSynapses re-derived
+#   copy <k> <from> <to> <eff> <lrate>         copySynapses( the loaded brain )
+#   copyrange <n> <start> <end>                 ... and the ranges it re-derived
+#   scalemw <i> <maxWeight>                    the argument, one row per entry
+#   scalefactor <i> <factor>                   `maxWeight / fileMaxWeight` in float
+#   scale <i> <k> <eff>                         loadSynapses( dump, maxWeight )
+family synrandom
+dumpindex 7
+dims 24 5 6 48
+maxweight 40e9999a
+filemaxweight 40e9999a
+src 0 21 5 c046c60c bdad0d41
+src 1 1 5 3e87fcf9 bd3cf598
+src 2 1 6 bfbae65f 3ca6e584
+src 3 3 6 c00c49ad bd2f308f
+src 4 11 7 bf4cb3f7 bd0064c8
+src 5 19 7 400af18e bc8b0cdb
+src 6 10 8 407fd6c8 bd0613c8
+src 7 14 8 bfa24e44 bd9a4575
+src 8 12 9 40134dea 3d815efc
+src 9 23 9 3e0ac0ce 3d5615fb
+src 10 15 10 bfadfd7f bc1ded2c
+src 11 22 10 405237fd 3c7f84f0
+src 12 12 11 c03971ac bcc3a70c
+src 13 1 11 40220743 3ba0efa8
+src 14 16 11 bf2acb78 b90d2cfc
+src 15 4 12 407ac4f5 3cbe07a5
+src 16 19 12 bf1f228a 3d6beb0d
+src 17 7 12 3f47dde4 3d82e8b6
+src 18 14 13 3ffacc1b bca94403
+src 19 22 13 3facf325 3d66fff5
+src 20 20 13 3f914c49 3ba60555
+src 21 18 14 4015eba6 3da6385d
+src 22 23 14 c0660551 3db0f45e
+src 23 19 14 40779e93 bdc83700
+src 24 18 15 bfd3a864 bd0164ff
+src 25 2 15 c074d178 3db57fb1
+src 26 4 15 bfe8978c 3cecdee8
+src 27 20 16 3fe4fe25 bca9b268
+src 28 5 16 400a6fca 3dc402e2
+src 29 14 16 403bf870 bd1dc759
+src 30 14 17 401c73dd 3dc6665a
+src 31 11 17 3fa6ced5 3d5e41a0
+src 32 12 17 bd9d197e 3dc9a597
+src 33 5 18 be0bed65 3d55cb61
+src 34 12 18 c00b72ab 3cb12cc0
+src 35 14 18 3ebee53b bd0c7e6e
+src 36 18 19 c04df906 bda5e537
+src 37 13 19 bfd8dfcf 3b350893
+src 38 3 19 3d77d9d5 bd275336
+src 39 18 20 c000bf89 3dc7af96
+src 40 17 20 3fe0285c 3ced61f0
+src 41 8 20 40209251 3d4176a3
+src 42 17 21 4002958f bd908d4a
+src 43 18 21 bfc944ae 3d8e7cb4
+src 44 16 21 3fb23971 bd324b62
+src 45 1 22 3fed8be7 bc7e680c
+src 46 10 22 bfae014b 3dc75f7e
+src 47 3 22 3f8528e6 bd3717ee
+rt 0 21 5 c046c615 bdad0d3c
+rt 1 1 5 3e87fcfc bd3cf5a4
+rt 2 1 6 bfbae686 3ca6e57d
+rt 3 3 6 c00c49ba bd2f308a
+rt 4 11 7 bf4cb3f6 bd0064c5
+rt 5 19 7 400af180 bc8b0cd9
+rt 6 10 8 407fd6b6 bd0613c6
+rt 7 14 8 bfa24e27 bd9a4576
+rt 8 12 9 40134de8 3d815ef5
+rt 9 23 9 3e0ac0c6 3d561607
+rt 10 15 10 bfadfd8b bc1ded31
+rt 11 22 10 40523809 3c7f851b
+rt 12 12 11 c039719f bcc3a71f
+rt 13 1 11 40220735 3ba0efa4
+rt 14 16 11 bf2acb75 b90d2d13
+rt 15 4 12 407ac4f0 3cbe07a3
+rt 16 19 12 bf1f228e 3d6beb0b
+rt 17 7 12 3f47ddec 3d82e8b3
+rt 18 14 13 3ffacbfb bca943fc
+rt 19 22 13 3facf323 3d66ffe9
+rt 20 20 13 3f914c44 3ba6054d
+rt 21 18 14 4015ebaf 3da6385e
+rt 22 23 14 c066053e 3db0f45f
+rt 23 19 14 40779e84 bdc83706
+rt 24 18 15 bfd3a882 bd01650a
+rt 25 2 15 c074d163 3db57fb7
+rt 26 4 15 bfe89763 3cecdef1
+rt 27 20 16 3fe4fe48 bca9b281
+rt 28 5 16 400a6fbd 3dc402df
+rt 29 14 16 403bf877 bd1dc75b
+rt 30 14 17 401c73d6 3dc66659
+rt 31 11 17 3fa6ceee 3d5e419f
+rt 32 12 17 bd9d1981 3dc9a59b
+rt 33 5 18 be0bed74 3d55cb5e
+rt 34 12 18 c00b729b 3cb12cc9
+rt 35 14 18 3ebee547 bd0c7e79
+rt 36 18 19 c04df8f4 bda5e537
+rt 37 13 19 bfd8dfce 3b35088b
+rt 38 3 19 3d77d9dc bd27532b
+rt 39 18 20 c000bf87 3dc7af9a
+rt 40 17 20 3fe0284e 3ced6203
+rt 41 8 20 4020924f 3d4176a8
+rt 42 17 21 40029596 bd908d4c
+rt 43 18 21 bfc944bb 3d8e7cb5
+rt 44 16 21 3fb23982 bd324b5c
+rt 45 1 22 3fed8bd6 bc7e67e5
+rt 46 10 22 bfae0126 3dc75f7d
+rt 47 3 22 3f8528e1 bd3717fa
+range 0 0 1
+range 1 1 2
+range 2 2 3
+range 3 3 4
+range 4 4 5
+range 5 0 2
+range 6 2 4
+range 7 4 6
+range 8 6 8
+range 9 8 10
+range 10 10 12
+range 11 12 15
+range 12 15 18
+range 13 18 21
+range 14 21 24
+range 15 24 27
+range 16 27 30
+range 17 30 33
+range 18 33 36
+range 19 36 39
+range 20 39 42
+range 21 42 45
+range 22 45 48
+range 23 23 24
+copy 0 21 5 c046c615 bdad0d3c
+copy 1 1 5 3e87fcfc bd3cf5a4
+copy 2 1 6 bfbae686 3ca6e57d
+copy 3 3 6 c00c49ba bd2f308a
+copy 4 11 7 bf4cb3f6 bd0064c5
+copy 5 19 7 400af180 bc8b0cd9
+copy 6 10 8 407fd6b6 bd0613c6
+copy 7 14 8 bfa24e27 bd9a4576
+copy 8 12 9 40134de8 3d815ef5
+copy 9 23 9 3e0ac0c6 3d561607
+copy 10 15 10 bfadfd8b bc1ded31
+copy 11 22 10 40523809 3c7f851b
+copy 12 12 11 c039719f bcc3a71f
+copy 13 1 11 40220735 3ba0efa4
+copy 14 16 11 bf2acb75 b90d2d13
+copy 15 4 12 407ac4f0 3cbe07a3
+copy 16 19 12 bf1f228e 3d6beb0b
+copy 17 7 12 3f47ddec 3d82e8b3
+copy 18 14 13 3ffacbfb bca943fc
+copy 19 22 13 3facf323 3d66ffe9
+copy 20 20 13 3f914c44 3ba6054d
+copy 21 18 14 4015ebaf 3da6385e
+copy 22 23 14 c066053e 3db0f45f
+copy 23 19 14 40779e84 bdc83706
+copy 24 18 15 bfd3a882 bd01650a
+copy 25 2 15 c074d163 3db57fb7
+copy 26 4 15 bfe89763 3cecdef1
+copy 27 20 16 3fe4fe48 bca9b281
+copy 28 5 16 400a6fbd 3dc402df
+copy 29 14 16 403bf877 bd1dc75b
+copy 30 14 17 401c73d6 3dc66659
+copy 31 11 17 3fa6ceee 3d5e419f
+copy 32 12 17 bd9d1981 3dc9a59b
+copy 33 5 18 be0bed74 3d55cb5e
+copy 34 12 18 c00b729b 3cb12cc9
+copy 35 14 18 3ebee547 bd0c7e79
+copy 36 18 19 c04df8f4 bda5e537
+copy 37 13 19 bfd8dfce 3b35088b
+copy 38 3 19 3d77d9dc bd27532b
+copy 39 18 20 c000bf87 3dc7af9a
+copy 40 17 20 3fe0284e 3ced6203
+copy 41 8 20 4020924f 3d4176a8
+copy 42 17 21 40029596 bd908d4c
+copy 43 18 21 bfc944bb 3d8e7cb5
+copy 44 16 21 3fb23982 bd324b5c
+copy 45 1 22 3fed8bd6 bc7e67e5
+copy 46 10 22 bfae0126 3dc75f7d
+copy 47 3 22 3f8528e1 bd3717fa
+copyrange 0 0 1
+copyrange 1 1 2
+copyrange 2 2 3
+copyrange 3 3 4
+copyrange 4 4 5
+copyrange 5 0 2
+copyrange 6 2 4
+copyrange 7 4 6
+copyrange 8 6 8
+copyrange 9 8 10
+copyrange 10 10 12
+copyrange 11 12 15
+copyrange 12 15 18
+copyrange 13 18 21
+copyrange 14 21 24
+copyrange 15 24 27
+copyrange 16 27 30
+copyrange 17 30 33
+copyrange 18 33 36
+copyrange 19 36 39
+copyrange 20 39 42
+copyrange 21 42 45
+copyrange 22 45 48
+copyrange 23 23 24
+scalemw 0 00000000
+scalefactor 0 00000000
+scale 0 0 80000000
+scale 0 1 00000000
+scale 0 2 80000000
+scale 0 3 80000000
+scale 0 4 80000000
+scale 0 5 00000000
+scale 0 6 00000000
+scale 0 7 80000000
+scale 0 8 00000000
+scale 0 9 00000000
+scale 0 10 80000000
+scale 0 11 00000000
+scale 0 12 80000000
+scale 0 13 00000000
+scale 0 14 80000000
+scale 0 15 00000000
+scale 0 16 80000000
+scale 0 17 00000000
+scale 0 18 00000000
+scale 0 19 00000000
+scale 0 20 00000000
+scale 0 21 00000000
+scale 0 22 80000000
+scale 0 23 00000000
+scale 0 24 80000000
+scale 0 25 80000000
+scale 0 26 80000000
+scale 0 27 00000000
+scale 0 28 00000000
+scale 0 29 00000000
+scale 0 30 00000000
+scale 0 31 00000000
+scale 0 32 80000000
+scale 0 33 80000000
+scale 0 34 80000000
+scale 0 35 00000000
+scale 0 36 80000000
+scale 0 37 80000000
+scale 0 38 00000000
+scale 0 39 80000000
+scale 0 40 00000000
+scale 0 41 00000000
+scale 0 42 00000000
+scale 0 43 80000000
+scale 0 44 00000000
+scale 0 45 00000000
+scale 0 46 80000000
+scale 0 47 00000000
+scalemw 1 3f800000
+scalefactor 1 3e0c4623
+scale 1 0 bed9d592
+scale 1 1 3d150737
+scale 1 2 be4cd28c
+scale 1 3 be99bd82
+scale 1 4 bde054ff
+scale 1 5 3e984446
+scale 1 6 3f0c2f83
+scale 1 7 be31de6a
+scale 1 8 3ea16ded
+scale 1 9 3c980ee0
+scale 1 10 be3eaca6
+scale 1 11 3ee6607a
+scale 1 12 becb39e3
+scale 1 13 3eb190aa
+scale 1 14 bdbb2c1e
+scale 1 15 3f096867
+scale 1 16 bdae64fe
+scale 1 17 3ddb083e
+scale 1 18 3e896c43
+scale 1 19 3e3d88b3
+scale 1 20 3e1f3b08
+scale 1 21 3ea44bed
+scale 1 22 befc13c6
+scale 1 23 3f07ae87
+scale 1 24 be67f448
+scale 1 25 bf062595
+scale 1 26 be7ee507
+scale 1 27 3e7af398
+scale 1 28 3e97b612
+scale 1 29 3ecdfec1
+scale 1 30 3eab746c
+scale 1 31 3e36cdbb
+scale 1 32 bc2c29fa
+scale 1 33 bc995863
+scale 1 34 be98d1c2
+scale 1 35 3d51335f
+scale 1 36 bee1b927
+scale 1 37 be6dab9f
+scale 1 38 3c07cf0c
+scale 1 39 be8d1808
+scale 1 40 3e75a6e9
+scale 1 41 3eaff802
+scale 1 42 3e8f1b2a
+scale 1 43 be5c9175
+scale 1 44 3e43508e
+scale 1 45 3e82298e
+scale 1 46 be3eb09a
+scale 1 47 3e11edad
+scalemw 2 40200000
+scalefactor 2 3eaf57ac
+scale 2 0 bf88257b
+scale 2 1 3dba4905
+scale 2 2 bf000398
+scale 2 3 bf402ce3
+scale 2 4 be8c3520
+scale 2 5 3f3e5558
+scale 2 6 3faf3b64
+scale 2 7 bede5605
+scale 2 8 3f49c968
+scale 2 9 3d3e1298
+scale 2 10 beee57d0
+scale 2 11 3f8ffc4c
+scale 2 12 bf7e085c
+scale 2 13 3f5df4d5
+scale 2 14 be69f726
+scale 2 15 3fabc281
+scale 2 16 be59fe3d
+scale 2 17 3e88e527
+scale 2 18 3f2bc754
+scale 2 19 3eeceae0
+scale 2 20 3ec709ca
+scale 2 21 3f4d5ee9
+scale 2 22 bf9d8c5c
+scale 2 23 3fa99a29
+scale 2 24 bf10f8ad
+scale 2 25 bfa7aefa
+scale 2 26 bf1f4f24
+scale 2 27 3f1cd83f
+scale 2 28 3f3da396
+scale 2 29 3f80bf39
+scale 2 30 3f565188
+scale 2 31 3ee4812a
+scale 2 32 bcd73479
+scale 2 33 bd3fae7c
+scale 2 34 bf3f0633
+scale 2 35 3e02c01c
+scale 2 36 bf8d13b9
+scale 2 37 bf148b44
+scale 2 38 3ca9c2cf
+scale 2 39 bf305e0a
+scale 2 40 3f198852
+scale 2 41 3f5bf603
+scale 2 42 3f32e1f4
+scale 2 43 bf09dae9
+scale 2 44 3ef424b2
+scale 2 45 3f22b3f1
+scale 2 46 beee5cc1
+scale 2 47 3eb66918
+scalemw 3 40c00000
+scalefactor 3 3f526934
+scale 3 0 c023602d
+scale 3 1 3e5f8ad2
+scale 3 2 bf999de8
+scale 3 3 bfe69c43
+scale 3 4 bf283fbf
+scale 3 5 3fe46669
+scale 3 6 40524744
+scale 3 7 bf8566cf
+scale 3 8 3ff224e2
+scale 3 9 3de4164f
+scale 3 10 bf8f017c
+scale 3 11 402cc85b
+scale 3 12 c0186b6a
+scale 3 13 40052c7f
+scale 3 14 bf0c6116
+scale 3 15 404e1c9b
+scale 3 16 bf02cbbe
+scale 3 17 3f24462e
+scale 3 18 3fce2265
+scale 3 19 3f8e2686
+scale 3 20 3f6ed88b
+scale 3 21 3ff671e3
+scale 3 22 c03d0ed4
+scale 3 23 404b85cb
+scale 3 24 bfadf736
+scale 3 25 c049385f
+scale 3 26 bfbf2bc5
+scale 3 27 3fbc36b2
+scale 3 28 3fe3911a
+scale 3 29 401a7f11
+scale 3 30 40009751
+scale 3 31 3f891a4c
+scale 3 32 bd811f7b
+scale 3 33 bde60494
+scale 3 34 bfe53aa3
+scale 3 35 3e9ce687
+scale 3 36 c0294add
+scale 3 37 bfb240b7
+scale 3 38 3d4bb691
+scale 3 39 bfd3a40b
+scale 3 40 3fb83d2e
+scale 3 41 4003fa01
+scale 3 42 3fd6a8be
+scale 3 43 bfa56d17
+scale 3 44 3f927c6a
+scale 3 45 3fc33e54
+scale 3 46 bf8f0473
+scale 3 47 3f5ae483
+scalemw 4 40e9999a
+scalefactor 4 3f800000
+scale 4 0 c046c615
+scale 4 1 3e87fcfc
+scale 4 2 bfbae686
+scale 4 3 c00c49ba
+scale 4 4 bf4cb3f6
+scale 4 5 400af180
+scale 4 6 407fd6b6
+scale 4 7 bfa24e27
+scale 4 8 40134de8
+scale 4 9 3e0ac0c6
+scale 4 10 bfadfd8b
+scale 4 11 40523809
+scale 4 12 c039719f
+scale 4 13 40220735
+scale 4 14 bf2acb75
+scale 4 15 407ac4f0
+scale 4 16 bf1f228e
+scale 4 17 3f47ddec
+scale 4 18 3ffacbfb
+scale 4 19 3facf323
+scale 4 20 3f914c44
+scale 4 21 4015ebaf
+scale 4 22 c066053e
+scale 4 23 40779e84
+scale 4 24 bfd3a882
+scale 4 25 c074d163
+scale 4 26 bfe89763
+scale 4 27 3fe4fe48
+scale 4 28 400a6fbd
+scale 4 29 403bf877
+scale 4 30 401c73d6
+scale 4 31 3fa6ceee
+scale 4 32 bd9d1981
+scale 4 33 be0bed74
+scale 4 34 c00b729b
+scale 4 35 3ebee547
+scale 4 36 c04df8f4
+scale 4 37 bfd8dfce
+scale 4 38 3d77d9dc
+scale 4 39 c000bf87
+scale 4 40 3fe0284e
+scale 4 41 4020924f
+scale 4 42 40029596
+scale 4 43 bfc944bb
+scale 4 44 3fb23982
+scale 4 45 3fed8bd6
+scale 4 46 bfae0126
+scale 4 47 3f8528e1
+scalemw 5 40490fd0
+scalefactor 5 3edc5777
+scale 5 0 bfab1624
+scale 5 1 3dea17be
+scale 5 2 bf20ddf6
+scale 5 3 bf717e94
+scale 5 4 beb03098
+scale 5 5 3f6f2e05
+scale 5 6 3fdc33ed
+scale 5 7 bf0bb29e
+scale 5 8 3f7d928f
+scale 5 9 3d6eda24
+scale 5 10 bf15c155
+scale 5 11 3fb4effa
+scale 5 12 bf9f9d00
+scale 5 13 3f8b758d
+scale 5 14 be930133
+scale 5 15 3fd7d6ec
+scale 5 16 be88f811
+scale 5 17 3eac0700
+scale 5 18 3f57dcfc
+scale 5 19 3f14dc09
+scale 5 20 3efa1e5e
+scale 5 21 3f8109c3
+scale 5 22 bfc5fb18
+scale 5 23 3fd520d3
+scale 5 24 bf362d20
+scale 5 25 bfd2b796
+scale 5 26 bf483191
+scale 5 27 3f4518c3
+scale 5 28 3f6e4ea5
+scale 5 29 3fa1c9bf
+scale 5 30 3f86a900
+scale 5 31 3f0f92d2
+scale 5 32 bd073798
+scale 5 33 bd70dfbd
+scale 5 34 bf700c44
+scale 5 35 3e244e42
+scale 5 36 bfb14851
+scale 5 37 bf3aaa6e
+scale 5 38 3cd553e7
+scale 5 39 bf5da12a
+scale 5 40 3f40ef39
+scale 5 41 3f8a3498
+scale 5 42 3f60ca55
+scale 5 43 bf2d3bd5
+scale 5 44 3f196650
+scale 5 45 3f4c7555
+scale 5 46 bf15c470
+scale 5 47 3ee53940
+scalemw 6 41480000
+scalefactor 6 3fdb2d96
+scale 6 0 c0aa2ed9
+scale 6 1 3ee8db45
+scale 6 2 c020047d
+scale 6 3 c070381b
+scale 6 4 bfaf4267
+scale 6 5 406deaad
+scale 6 6 40db0a3c
+scale 6 7 c00af5c2
+scale 6 8 407c3bc1
+scale 6 9 3e6d973d
+scale 6 10 c014f6e1
+scale 6 11 40b3fb5f
+scale 6 12 c09ec539
+scale 6 13 408ab905
+scale 6 14 bf923a77
+scale 6 15 40d6b321
+scale 6 16 bf883ee6
+scale 6 17 3fab1e70
+scale 6 18 4056b929
+scale 6 19 401412cb
+scale 6 20 3ff8cc3b
+scale 6 21 40805b51
+scale 6 22 c0c4ef72
+scale 6 23 40d400b3
+scale 6 24 c03536d8
+scale 6 25 c0d19ab8
+scale 6 26 c04722ed
+scale 6 27 40440e4e
+scale 6 28 406d0c7b
+scale 6 29 40a0ef07
+scale 6 30 4085f2f4
+scale 6 31 400ed0ba
+scale 6 32 be0680cb
+scale 6 33 be6f9a1a
+scale 6 34 c06ec7bf
+scale 6 35 3f237022
+scale 6 36 c0b058a6
+scale 6 37 c039ae14
+scale 6 38 3dd43382
+scale 6 39 c05c758b
+scale 6 40 403fea65
+scale 6 41 408979c1
+scale 6 42 405f9a70
+scale 6 43 c02c51a3
+scale 6 44 401896ef
+scale 6 45 404b60ed
+scale 6 46 c014f9f8
+scale 6 47 3fe4035d
+summary synapses 48 rt_same 0 copy_same 48 scale_rows 336 scale_changed 288

@@ -1,0 +1,57 @@
+@version 2
+
+RecordFrequency 100
+RecordAll True
+
+MaxSteps 301
+
+MinAgents 20
+MaxAgents 25
+InitAgents MaxAgents
+
+MinFood 10
+MaxFood 30
+
+MaxInternalNeuralGroups 5
+
+WorldSize 25
+
+################################################################################
+#
+# Agent Metabolisms
+#
+#   W1h residual 3 (t_a0aca481).  Derivation of native
+#   `tests/low-spec-pc/minitest.wf`: identical except for this section, which
+#   defines TWO metabolisms so that
+#
+#     * `Simulation::getStatusText` prints the per-metabolism alive counts
+#       (` -<Name> = <n>`, printed only when
+#       `Metabolism::getNumberOfDefinitions() > 1`, Simulation.cc:4894-4904);
+#     * the populations actually split, so the metabolism count is a different
+#       number from the status text's `agents` count -- which is what makes the
+#       recording able to distinguish the two.
+#
+#   Selection mode `Random`: `agent::setGenomeReady()` draws
+#   `index = nint( (getNumberOfDefinitions() - 1) * drand() )` (agent.cc:490-505)
+#   for every agent, including newborns, so the split is ~50/50 and stable.
+#   The default mode (`Gene`) would key the metabolism off a genome gene.
+#
+#   Names differ (the native auto-rename to `MetabolismN` applies only to a
+#   `Null` name, Simulation.cc:4082-4087), and both keep the schema's default
+#   `EnergyPolarity [ 1 ]` / `EnergyDelta [ 0 ]` / `CarcassFoodTypeMode
+#   FindEnergyPolarity` -- the metabolism *identity* is what this fixture is
+#   about, not its energy semantics.
+#
+################################################################################
+AgentMetabolisms
+[
+  {
+    Name  "Alpha"
+  }
+  ,
+  {
+    Name  "Beta"
+  }
+]
+
+AgentMetabolismSelectionMode Random

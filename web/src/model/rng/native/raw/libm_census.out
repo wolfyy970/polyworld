@@ -1,0 +1,235 @@
+{
+  "cos": {
+    "cr_exact": 4860,
+    "cr_max_ulp": 1,
+    "cr_sign": 0,
+    "examples": [
+      [
+        [
+          "cos",
+          "3fc8879100000000"
+        ],
+        "3fef6a08f6aea33d",
+        "3fef6a08f6aea33c",
+        "3fef6a08f6aea33c"
+      ],
+      [
+        [
+          "cos",
+          "3fdc8d00e0000000"
+        ],
+        "3fecde4807770c74",
+        "3fecde4807770c73",
+        "3fecde4807770c74"
+      ],
+      [
+        [
+          "cos",
+          "3fe0493860000000"
+        ],
+        "3febf1c41951b129",
+        "3febf1c41951b128",
+        "3febf1c41951b129"
+      ],
+      [
+        [
+          "cos",
+          "3fe130d800000000"
+        ],
+        "3feb7e1029f40935",
+        "3feb7e1029f40934",
+        "3feb7e1029f40934"
+      ],
+      [
+        [
+          "cos",
+          "3fe319d380000000"
+        ],
+        "3fea7771accb0ce4",
+        "3fea7771accb0ce5",
+        "3fea7771accb0ce4"
+      ]
+    ],
+    "n": 5055,
+    "precision_ambiguous": 0,
+    "v8_exact": 4845,
+    "v8_max_ulp": 1,
+    "v8_sign": 0
+  },
+  "exp": {
+    "cr_exact": 8255,
+    "cr_max_ulp": 1,
+    "cr_sign": 0,
+    "examples": [
+      [
+        [
+          "exp",
+          "401c9ad9019e28a1"
+        ],
+        "4093eea32508ae37",
+        "4093eea32508ae38",
+        "4093eea32508ae38"
+      ],
+      [
+        [
+          "exp",
+          "405417cdd4694f89"
+        ],
+        "472ef501535f7fbc",
+        "472ef501535f7fbb",
+        "472ef501535f7fbc"
+      ],
+      [
+        [
+          "exp",
+          "4048f8161cc595ad"
+        ],
+        "4470836815cd0329",
+        "4470836815cd0328",
+        "4470836815cd0328"
+      ],
+      [
+        [
+          "exp",
+          "40237728838b0388"
+        ],
+        "40d077223fadec1c",
+        "40d077223fadec1b",
+        "40d077223fadec1c"
+      ],
+      [
+        [
+          "exp",
+          "c0195dcc3838c822"
+        ],
+        "3f5cdc31b59f004d",
+        "3f5cdc31b59f004c",
+        "3f5cdc31b59f004c"
+      ]
+    ],
+    "n": 8261,
+    "precision_ambiguous": 0,
+    "v8_exact": 7883,
+    "v8_max_ulp": 1,
+    "v8_sign": 0
+  },
+  "pow": {
+    "cr_exact": 4373,
+    "cr_max_ulp": 9218868437227405312,
+    "cr_sign": 1,
+    "examples": [
+      [
+        [
+          "pow",
+          "3fbdbe45325888e0",
+          "4010000000000000"
+        ],
+        "3f27e2407d8d8c09",
+        "3f27e2407d8d8c0a",
+        "3f27e2407d8d8c0a"
+      ],
+      [
+        [
+          "pow",
+          "40bee27758f912ee",
+          "4000000000000000"
+        ],
+        "418dcee27e58e05d",
+        "418dcee27e58e05e",
+        "418dcee27e58e05e"
+      ],
+      [
+        [
+          "pow",
+          "40838af906cffa26",
+          "4000000000000000"
+        ],
+        "4117dec6870759c2",
+        "4117dec6870759c1",
+        "4117dec6870759c1"
+      ],
+      [
+        [
+          "pow",
+          "409ef875db3816ff",
+          "4000000000000000"
+        ],
+        "414df9661f81216a",
+        "414df9661f81216b",
+        "414df9661f81216b"
+      ],
+      [
+        [
+          "pow",
+          "4005bf0a8b145769",
+          "c02bf448d09b41e8"
+        ],
+        "3eac8c1a34d069bf",
+        "3eac8c1a34d069c0",
+        "3eac8c1a34d069c0"
+      ]
+    ],
+    "n": 4471,
+    "precision_ambiguous": 0,
+    "v8_exact": 4084,
+    "v8_max_ulp": 4613937818241073152,
+    "v8_sign": 0
+  },
+  "sin": {
+    "cr_exact": 4858,
+    "cr_max_ulp": 1,
+    "cr_sign": 0,
+    "examples": [
+      [
+        [
+          "sin",
+          "3fbb582c20000000"
+        ],
+        "3fbb4ade6af79dbf",
+        "3fbb4ade6af79dbe",
+        "3fbb4ade6af79dbf"
+      ],
+      [
+        [
+          "sin",
+          "3fc14a9460000000"
+        ],
+        "3fc13d20e5754dcc",
+        "3fc13d20e5754dcb",
+        "3fc13d20e5754dcb"
+      ],
+      [
+        [
+          "sin",
+          "3fd34d4c40000000"
+        ],
+        "3fd302baa9199529",
+        "3fd302baa919952a",
+        "3fd302baa9199529"
+      ],
+      [
+        [
+          "sin",
+          "3fdd276b40000000"
+        ],
+        "3fdc27f6a52a773e",
+        "3fdc27f6a52a773d",
+        "3fdc27f6a52a773d"
+      ],
+      [
+        [
+          "sin",
+          "3fe015bfa0000000"
+        ],
+        "3fded50d75207329",
+        "3fded50d75207328",
+        "3fded50d75207329"
+      ]
+    ],
+    "n": 5055,
+    "precision_ambiguous": 0,
+    "v8_exact": 4838,
+    "v8_max_ulp": 1,
+    "v8_sign": 0
+  }
+}

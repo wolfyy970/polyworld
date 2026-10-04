@@ -1,0 +1,1515 @@
+{
+ "formatVersion": 1,
+ "scenario": "minitest_voff",
+ "recordedBy": "tools/cppprops/fixtures/harness/run_native.sh",
+ "stateSource": "run status text (Simulation::getStatusText), independent of the cppprops path",
+ "valueSource": "native FarmMonitor -> PropertyMetadata::toString()",
+ "note": "state traces are the evaluator's INPUT; farm logs are the EXPECTED OUTPUT",
+ "steps": [
+  {
+   "step": 1,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 2,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 3,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 4,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 5,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 6,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 7,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 8,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 9,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 10,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 11,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 12,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 13,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 14,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 15,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 16,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 17,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 18,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 19,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 20,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 21,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 22,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 23,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 24,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 25,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 26,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 27,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 28,
+   "agents": 25,
+   "food": 12
+  },
+  {
+   "step": 29,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 30,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 31,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 32,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 33,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 34,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 35,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 36,
+   "agents": 25,
+   "food": 12
+  },
+  {
+   "step": 37,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 38,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 39,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 40,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 41,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 42,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 43,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 44,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 45,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 46,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 47,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 48,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 49,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 50,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 51,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 52,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 53,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 54,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 55,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 56,
+   "agents": 22,
+   "food": 12
+  },
+  {
+   "step": 57,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 58,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 59,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 60,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 61,
+   "agents": 23,
+   "food": 13
+  },
+  {
+   "step": 62,
+   "agents": 23,
+   "food": 13
+  },
+  {
+   "step": 63,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 64,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 65,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 66,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 67,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 68,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 69,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 70,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 71,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 72,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 73,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 74,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 75,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 76,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 77,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 78,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 79,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 80,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 81,
+   "agents": 21,
+   "food": 14
+  },
+  {
+   "step": 82,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 83,
+   "agents": 21,
+   "food": 14
+  },
+  {
+   "step": 84,
+   "agents": 20,
+   "food": 14
+  },
+  {
+   "step": 85,
+   "agents": 20,
+   "food": 14
+  },
+  {
+   "step": 86,
+   "agents": 21,
+   "food": 14
+  },
+  {
+   "step": 87,
+   "agents": 21,
+   "food": 14
+  },
+  {
+   "step": 88,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 89,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 90,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 91,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 92,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 93,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 94,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 95,
+   "agents": 22,
+   "food": 13
+  },
+  {
+   "step": 96,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 97,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 98,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 99,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 100,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 101,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 102,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 103,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 104,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 105,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 106,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 107,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 108,
+   "agents": 25,
+   "food": 14
+  },
+  {
+   "step": 109,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 110,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 111,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 112,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 113,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 114,
+   "agents": 22,
+   "food": 15
+  },
+  {
+   "step": 115,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 116,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 117,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 118,
+   "agents": 23,
+   "food": 13
+  },
+  {
+   "step": 119,
+   "agents": 23,
+   "food": 13
+  },
+  {
+   "step": 120,
+   "agents": 23,
+   "food": 13
+  },
+  {
+   "step": 121,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 122,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 123,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 124,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 125,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 126,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 127,
+   "agents": 25,
+   "food": 14
+  },
+  {
+   "step": 128,
+   "agents": 24,
+   "food": 15
+  },
+  {
+   "step": 129,
+   "agents": 24,
+   "food": 15
+  },
+  {
+   "step": 130,
+   "agents": 24,
+   "food": 15
+  },
+  {
+   "step": 131,
+   "agents": 24,
+   "food": 15
+  },
+  {
+   "step": 132,
+   "agents": 24,
+   "food": 16
+  },
+  {
+   "step": 133,
+   "agents": 23,
+   "food": 16
+  },
+  {
+   "step": 134,
+   "agents": 23,
+   "food": 15
+  },
+  {
+   "step": 135,
+   "agents": 23,
+   "food": 15
+  },
+  {
+   "step": 136,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 137,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 138,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 139,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 140,
+   "agents": 25,
+   "food": 14
+  },
+  {
+   "step": 141,
+   "agents": 25,
+   "food": 14
+  },
+  {
+   "step": 142,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 143,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 144,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 145,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 146,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 147,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 148,
+   "agents": 21,
+   "food": 15
+  },
+  {
+   "step": 149,
+   "agents": 20,
+   "food": 16
+  },
+  {
+   "step": 150,
+   "agents": 20,
+   "food": 14
+  },
+  {
+   "step": 151,
+   "agents": 21,
+   "food": 14
+  },
+  {
+   "step": 152,
+   "agents": 21,
+   "food": 14
+  },
+  {
+   "step": 153,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 154,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 155,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 156,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 157,
+   "agents": 23,
+   "food": 15
+  },
+  {
+   "step": 158,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 159,
+   "agents": 24,
+   "food": 14
+  },
+  {
+   "step": 160,
+   "agents": 25,
+   "food": 14
+  },
+  {
+   "step": 161,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 162,
+   "agents": 23,
+   "food": 14
+  },
+  {
+   "step": 163,
+   "agents": 22,
+   "food": 15
+  },
+  {
+   "step": 164,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 165,
+   "agents": 20,
+   "food": 14
+  },
+  {
+   "step": 166,
+   "agents": 20,
+   "food": 13
+  },
+  {
+   "step": 167,
+   "agents": 20,
+   "food": 12
+  },
+  {
+   "step": 168,
+   "agents": 21,
+   "food": 12
+  },
+  {
+   "step": 169,
+   "agents": 21,
+   "food": 12
+  },
+  {
+   "step": 170,
+   "agents": 21,
+   "food": 12
+  },
+  {
+   "step": 171,
+   "agents": 21,
+   "food": 12
+  },
+  {
+   "step": 172,
+   "agents": 21,
+   "food": 12
+  },
+  {
+   "step": 173,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 174,
+   "agents": 21,
+   "food": 13
+  },
+  {
+   "step": 175,
+   "agents": 20,
+   "food": 13
+  },
+  {
+   "step": 176,
+   "agents": 20,
+   "food": 13
+  },
+  {
+   "step": 177,
+   "agents": 20,
+   "food": 11
+  },
+  {
+   "step": 178,
+   "agents": 20,
+   "food": 12
+  },
+  {
+   "step": 179,
+   "agents": 20,
+   "food": 11
+  },
+  {
+   "step": 180,
+   "agents": 21,
+   "food": 10
+  },
+  {
+   "step": 181,
+   "agents": 21,
+   "food": 10
+  },
+  {
+   "step": 182,
+   "agents": 21,
+   "food": 11
+  },
+  {
+   "step": 183,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 184,
+   "agents": 23,
+   "food": 12
+  },
+  {
+   "step": 185,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 186,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 187,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 188,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 189,
+   "agents": 25,
+   "food": 13
+  },
+  {
+   "step": 190,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 191,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 192,
+   "agents": 22,
+   "food": 14
+  },
+  {
+   "step": 193,
+   "agents": 23,
+   "food": 13
+  },
+  {
+   "step": 194,
+   "agents": 24,
+   "food": 13
+  },
+  {
+   "step": 195,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 196,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 197,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 198,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 199,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 200,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 201,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 202,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 203,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 204,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 205,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 206,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 207,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 208,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 209,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 210,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 211,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 212,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 213,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 214,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 215,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 216,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 217,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 218,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 219,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 220,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 221,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 222,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 223,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 224,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 225,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 226,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 227,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 228,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 229,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 230,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 231,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 232,
+   "agents": 23,
+   "food": 10
+  },
+  {
+   "step": 233,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 234,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 235,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 236,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 237,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 238,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 239,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 240,
+   "agents": 23,
+   "food": 12
+  },
+  {
+   "step": 241,
+   "agents": 23,
+   "food": 12
+  },
+  {
+   "step": 242,
+   "agents": 23,
+   "food": 12
+  },
+  {
+   "step": 243,
+   "agents": 23,
+   "food": 12
+  },
+  {
+   "step": 244,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 245,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 246,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 247,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 248,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 249,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 250,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 251,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 252,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 253,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 254,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 255,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 256,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 257,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 258,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 259,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 260,
+   "agents": 25,
+   "food": 12
+  },
+  {
+   "step": 261,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 262,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 263,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 264,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 265,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 266,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 267,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 268,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 269,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 270,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 271,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 272,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 273,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 274,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 275,
+   "agents": 24,
+   "food": 12
+  },
+  {
+   "step": 276,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 277,
+   "agents": 24,
+   "food": 11
+  },
+  {
+   "step": 278,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 279,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 280,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 281,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 282,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 283,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 284,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 285,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 286,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 287,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 288,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 289,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 290,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 291,
+   "agents": 25,
+   "food": 10
+  },
+  {
+   "step": 292,
+   "agents": 24,
+   "food": 10
+  },
+  {
+   "step": 293,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 294,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 295,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 296,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 297,
+   "agents": 23,
+   "food": 11
+  },
+  {
+   "step": 298,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 299,
+   "agents": 25,
+   "food": 11
+  },
+  {
+   "step": 300,
+   "agents": 23,
+   "food": 12
+  },
+  {
+   "step": 301,
+   "agents": 23,
+   "food": 11
+  }
+ ]
+}

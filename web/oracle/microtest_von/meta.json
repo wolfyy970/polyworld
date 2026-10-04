@@ -1,0 +1,21 @@
+{
+  "scenario": "microtest_von",
+  "golden": "polyworld-web/oracle/microtest_von",
+  "lock_wait_sec": 0.0,
+  "native_run_displaced": "polyworld/run.previous.1790620080",
+  "command": "polyworld/Polyworld --ui term worldfiles/tests/low-spec-pc/microtest.wf",
+  "cwd": "polyworld",
+  "exit_code": 0,
+  "wall_sec": 1.19,
+  "end_reason": "MaxSteps",
+  "recorded": "2026-09-28T14:28:01",
+  "files_hashed": 225,
+  "tier": "B",
+  "manifest_excludes": [
+    "run/.cppprops/"
+  ],
+  "worldfile": "worldfiles/tests/low-spec-pc/microtest.wf",
+  "args": [],
+  "runner": "tools/record_oracle.py",
+  "scenario_source": "polyworld-web/tools/scenarios.d/microtest_von.json"
+}

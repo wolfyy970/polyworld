@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Polyworld (C++ -> TypeScript port): browser demo. Boots a worldfile in the page, runs the ported simulation and draws the world as it steps." />
+    <title>Polyworld · browser port</title>
+    <!-- Vite processes this link as a build asset; keeping it in the HTML (rather than
+         importing it from main.ts) means the pre-boot state is styled even with JS off. -->
+    <link rel="stylesheet" href="/src/browser/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/src/browser/favicon.svg" />
+  </head>
+  <body>
+    <!--
+      Lane L18 owns this file (W1g built the shell). The app mounts itself into #app; the
+      markup below is the pre-boot / no-JS state only. All UI panels are built in TypeScript
+      (no UI framework), see src/browser/ui/.
+    -->
+    <div id="app">
+      <section id="boot" class="boot" role="status" aria-live="polite">
+        <h1>Polyworld</h1>
+        <p class="boot__sub">booting worldfile…</p>
+        <p class="boot__hint">
+          If this message does not go away, the page failed to boot. Check the browser
+          console for the first error.
+        </p>
+      </section>
+    </div>
+    <noscript>
+      <p class="boot__hint">This demo needs JavaScript and WebGL2.</p>
+    </noscript>
+    <script type="module" src="/src/browser/main.ts"></script>
+  </body>
+</html>

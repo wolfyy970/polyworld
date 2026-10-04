@@ -1,3 +1,11 @@
+> ***This fork** (`wolfyy970/polyworld`) modernizes the build for current macOS — Qt 6,
+> Apple Silicon, Homebrew — and adds a **byte-exact browser port** of the simulation
+> (TypeScript + Three.js) under [`web/`](web/README.md), graded file-for-file against this
+> build. See [`docs/MODERNIZATION.md`](docs/MODERNIZATION.md) for the native changes and
+> [`web/README.md`](web/README.md) for the port.*
+>
+> *The original README follows.*
+
 Welcome to the modern version of Polyworld, an Artificial Life
 system designed as an approach to Artificial Intelligence.
 

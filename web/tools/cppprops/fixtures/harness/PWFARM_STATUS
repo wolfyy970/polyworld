@@ -1,0 +1,3 @@
+#!/bin/bash
+# W1h test harness: logs the FarmMonitor argument (native cppprops values) per invocation.
+printf '%s\n' "${@:2}" >> "$PWFARM_STATUS_LOG"

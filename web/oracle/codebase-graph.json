@@ -1,0 +1,287 @@
+{
+ "edges": {
+  "app": [
+   "app/ui",
+   "library/monitor",
+   "library/proplib",
+   "library/sim"
+  ],
+  "app/ui": [
+   "library/agent",
+   "library/brain",
+   "library/graphics",
+   "library/monitor",
+   "library/sim",
+   "library/utils",
+   "qtrenderer/renderer"
+  ],
+  "library/agent": [
+   "library/brain",
+   "library/environment",
+   "library/genome",
+   "library/graphics",
+   "library/logs",
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/brain": [
+   "library/agent",
+   "library/genome",
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/complexity": [
+   "library/genome",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/environment": [
+   "library/agent",
+   "library/graphics",
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/genome": [
+   "library/agent",
+   "library/brain",
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/graphics": [
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/logs": [
+   "library/agent",
+   "library/brain",
+   "library/complexity",
+   "library/environment",
+   "library/genome",
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/monitor": [
+   "library/agent",
+   "library/graphics",
+   "library/proplib",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/proplib": [
+   "library/environment",
+   "library/sim",
+   "library/utils"
+  ],
+  "library/sim": [
+   "library/agent",
+   "library/brain",
+   "library/complexity",
+   "library/environment",
+   "library/genome",
+   "library/graphics",
+   "library/logs",
+   "library/proplib",
+   "library/utils"
+  ],
+  "library/utils": [
+   "library/agent",
+   "library/brain",
+   "library/environment",
+   "library/genome",
+   "library/graphics",
+   "library/proplib",
+   "library/sim"
+  ],
+  "qtrenderer/renderer": [
+   "library/agent",
+   "library/monitor",
+   "library/utils"
+  ],
+  "tools/CalcComplexity": [
+   "library/complexity",
+   "library/utils"
+  ],
+  "tools/PwMoviePlayer": [
+   "library/utils"
+  ],
+  "tools/bifurcation": [
+   "library/brain",
+   "library/genome",
+   "library/utils"
+  ],
+  "tools/expansion": [
+   "library/brain",
+   "library/genome",
+   "library/utils"
+  ],
+  "tools/neurons": [
+   "library/brain",
+   "library/utils"
+  ],
+  "tools/nullevo": [
+   "library/genome",
+   "library/sim",
+   "library/utils"
+  ],
+  "tools/passive": [
+   "library/brain",
+   "library/genome",
+   "library/sim",
+   "library/utils"
+  ],
+  "tools/pmvutil": [
+   "library/utils"
+  ],
+  "tools/proputil": [
+   "library/proplib",
+   "library/utils"
+  ],
+  "tools/timeseries": [
+   "library/brain",
+   "library/sim",
+   "library/utils"
+  ],
+  "tools/clustering": [],
+  "tools/rancheck": [],
+  "tools/omp_test": []
+ },
+ "loc": {
+  "app": 193,
+  "app/ui": 2702,
+  "library/agent": 3606,
+  "library/brain": 4706,
+  "library/complexity": 2591,
+  "library/environment": 2297,
+  "library/genome": 6134,
+  "library/graphics": 3928,
+  "library/logs": 2801,
+  "library/monitor": 1762,
+  "library/proplib": 7096,
+  "library/sim": 7412,
+  "library/utils": 7645,
+  "qtrenderer/renderer": 630,
+  "tools/CalcComplexity": 976,
+  "tools/PwMoviePlayer": 1027,
+  "tools/bifurcation": 165,
+  "tools/clustering": 3810,
+  "tools/expansion": 259,
+  "tools/neurons": 69,
+  "tools/nullevo": 156,
+  "tools/omp_test": 22,
+  "tools/passive": 238,
+  "tools/pmvutil": 126,
+  "tools/proputil": 419,
+  "tools/rancheck": 31,
+  "tools/timeseries": 310
+ },
+ "files": {
+  "app": 1,
+  "app/ui": 25,
+  "library/agent": 26,
+  "library/brain": 23,
+  "library/complexity": 9,
+  "library/environment": 16,
+  "library/genome": 30,
+  "library/graphics": 24,
+  "library/logs": 4,
+  "library/monitor": 13,
+  "library/proplib": 25,
+  "library/sim": 18,
+  "library/utils": 34,
+  "qtrenderer/renderer": 8,
+  "tools/CalcComplexity": 6,
+  "tools/PwMoviePlayer": 6,
+  "tools/bifurcation": 1,
+  "tools/clustering": 2,
+  "tools/expansion": 1,
+  "tools/neurons": 1,
+  "tools/nullevo": 1,
+  "tools/omp_test": 1,
+  "tools/passive": 1,
+  "tools/pmvutil": 1,
+  "tools/proputil": 1,
+  "tools/rancheck": 1,
+  "tools/timeseries": 1
+ },
+ "waves": [
+  [
+   [
+    "library/agent",
+    "library/brain",
+    "library/complexity",
+    "library/environment",
+    "library/genome",
+    "library/graphics",
+    "library/logs",
+    "library/proplib",
+    "library/sim",
+    "library/utils"
+   ],
+   [
+    "tools/clustering"
+   ],
+   [
+    "tools/rancheck"
+   ],
+   [
+    "tools/omp_test"
+   ]
+  ],
+  [
+   [
+    "library/monitor"
+   ],
+   [
+    "tools/PwMoviePlayer"
+   ],
+   [
+    "tools/CalcComplexity"
+   ],
+   [
+    "tools/proputil"
+   ],
+   [
+    "tools/timeseries"
+   ],
+   [
+    "tools/expansion"
+   ],
+   [
+    "tools/passive"
+   ],
+   [
+    "tools/bifurcation"
+   ],
+   [
+    "tools/nullevo"
+   ],
+   [
+    "tools/pmvutil"
+   ],
+   [
+    "tools/neurons"
+   ]
+  ],
+  [
+   [
+    "qtrenderer/renderer"
+   ]
+  ],
+  [
+   [
+    "app/ui"
+   ]
+  ],
+  [
+   [
+    "app"
+   ]
+  ]
+ ]
+}

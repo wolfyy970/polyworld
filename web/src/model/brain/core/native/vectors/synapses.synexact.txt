@@ -1,0 +1,559 @@
+# native Brain::dumpSynapses -> loadSynapses -> copySynapses/scaleSynapses, driven
+# through the shipped libpolyworld.dylib.  Every value is an IEEE-754 float in hex.
+#
+#   src <k> <from> <to> <eff> <lrate>          the brain the dump was taken from
+#   rt <k> <from> <to> <eff> <lrate>           loadSynapses( dump ), default maxWeight
+#   range <n> <start> <end>                    the ranges setSynapses re-derived
+#   copy <k> <from> <to> <eff> <lrate>         copySynapses( the loaded brain )
+#   copyrange <n> <start> <end>                 ... and the ranges it re-derived
+#   scalemw <i> <maxWeight>                    the argument, one row per entry
+#   scalefactor <i> <factor>                   `maxWeight / fileMaxWeight` in float
+#   scale <i> <k> <eff>                         loadSynapses( dump, maxWeight )
+family synexact
+dumpindex 7
+dims 24 5 6 48
+maxweight 40e9999a
+filemaxweight 40e9999a
+src 0 0 5 3e800000 3c23d70a
+src 1 13 5 bf000000 3dcccccd
+src 2 3 6 3fc00000 bd4ccccd
+src 3 21 6 40000000 3a83126f
+src 4 16 7 3e000000 3ccccccd
+src 5 1 7 c0500000 3f000000
+src 6 9 8 3d800000 3d99999a
+src 7 15 8 3f880000 bdcccccd
+src 8 12 9 41000000 3ca3d70a
+src 9 19 9 3f000000 00000000
+src 10 1 10 40800000 3f666666
+src 11 2 10 c0200000 38d1b717
+src 12 10 11 3ec00000 3c23d70a
+src 13 6 11 3fa00000 3dcccccd
+src 14 22 11 3e400000 bd4ccccd
+src 15 17 12 40400000 3a83126f
+src 16 14 12 3f400000 3ccccccd
+src 17 16 12 bd800000 3f000000
+src 18 19 13 3fe00000 3d99999a
+src 19 18 13 bfc00000 bdcccccd
+src 20 12 13 40c00000 3ca3d70a
+src 21 12 14 3d000000 00000000
+src 22 23 14 40200000 3f666666
+src 23 18 14 be000000 38d1b717
+src 24 19 15 3f900000 3c23d70a
+src 25 2 15 00000000 3dcccccd
+src 26 22 15 3f600000 bd4ccccd
+src 27 2 16 c0800000 3a83126f
+src 28 7 16 3e800000 3ccccccd
+src 29 11 16 bf000000 3f000000
+src 30 22 17 3fc00000 3d99999a
+src 31 16 17 40000000 bdcccccd
+src 32 12 17 3e000000 3ca3d70a
+src 33 10 18 c0500000 00000000
+src 34 12 18 3d800000 3f666666
+src 35 20 18 3f880000 38d1b717
+src 36 22 19 41000000 3c23d70a
+src 37 21 19 3f000000 3dcccccd
+src 38 13 19 40800000 bd4ccccd
+src 39 15 20 c0200000 3a83126f
+src 40 9 20 3ec00000 3ccccccd
+src 41 10 20 3fa00000 3f000000
+src 42 0 21 3e400000 3d99999a
+src 43 17 21 40400000 bdcccccd
+src 44 11 21 3f400000 3ca3d70a
+src 45 15 22 bd800000 00000000
+src 46 9 22 3fe00000 3f666666
+src 47 23 22 bfc00000 38d1b717
+rt 0 0 5 3e800000 3c23d70a
+rt 1 13 5 bf000000 3dcccccd
+rt 2 3 6 3fc00000 bd4ccccd
+rt 3 21 6 40000000 3a83126f
+rt 4 16 7 3e000000 3ccccccd
+rt 5 1 7 c0500000 3f000000
+rt 6 9 8 3d800000 3d99999a
+rt 7 15 8 3f880000 bdcccccd
+rt 8 12 9 41000000 3ca3d70a
+rt 9 19 9 3f000000 00000000
+rt 10 1 10 40800000 3f666666
+rt 11 2 10 c0200000 38d1b717
+rt 12 10 11 3ec00000 3c23d70a
+rt 13 6 11 3fa00000 3dcccccd
+rt 14 22 11 3e400000 bd4ccccd
+rt 15 17 12 40400000 3a83126f
+rt 16 14 12 3f400000 3ccccccd
+rt 17 16 12 bd800000 3f000000
+rt 18 19 13 3fe00000 3d99999a
+rt 19 18 13 bfc00000 bdcccccd
+rt 20 12 13 40c00000 3ca3d70a
+rt 21 12 14 3d000000 00000000
+rt 22 23 14 40200000 3f666666
+rt 23 18 14 be000000 38d1b717
+rt 24 19 15 3f900000 3c23d70a
+rt 25 2 15 00000000 3dcccccd
+rt 26 22 15 3f600000 bd4ccccd
+rt 27 2 16 c0800000 3a83126f
+rt 28 7 16 3e800000 3ccccccd
+rt 29 11 16 bf000000 3f000000
+rt 30 22 17 3fc00000 3d99999a
+rt 31 16 17 40000000 bdcccccd
+rt 32 12 17 3e000000 3ca3d70a
+rt 33 10 18 c0500000 00000000
+rt 34 12 18 3d800000 3f666666
+rt 35 20 18 3f880000 38d1b717
+rt 36 22 19 41000000 3c23d70a
+rt 37 21 19 3f000000 3dcccccd
+rt 38 13 19 40800000 bd4ccccd
+rt 39 15 20 c0200000 3a83126f
+rt 40 9 20 3ec00000 3ccccccd
+rt 41 10 20 3fa00000 3f000000
+rt 42 0 21 3e400000 3d99999a
+rt 43 17 21 40400000 bdcccccd
+rt 44 11 21 3f400000 3ca3d70a
+rt 45 15 22 bd800000 00000000
+rt 46 9 22 3fe00000 3f666666
+rt 47 23 22 bfc00000 38d1b717
+range 0 0 1
+range 1 1 2
+range 2 2 3
+range 3 3 4
+range 4 4 5
+range 5 0 2
+range 6 2 4
+range 7 4 6
+range 8 6 8
+range 9 8 10
+range 10 10 12
+range 11 12 15
+range 12 15 18
+range 13 18 21
+range 14 21 24
+range 15 24 27
+range 16 27 30
+range 17 30 33
+range 18 33 36
+range 19 36 39
+range 20 39 42
+range 21 42 45
+range 22 45 48
+range 23 23 24
+copy 0 0 5 3e800000 3c23d70a
+copy 1 13 5 bf000000 3dcccccd
+copy 2 3 6 3fc00000 bd4ccccd
+copy 3 21 6 40000000 3a83126f
+copy 4 16 7 3e000000 3ccccccd
+copy 5 1 7 c0500000 3f000000
+copy 6 9 8 3d800000 3d99999a
+copy 7 15 8 3f880000 bdcccccd
+copy 8 12 9 41000000 3ca3d70a
+copy 9 19 9 3f000000 00000000
+copy 10 1 10 40800000 3f666666
+copy 11 2 10 c0200000 38d1b717
+copy 12 10 11 3ec00000 3c23d70a
+copy 13 6 11 3fa00000 3dcccccd
+copy 14 22 11 3e400000 bd4ccccd
+copy 15 17 12 40400000 3a83126f
+copy 16 14 12 3f400000 3ccccccd
+copy 17 16 12 bd800000 3f000000
+copy 18 19 13 3fe00000 3d99999a
+copy 19 18 13 bfc00000 bdcccccd
+copy 20 12 13 40c00000 3ca3d70a
+copy 21 12 14 3d000000 00000000
+copy 22 23 14 40200000 3f666666
+copy 23 18 14 be000000 38d1b717
+copy 24 19 15 3f900000 3c23d70a
+copy 25 2 15 00000000 3dcccccd
+copy 26 22 15 3f600000 bd4ccccd
+copy 27 2 16 c0800000 3a83126f
+copy 28 7 16 3e800000 3ccccccd
+copy 29 11 16 bf000000 3f000000
+copy 30 22 17 3fc00000 3d99999a
+copy 31 16 17 40000000 bdcccccd
+copy 32 12 17 3e000000 3ca3d70a
+copy 33 10 18 c0500000 00000000
+copy 34 12 18 3d800000 3f666666
+copy 35 20 18 3f880000 38d1b717
+copy 36 22 19 41000000 3c23d70a
+copy 37 21 19 3f000000 3dcccccd
+copy 38 13 19 40800000 bd4ccccd
+copy 39 15 20 c0200000 3a83126f
+copy 40 9 20 3ec00000 3ccccccd
+copy 41 10 20 3fa00000 3f000000
+copy 42 0 21 3e400000 3d99999a
+copy 43 17 21 40400000 bdcccccd
+copy 44 11 21 3f400000 3ca3d70a
+copy 45 15 22 bd800000 00000000
+copy 46 9 22 3fe00000 3f666666
+copy 47 23 22 bfc00000 38d1b717
+copyrange 0 0 1
+copyrange 1 1 2
+copyrange 2 2 3
+copyrange 3 3 4
+copyrange 4 4 5
+copyrange 5 0 2
+copyrange 6 2 4
+copyrange 7 4 6
+copyrange 8 6 8
+copyrange 9 8 10
+copyrange 10 10 12
+copyrange 11 12 15
+copyrange 12 15 18
+copyrange 13 18 21
+copyrange 14 21 24
+copyrange 15 24 27
+copyrange 16 27 30
+copyrange 17 30 33
+copyrange 18 33 36
+copyrange 19 36 39
+copyrange 20 39 42
+copyrange 21 42 45
+copyrange 22 45 48
+copyrange 23 23 24
+scalemw 0 00000000
+scalefactor 0 00000000
+scale 0 0 00000000
+scale 0 1 80000000
+scale 0 2 00000000
+scale 0 3 00000000
+scale 0 4 00000000
+scale 0 5 80000000
+scale 0 6 00000000
+scale 0 7 00000000
+scale 0 8 00000000
+scale 0 9 00000000
+scale 0 10 00000000
+scale 0 11 80000000
+scale 0 12 00000000
+scale 0 13 00000000
+scale 0 14 00000000
+scale 0 15 00000000
+scale 0 16 00000000
+scale 0 17 80000000
+scale 0 18 00000000
+scale 0 19 80000000
+scale 0 20 00000000
+scale 0 21 00000000
+scale 0 22 00000000
+scale 0 23 80000000
+scale 0 24 00000000
+scale 0 25 00000000
+scale 0 26 00000000
+scale 0 27 80000000
+scale 0 28 00000000
+scale 0 29 80000000
+scale 0 30 00000000
+scale 0 31 00000000
+scale 0 32 00000000
+scale 0 33 80000000
+scale 0 34 00000000
+scale 0 35 00000000
+scale 0 36 00000000
+scale 0 37 00000000
+scale 0 38 00000000
+scale 0 39 80000000
+scale 0 40 00000000
+scale 0 41 00000000
+scale 0 42 00000000
+scale 0 43 00000000
+scale 0 44 00000000
+scale 0 45 80000000
+scale 0 46 00000000
+scale 0 47 80000000
+scalemw 1 3f800000
+scalefactor 1 3e0c4623
+scale 1 0 3d0c4623
+scale 1 1 bd8c4623
+scale 1 2 3e526934
+scale 1 3 3e8c4623
+scale 1 4 3c8c4623
+scale 1 5 bee3f1f9
+scale 1 6 3c0c4623
+scale 1 7 3e150a85
+scale 1 8 3f8c4623
+scale 1 9 3d8c4623
+scale 1 10 3f0c4623
+scale 1 11 beaf57ac
+scale 1 12 3d526934
+scale 1 13 3e2f57ac
+scale 1 14 3cd26934
+scale 1 15 3ed26934
+scale 1 16 3dd26934
+scale 1 17 bc0c4623
+scale 1 18 3e757abd
+scale 1 19 be526934
+scale 1 20 3f526934
+scale 1 21 3b8c4623
+scale 1 22 3eaf57ac
+scale 1 23 bc8c4623
+scale 1 24 3e1dcee7
+scale 1 25 00000000
+scale 1 26 3df57abd
+scale 1 27 bf0c4623
+scale 1 28 3d0c4623
+scale 1 29 bd8c4623
+scale 1 30 3e526934
+scale 1 31 3e8c4623
+scale 1 32 3c8c4623
+scale 1 33 bee3f1f9
+scale 1 34 3c0c4623
+scale 1 35 3e150a85
+scale 1 36 3f8c4623
+scale 1 37 3d8c4623
+scale 1 38 3f0c4623
+scale 1 39 beaf57ac
+scale 1 40 3d526934
+scale 1 41 3e2f57ac
+scale 1 42 3cd26934
+scale 1 43 3ed26934
+scale 1 44 3dd26934
+scale 1 45 bc0c4623
+scale 1 46 3e757abd
+scale 1 47 be526934
+scalemw 2 40200000
+scalefactor 2 3eaf57ac
+scale 2 0 3daf57ac
+scale 2 1 be2f57ac
+scale 2 2 3f0381c1
+scale 2 3 3f2f57ac
+scale 2 4 3d2f57ac
+scale 2 5 bf8e773c
+scale 2 6 3caf57ac
+scale 2 7 3eba4d27
+scale 2 8 402f57ac
+scale 2 9 3e2f57ac
+scale 2 10 3faf57ac
+scale 2 11 bf5b2d97
+scale 2 12 3e0381c1
+scale 2 13 3edb2d97
+scale 2 14 3d8381c1
+scale 2 15 3f8381c1
+scale 2 16 3e8381c1
+scale 2 17 bcaf57ac
+scale 2 18 3f196cb6
+scale 2 19 bf0381c1
+scale 2 20 400381c1
+scale 2 21 3c2f57ac
+scale 2 22 3f5b2d97
+scale 2 23 bd2f57ac
+scale 2 24 3ec542a2
+scale 2 25 00000000
+scale 2 26 3e996cb6
+scale 2 27 bfaf57ac
+scale 2 28 3daf57ac
+scale 2 29 be2f57ac
+scale 2 30 3f0381c1
+scale 2 31 3f2f57ac
+scale 2 32 3d2f57ac
+scale 2 33 bf8e773c
+scale 2 34 3caf57ac
+scale 2 35 3eba4d27
+scale 2 36 402f57ac
+scale 2 37 3e2f57ac
+scale 2 38 3faf57ac
+scale 2 39 bf5b2d97
+scale 2 40 3e0381c1
+scale 2 41 3edb2d97
+scale 2 42 3d8381c1
+scale 2 43 3f8381c1
+scale 2 44 3e8381c1
+scale 2 45 bcaf57ac
+scale 2 46 3f196cb6
+scale 2 47 bf0381c1
+scalemw 3 40c00000
+scalefactor 3 3f526934
+scale 3 0 3e526934
+scale 3 1 bed26934
+scale 3 2 3f9dcee7
+scale 3 3 3fd26934
+scale 3 4 3dd26934
+scale 3 5 c02af57a
+scale 3 6 3d526934
+scale 3 7 3f5f8fc7
+scale 3 8 40d26934
+scale 3 9 3ed26934
+scale 3 10 40526934
+scale 3 11 c00381c0
+scale 3 12 3e9dcee7
+scale 3 13 3f8381c0
+scale 3 14 3e1dcee7
+scale 3 15 401dcee7
+scale 3 16 3f1dcee7
+scale 3 17 bd526934
+scale 3 18 3fb81c0e
+scale 3 19 bf9dcee7
+scale 3 20 409dcee7
+scale 3 21 3cd26934
+scale 3 22 400381c0
+scale 3 23 bdd26934
+scale 3 24 3f6cb65a
+scale 3 25 00000000
+scale 3 26 3f381c0e
+scale 3 27 c0526934
+scale 3 28 3e526934
+scale 3 29 bed26934
+scale 3 30 3f9dcee7
+scale 3 31 3fd26934
+scale 3 32 3dd26934
+scale 3 33 c02af57a
+scale 3 34 3d526934
+scale 3 35 3f5f8fc7
+scale 3 36 40d26934
+scale 3 37 3ed26934
+scale 3 38 40526934
+scale 3 39 c00381c0
+scale 3 40 3e9dcee7
+scale 3 41 3f8381c0
+scale 3 42 3e1dcee7
+scale 3 43 401dcee7
+scale 3 44 3f1dcee7
+scale 3 45 bd526934
+scale 3 46 3fb81c0e
+scale 3 47 bf9dcee7
+scalemw 4 40e9999a
+scalefactor 4 3f800000
+scale 4 0 3e800000
+scale 4 1 bf000000
+scale 4 2 3fc00000
+scale 4 3 40000000
+scale 4 4 3e000000
+scale 4 5 c0500000
+scale 4 6 3d800000
+scale 4 7 3f880000
+scale 4 8 41000000
+scale 4 9 3f000000
+scale 4 10 40800000
+scale 4 11 c0200000
+scale 4 12 3ec00000
+scale 4 13 3fa00000
+scale 4 14 3e400000
+scale 4 15 40400000
+scale 4 16 3f400000
+scale 4 17 bd800000
+scale 4 18 3fe00000
+scale 4 19 bfc00000
+scale 4 20 40c00000
+scale 4 21 3d000000
+scale 4 22 40200000
+scale 4 23 be000000
+scale 4 24 3f900000
+scale 4 25 00000000
+scale 4 26 3f600000
+scale 4 27 c0800000
+scale 4 28 3e800000
+scale 4 29 bf000000
+scale 4 30 3fc00000
+scale 4 31 40000000
+scale 4 32 3e000000
+scale 4 33 c0500000
+scale 4 34 3d800000
+scale 4 35 3f880000
+scale 4 36 41000000
+scale 4 37 3f000000
+scale 4 38 40800000
+scale 4 39 c0200000
+scale 4 40 3ec00000
+scale 4 41 3fa00000
+scale 4 42 3e400000
+scale 4 43 40400000
+scale 4 44 3f400000
+scale 4 45 bd800000
+scale 4 46 3fe00000
+scale 4 47 bfc00000
+scalemw 5 40490fd0
+scalefactor 5 3edc5777
+scale 5 0 3ddc5777
+scale 5 1 be5c5777
+scale 5 2 3f254199
+scale 5 3 3f5c5777
+scale 5 4 3d5c5777
+scale 5 5 bfb30711
+scale 5 6 3cdc5777
+scale 5 7 3eea1cee
+scale 5 8 405c5777
+scale 5 9 3e5c5777
+scale 5 10 3fdc5777
+scale 5 11 bf89b6aa
+scale 5 12 3e254199
+scale 5 13 3f09b6aa
+scale 5 14 3da54199
+scale 5 15 3fa54199
+scale 5 16 3ea54199
+scale 5 17 bcdc5777
+scale 5 18 3f40cc88
+scale 5 19 bf254199
+scale 5 20 40254199
+scale 5 21 3c5c5777
+scale 5 22 3f89b6aa
+scale 5 23 bd5c5777
+scale 5 24 3ef7e266
+scale 5 25 00000000
+scale 5 26 3ec0cc88
+scale 5 27 bfdc5777
+scale 5 28 3ddc5777
+scale 5 29 be5c5777
+scale 5 30 3f254199
+scale 5 31 3f5c5777
+scale 5 32 3d5c5777
+scale 5 33 bfb30711
+scale 5 34 3cdc5777
+scale 5 35 3eea1cee
+scale 5 36 405c5777
+scale 5 37 3e5c5777
+scale 5 38 3fdc5777
+scale 5 39 bf89b6aa
+scale 5 40 3e254199
+scale 5 41 3f09b6aa
+scale 5 42 3da54199
+scale 5 43 3fa54199
+scale 5 44 3ea54199
+scale 5 45 bcdc5777
+scale 5 46 3f40cc88
+scale 5 47 bf254199
+scalemw 6 41480000
+scalefactor 6 3fdb2d96
+scale 6 0 3edb2d96
+scale 6 1 bf5b2d96
+scale 6 2 40246230
+scale 6 3 405b2d96
+scale 6 4 3e5b2d96
+scale 6 5 c0b2150a
+scale 6 6 3ddb2d96
+scale 6 7 3fe8e06f
+scale 6 8 415b2d96
+scale 6 9 3f5b2d96
+scale 6 10 40db2d96
+scale 6 11 c088fc7e
+scale 6 12 3f246230
+scale 6 13 4008fc7e
+scale 6 14 3ea46230
+scale 6 15 40a46230
+scale 6 16 3fa46230
+scale 6 17 bddb2d96
+scale 6 18 403fc7e3
+scale 6 19 c0246230
+scale 6 20 41246230
+scale 6 21 3d5b2d96
+scale 6 22 4088fc7e
+scale 6 23 be5b2d96
+scale 6 24 3ff69349
+scale 6 25 00000000
+scale 6 26 3fbfc7e3
+scale 6 27 c0db2d96
+scale 6 28 3edb2d96
+scale 6 29 bf5b2d96
+scale 6 30 40246230
+scale 6 31 405b2d96
+scale 6 32 3e5b2d96
+scale 6 33 c0b2150a
+scale 6 34 3ddb2d96
+scale 6 35 3fe8e06f
+scale 6 36 415b2d96
+scale 6 37 3f5b2d96
+scale 6 38 40db2d96
+scale 6 39 c088fc7e
+scale 6 40 3f246230
+scale 6 41 4008fc7e
+scale 6 42 3ea46230
+scale 6 43 40a46230
+scale 6 44 3fa46230
+scale 6 45 bddb2d96
+scale 6 46 403fc7e3
+scale 6 47 c0246230
+summary synapses 48 rt_same 48 copy_same 48 scale_rows 336 scale_changed 282
